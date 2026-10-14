@@ -392,6 +392,11 @@ function computeRemainingStrength() {
 
 /* ---------------- Player stats computation ---------------- */
 
+function gamesPctCell(t) {
+  const tot = t.gamesFor + t.gamesAgainst;
+  return tot > 0 ? `${((t.gamesFor / tot) * 100).toFixed(0)}%` : `<span class="muted">-</span>`;
+}
+
 function canonName(name) {
   const a = (DATA && DATA.playerAliases) || {};
   return a[name] || name;
@@ -551,7 +556,7 @@ function renderPlayers() {
       <thead>
         <tr>
           <th data-nosort></th><th>Order</th><th>Player</th>${showTeamCol ? "<th>Team</th>" : ""}<th>W-L</th><th>Win %</th>
-          <th>Singles</th><th>Doubles</th><th>Games S</th><th>Games D</th><th>Sets</th><th>Games</th><th data-nosort>Form</th>
+          <th>Singles</th><th>Doubles</th><th>Games % S</th><th>Games % D</th><th>Sets</th><th>Games</th><th data-nosort>Form</th>
         </tr>
       </thead>
       <tbody>
@@ -568,8 +573,8 @@ function renderPlayers() {
             <td>${(p.winPct * 100).toFixed(0)}%</td>
             <td>${p.singles.played ? `${p.singles.wins}-${p.singles.losses}` : `<span class="muted">-</span>`}</td>
             <td>${p.doubles.played ? `${p.doubles.wins}-${p.doubles.losses}` : `<span class="muted">-</span>`}</td>
-            <td>${p.singles.played ? `${p.singles.gamesFor}-${p.singles.gamesAgainst}` : `<span class="muted">-</span>`}</td>
-            <td>${p.doubles.played ? `${p.doubles.gamesFor}-${p.doubles.gamesAgainst}` : `<span class="muted">-</span>`}</td>
+                        <td>${gamesPctCell(p.singles)}</td>
+            <td>${gamesPctCell(p.doubles)}</td>
             <td>${p.setsFor}-${p.setsAgainst}</td>
             <td>${p.gamesFor}-${p.gamesAgainst}</td>
             <td><div class="form-pills">${p.form.slice(-5).map(f => `<span class="pill ${f.result}" title="Rd${f.round} ${f.type} vs ${f.opponents.join(' & ')} (${f.opponentTeam}) — ${f.score}">${f.result}</span>`).join("")}</div></td>
@@ -729,29 +734,27 @@ function renderStats() {
 
   // UTR ranking (Berwick roster only — UTR data isn't available for opponents)
   const utrEl = document.getElementById("stats-utr");
-  const utrRows = DATA.roster
-    .map(p => ({ ...p, _avg: avgUtr(p) }))
-    .filter(p => p._avg !== null)
-    .sort((a, b) => b._avg - a._avg);
+  const berwick = stats.filter(p => p.team === OUR_TEAM && p.played > 0);
 
-  if (!utrRows.length) {
-    utrEl.innerHTML = `<p class="muted">No UTR data yet — add ratings on the Roster tab.</p>`;
+  if (!berwick.length) {
+    utrEl.innerHTML = `<p class="muted">No games played yet.</p>`;
   } else {
     utrEl.innerHTML = `
       <div class="table-wrap">
       <table>
-        <thead><tr><th>Player</th><th>UTR Singles</th><th>UTR Doubles</th></tr></thead>
+        <thead><tr><th>Player</th><th>Games % Singles</th><th>Games % Doubles</th><th>Games % Overall</th></tr></thead>
         <tbody>
-          ${utrRows.map(p => `
+          ${berwick.map(p => `
             <tr class="us-row">
               <td>${escapeHtml(p.name)}</td>
-              <td>${formatUtr(p, "singles")}</td>
-              <td>${formatUtr(p, "doubles")}</td>
+              <td>${gamesPctCell(p.singles)}</td>
+              <td>${gamesPctCell(p.doubles)}</td>
+              <td>${gamesPctCell(p)}</td>
             </tr>`).join("")}
         </tbody>
       </table>
       </div>
-      <p class="muted" style="margin-top:0.5rem;">Ranked by average of singles/doubles UTR. Values shown as "N.xx" are masked by UTR Sports until signed in — update with exact ratings on the Berwick tab when known.</p>
+      <p class="muted" style="margin-top:0.5rem;">Share of games won (games for ÷ games for + against) for Berwick players who have played this season.</p>
     `;
   }
   if (utrEl.querySelector("table")) makeSortable(utrEl.querySelector("table"), "stats-utr");
