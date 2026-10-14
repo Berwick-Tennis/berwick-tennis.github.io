@@ -408,8 +408,8 @@ function computePlayerStats() {
         played: 0, wins: 0, losses: 0,
         setsFor: 0, setsAgainst: 0,
         gamesFor: 0, gamesAgainst: 0,
-        singles: { played: 0, wins: 0, losses: 0 },
-        doubles: { played: 0, wins: 0, losses: 0 },
+        singles: { played: 0, wins: 0, losses: 0, gamesFor: 0, gamesAgainst: 0 },
+        doubles: { played: 0, wins: 0, losses: 0, gamesFor: 0, gamesAgainst: 0 },
         form: []
       };
     }
@@ -439,6 +439,8 @@ function computePlayerStats() {
             p.gamesAgainst += side.gamesAgainst;
             const typeStats = r.type === "singles" ? p.singles : p.doubles;
             typeStats.played++;
+            typeStats.gamesFor += side.gamesFor;
+            typeStats.gamesAgainst += side.gamesAgainst;
             if (side.won) typeStats.wins++; else typeStats.losses++;
             const partner = side.names.map(canonName).filter(n => n !== name)[0] || null;
             const score = r.sets.map(s => side.isHome ? `${s[0]}-${s[1]}` : `${s[1]}-${s[0]}`).join(", ");
@@ -549,7 +551,7 @@ function renderPlayers() {
       <thead>
         <tr>
           <th data-nosort></th><th>Order</th><th>Player</th>${showTeamCol ? "<th>Team</th>" : ""}<th>W-L</th><th>Win %</th>
-          <th>Singles</th><th>Doubles</th><th>UTR S</th><th>UTR D</th><th>Sets</th><th>Games</th><th data-nosort>Form</th>
+          <th>Singles</th><th>Doubles</th><th>Games S</th><th>Games D</th><th>Sets</th><th>Games</th><th data-nosort>Form</th>
         </tr>
       </thead>
       <tbody>
@@ -566,8 +568,8 @@ function renderPlayers() {
             <td>${(p.winPct * 100).toFixed(0)}%</td>
             <td>${p.singles.played ? `${p.singles.wins}-${p.singles.losses}` : `<span class="muted">-</span>`}</td>
             <td>${p.doubles.played ? `${p.doubles.wins}-${p.doubles.losses}` : `<span class="muted">-</span>`}</td>
-            <td>${roster ? formatUtr(roster, "singles") : `<span class="muted">-</span>`}</td>
-            <td>${roster ? formatUtr(roster, "doubles") : `<span class="muted">-</span>`}</td>
+            <td>${p.singles.played ? `${p.singles.gamesFor}-${p.singles.gamesAgainst}` : `<span class="muted">-</span>`}</td>
+            <td>${p.doubles.played ? `${p.doubles.gamesFor}-${p.doubles.gamesAgainst}` : `<span class="muted">-</span>`}</td>
             <td>${p.setsFor}-${p.setsAgainst}</td>
             <td>${p.gamesFor}-${p.gamesAgainst}</td>
             <td><div class="form-pills">${p.form.slice(-5).map(f => `<span class="pill ${f.result}" title="Rd${f.round} ${f.type} vs ${f.opponents.join(' & ')} (${f.opponentTeam}) — ${f.score}">${f.result}</span>`).join("")}</div></td>
@@ -576,7 +578,7 @@ function renderPlayers() {
       </tbody>
     </table>
     </div>
-    <p class="muted" style="margin-top:0.5rem;">Stats compiled from rubber-by-rubber results (singles + doubles) across all ${(DATA.teams || []).length || "the"} teams in ${escapeHtml(sectionShort())}${DATA.results.length ? `, rounds 1–${DATA.results.length}` : " (no rounds played yet)"}. Hover the form pills for set scores. UTR values are masked where UTR Sports requires sign-in to view the exact rating — edit them on the Berwick tab as real ratings become known. "Order" is each player's roster/singles position (lower = more senior); rostered players may only play at their own position or higher (more senior). <span class="badge-e" title="Emergency player">E</span> = emergency player.</p>
+    <p class="muted" style="margin-top:0.5rem;">Stats compiled from rubber-by-rubber results (singles + doubles) across all ${(DATA.teams || []).length || "the"} teams in ${escapeHtml(sectionShort())}${DATA.results.length ? `, rounds 1–${DATA.results.length}` : " (no rounds played yet)"}. Hover the form pills for set scores. "Order" is each player's roster/singles position (lower = more senior); rostered players may only play at their own position or higher (more senior). <span class="badge-e" title="Emergency player">E</span> = emergency player.</p>
   `;
 
   makeSortable(el.querySelector("table"), "players");
