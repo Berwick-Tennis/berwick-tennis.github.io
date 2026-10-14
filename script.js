@@ -392,10 +392,16 @@ function computeRemainingStrength() {
 
 /* ---------------- Player stats computation ---------------- */
 
+function canonName(name) {
+  const a = (DATA && DATA.playerAliases) || {};
+  return a[name] || name;
+}
+
 function computePlayerStats() {
   const players = {};
 
   function ensure(name, team) {
+    name = canonName(name);
     if (!players[name]) {
       players[name] = {
         name, team,
@@ -422,7 +428,8 @@ function computePlayerStats() {
           { names: r.awayPlayers, team: m.away, won: !homeWon, setsFor: r.awaySets, setsAgainst: r.homeSets, gamesFor: r.awayGames, gamesAgainst: r.homeGames, oppNames: r.homePlayers, oppTeam: m.home, isHome: false }
         ];
         sides.forEach(side => {
-          side.names.forEach(name => {
+          side.names.forEach(rawName => {
+            const name = canonName(rawName);
             const p = ensure(name, side.team);
             p.played++;
             if (side.won) p.wins++; else p.losses++;
@@ -433,7 +440,7 @@ function computePlayerStats() {
             const typeStats = r.type === "singles" ? p.singles : p.doubles;
             typeStats.played++;
             if (side.won) typeStats.wins++; else typeStats.losses++;
-            const partner = side.names.filter(n => n !== name)[0] || null;
+            const partner = side.names.map(canonName).filter(n => n !== name)[0] || null;
             const score = r.sets.map(s => side.isHome ? `${s[0]}-${s[1]}` : `${s[1]}-${s[0]}`).join(", ");
             p.form.push({
               round: round.round, type: r.type, result: side.won ? "W" : "L",
@@ -455,6 +462,54 @@ function computePlayerStats() {
     if (b.winPct !== a.winPct) return b.winPct - a.winPct;
     return b.played - a.played;
   });
+}
+
+/* ---------------- Sortable tables ---------------- */
+
+const SORT_STATE = {}; // table key -> { col, dir }
+
+function sortValue(txt) {
+  const t = (txt || "").trim();
+  if (!t || t === "-") return null;
+  const m = t.match(/^(-?\d+(?:\.\d+)?)/);
+  return m ? parseFloat(m[1]) : t.toLowerCase();
+}
+
+function makeSortable(table, key) {
+  if (!table) return;
+  const ths = [...table.tHead.rows[0].cells];
+  const tbody = table.tBodies[0];
+  const apply = () => {
+    const st = SORT_STATE[key];
+    ths.forEach((th, i) => {
+      th.classList.remove("sorted-asc", "sorted-desc");
+      if (st && st.col === i) th.classList.add(st.dir === 1 ? "sorted-asc" : "sorted-desc");
+    });
+    if (!st) return;
+    const rows = [...tbody.rows];
+    rows.sort((ra, rb) => {
+      const a = sortValue(ra.cells[st.col].textContent), b = sortValue(rb.cells[st.col].textContent);
+      if (a === null && b === null) return 0;
+      if (a === null) return 1;
+      if (b === null) return -1;
+      if (typeof a === "number" && typeof b === "number") return (a - b) * st.dir;
+      return String(a).localeCompare(String(b)) * st.dir;
+    });
+    rows.forEach(r => tbody.appendChild(r));
+  };
+  ths.forEach((th, i) => {
+    if (th.hasAttribute("data-nosort") || !th.textContent.trim()) return;
+    th.classList.add("sortable");
+    th.addEventListener("click", () => {
+      const st = SORT_STATE[key];
+      // First click: numbers descending (best first), text ascending
+      const first = [...tbody.rows].map(r => sortValue(r.cells[i].textContent)).find(v => v !== null);
+      const startDir = typeof first === "number" ? -1 : 1;
+      SORT_STATE[key] = st && st.col === i ? { col: i, dir: -st.dir } : { col: i, dir: startDir };
+      apply();
+    });
+  });
+  apply();
 }
 
 /* ---------------- Players tab ---------------- */
@@ -493,8 +548,8 @@ function renderPlayers() {
     <table>
       <thead>
         <tr>
-          <th></th><th>Order</th><th>Player</th>${showTeamCol ? "<th>Team</th>" : ""}<th>W-L</th><th>Win %</th>
-          <th>Singles</th><th>Doubles</th><th>UTR S</th><th>UTR D</th><th>Sets</th><th>Games</th><th>Form</th>
+          <th data-nosort></th><th>Order</th><th>Player</th>${showTeamCol ? "<th>Team</th>" : ""}<th>W-L</th><th>Win %</th>
+          <th>Singles</th><th>Doubles</th><th>UTR S</th><th>UTR D</th><th>Sets</th><th>Games</th><th data-nosort>Form</th>
         </tr>
       </thead>
       <tbody>
@@ -523,6 +578,8 @@ function renderPlayers() {
     </div>
     <p class="muted" style="margin-top:0.5rem;">Stats compiled from rubber-by-rubber results (singles + doubles) across all ${(DATA.teams || []).length || "the"} teams in ${escapeHtml(sectionShort())}${DATA.results.length ? `, rounds 1–${DATA.results.length}` : " (no rounds played yet)"}. Hover the form pills for set scores. UTR values are masked where UTR Sports requires sign-in to view the exact rating — edit them on the Berwick tab as real ratings become known. "Order" is each player's roster/singles position (lower = more senior); rostered players may only play at their own position or higher (more senior). <span class="badge-e" title="Emergency player">E</span> = emergency player.</p>
   `;
+
+  makeSortable(el.querySelector("table"), "players");
 
   el.querySelectorAll(".player-link").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -661,6 +718,7 @@ function renderStatsRanking(stats) {
     </table>
     </div>
   `;
+  makeSortable(el.querySelector("table"), "stats-ranking-" + statsMode);
 }
 
 function renderStats() {
@@ -694,6 +752,7 @@ function renderStats() {
       <p class="muted" style="margin-top:0.5rem;">Ranked by average of singles/doubles UTR. Values shown as "N.xx" are masked by UTR Sports until signed in — update with exact ratings on the Berwick tab when known.</p>
     `;
   }
+  if (utrEl.querySelector("table")) makeSortable(utrEl.querySelector("table"), "stats-utr");
 }
 
 function avgUtr(p) {
@@ -868,7 +927,7 @@ function renderDashboard() {
       <div class="next-match-grid">
         <div class="match-venue-block">
           ${venue ? `
-            <div><a href="${mapsLink(venue.address)}" target="_blank" rel="noopener">${escapeHtml(venue.address)}</a>${venue.melway ? ` &middot; Melway ${venue.melway}` : ""}</div>
+            <div><a href="${mapsLink(venue.address)}" target="_blank" rel="noopener">${escapeHtml(venue.address)}</a></div>
             <div class="court-type-banner">${venue.courtType ? `🎾 ${escapeHtml(venue.courtType)}` : `<span class="muted">Court surface not set — add it on the Venues tab</span>`}</div>
             <div class="map-embed">
               <iframe src="https://www.google.com/maps?q=${encodeURIComponent(venue.address)}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -949,7 +1008,7 @@ function teamRosterTable(team) {
   return `
     <div class="table-wrap" style="margin-top:0.5rem;">
     <table>
-      <thead><tr><th></th><th>Order</th><th>Player</th><th>W-L</th><th>Win %</th></tr></thead>
+      <thead><tr><th></th><th>Order</th><th>Player</th><th>Singles W-L</th><th>Doubles W-L</th></tr></thead>
       <tbody>
         ${sorted.map(p => {
           const info = getPlayerOrderInfo(team, p.name);
@@ -958,8 +1017,8 @@ function teamRosterTable(team) {
             <td>${info.emergency ? `<span class="badge-e" title="Emergency player">E</span>` : ""}</td>
             <td>${info.order ?? "-"}</td>
             <td>${escapeHtml(p.name)}</td>
-            <td>${p.wins}-${p.losses}</td>
-            <td>${(p.winPct * 100).toFixed(0)}%</td>
+            <td>${p.singles.played ? `${p.singles.wins}-${p.singles.losses}` : `<span class="muted">-</span>`}</td>
+            <td>${p.doubles.played ? `${p.doubles.wins}-${p.doubles.losses}` : `<span class="muted">-</span>`}</td>
           </tr>`;
         }).join("")}
       </tbody>
@@ -1259,7 +1318,7 @@ function renderSchedule() {
             <td>${fmtDate(s.date)}</td>
             <td>${s.home === OUR_TEAM ? `<strong>${escapeHtml(s.home)}</strong>` : escapeHtml(s.home)}</td>
             <td>${s.away === OUR_TEAM ? `<strong>${escapeHtml(s.away)}</strong>` : escapeHtml(s.away)}</td>
-            <td>${venue ? `${escapeHtml(venue.address)}${venue.melway ? " (Melway " + venue.melway + ")" : ""} &middot; <a href="${mapsLink(venue.address)}" target="_blank" rel="noopener">Map</a>` : ""}</td>
+            <td>${venue ? `${escapeHtml(venue.address)} &middot; <a href="${mapsLink(venue.address)}" target="_blank" rel="noopener">Map</a>` : ""}</td>
             <td>${availabilityChips(s.date, { compact: true })}</td>
             <td>${resultBadge}</td>
           </tr>`;
@@ -1283,7 +1342,7 @@ function renderVenues() {
   el.innerHTML = DATA.clubs.map(c => `
     <div class="card">
       <h3>${c.name}${c.name === OUR_TEAM ? ' <span class="tag">us</span>' : ""}</h3>
-      <p class="muted">${c.address}${c.melway ? " &middot; Melway " + c.melway : ""} &middot; <a href="${mapsLink(c.address)}" target="_blank" rel="noopener">Map &rarr;</a></p>
+      <p class="muted">${c.address} &middot; <a href="${mapsLink(c.address)}" target="_blank" rel="noopener">Map &rarr;</a></p>
       <div class="court-type-banner">${c.courtType ? `🎾 ${escapeHtml(c.courtType)}` : `<span class="muted">Court surface not set — add it below</span>`}</div>
       <div class="grid-2">
         <div>
@@ -1390,7 +1449,25 @@ function initDataTools() {
 
 /* ---------------- Init ---------------- */
 
+function updateVisibility() {
+  const maxRound = Math.max(0, ...DATA.results.map(r => r.round || 0));
+  // Finals tab: hidden until round 8 results are in
+  const showFinals = maxRound >= 8;
+  const fb = document.querySelector('nav button[data-tab="finals"]');
+  const fs = document.getElementById("finals");
+  if (fb) fb.style.display = showFinals ? "" : "none";
+  if (!showFinals && fs && fs.classList.contains("active")) {
+    fs.classList.remove("active");
+    document.querySelector('nav button[data-tab="dashboard"]').classList.add("active");
+    document.getElementById("dashboard").classList.add("active");
+  }
+  // Ladder progression: hidden until round 2 results
+  const chart = document.getElementById("results-chart");
+  if (chart && chart.closest(".card")) chart.closest(".card").style.display = DATA.results.length >= 2 ? "" : "none";
+}
+
 function renderAll() {
+  updateVisibility();
   renderDashboard();
   renderLadder();
   renderFinals();

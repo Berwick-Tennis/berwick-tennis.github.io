@@ -569,3 +569,8 @@ a { color: var(--green-dark); }
 .lineup-reason{font-weight:400;font-size:.9rem}
 .lineup-block{max-width:540px}
 .lineup-slot{min-width:95px;white-space:nowrap}
+
+th.sortable { cursor: pointer; user-select: none; white-space: nowrap; }
+th.sortable:hover { text-decoration: underline; }
+th.sorted-asc::after { content: " \25B2"; font-size: 0.7em; }
+th.sorted-desc::after { content: " \25BC"; font-size: 0.7em; }

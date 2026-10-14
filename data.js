@@ -602,7 +602,7 @@ window.SITE_DATA = {
             "Stuart King"
           ],
           "awayPlayers": [
-            "Soe Tun",
+            "Soe Min Tun",
             "John Keecherer",
             "Shannon Watson",
             "David Thurmond"
@@ -615,7 +615,7 @@ window.SITE_DATA = {
                 "Tom Robinson"
               ],
               "awayPlayers": [
-                "Soe Tun"
+                "Soe Min Tun"
               ],
               "sets": [
                 [
@@ -1112,5 +1112,8 @@ window.SITE_DATA = {
         "Shannon Watson"
       ]
     }
+  },
+  "playerAliases": {
+    "Soe Tun": "Soe Min Tun"
   }
 };
