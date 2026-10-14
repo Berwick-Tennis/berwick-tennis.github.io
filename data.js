@@ -4,7 +4,7 @@ window.SITE_DATA = {
     "section": "Open Singles/Doubles A Reserve 2",
     "sectionCode": "AP020",
     "ourTeam": "Berwick",
-    "lastUpdated": "2026-10-13",
+    "lastUpdated": "2026-10-14",
     "resultsLoadedFromSite": "13th October 26 @ 11:02:12 PM",
     "sourceUrl": "https://www.trols.org.au/wdta/results.php?daytime=AP&section=AP020&style=",
     "fixtureUrl": "https://www.trols.org.au/wdta/fixture.php?daytime=AP&section=AP020&style=",
@@ -1080,14 +1080,14 @@ window.SITE_DATA = {
     },
     "2026-11-21": {
       "Soe Min Tun": {
-        "status": "maybe",
-        "note": "Probably away last 2 weeks of Nov \u2014 to confirm"
+        "status": "out",
+        "note": "Not available (WhatsApp, confirmed 14 Oct)"
       }
     },
     "2026-11-28": {
       "Soe Min Tun": {
-        "status": "maybe",
-        "note": "Probably away last 2 weeks of Nov \u2014 to confirm"
+        "status": "out",
+        "note": "Not available (WhatsApp, confirmed 14 Oct)"
       }
     },
     "2027-01-30": {
