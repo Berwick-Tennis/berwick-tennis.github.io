@@ -4,13 +4,13 @@ window.SITE_DATA = {
     "section": "Open Singles/Doubles A Reserve 2",
     "sectionCode": "AP020",
     "ourTeam": "Berwick",
-    "lastUpdated": "2026-10-17",
-    "resultsLoadedFromSite": "13th October 26 @ 11:02:12 PM",
+    "lastUpdated": "2026-10-20",
+    "resultsLoadedFromSite": "20th October 26 @ 09:36:50 PM",
     "sourceUrl": "https://www.trols.org.au/wdta/results.php?daytime=AP&section=AP020&style=",
     "fixtureUrl": "https://www.trols.org.au/wdta/fixture.php?daytime=AP&section=AP020&style=",
     "archives": [
       {
-        "label": "Winter 2026 — A Reserve 4",
+        "label": "Winter 2026 \u2014 A Reserve 4",
         "path": "winter-2026/"
       }
     ],
@@ -31,21 +31,21 @@ window.SITE_DATA = {
       "plays": "Right",
       "serving": "Average serves",
       "generalPlay": "20 y/o Asian girl, small build. Plays both singles and doubles. DT won 6-0, 6-1 vs her in singles.",
-      "strengths": "Great backhand — much stronger on that side, go to backhand",
-      "weaknesses": "Forehand is a weakness — not much power. Average serves."
+      "strengths": "Great backhand \u2014 much stronger on that side, go to backhand",
+      "weaknesses": "Forehand is a weakness \u2014 not much power. Average serves."
     },
     "Burden Park::Alan": {
       "plays": "Right",
-      "serving": "Decent serve — likes to go out wide",
+      "serving": "Decent serve \u2014 likes to go out wide",
       "generalPlay": "Late 40s Asian guy. Only played doubles. Okay at rallies. Possibly listed as Lun Wang in results.",
       "strengths": "Decent serve, comfortable at baseline rallies",
-      "weaknesses": "Very bad at the net — missed 4-5 easy volleys from about 1 metre away. Target him at net."
+      "weaknesses": "Very bad at the net \u2014 missed 4-5 easy volleys from about 1 metre away. Target him at net."
     },
     "Burden Park::Isaac Khaoula": {
       "plays": "Right",
       "serving": "Average pusher-style serve",
-      "generalPlay": "Mid-20s guy — definition of a pusher. Slices 90% of the time. Rallies last 10-20 shots each. Gives no pace, just slice and some topspin forehands. Looks a very frustrating player to play against.",
-      "strengths": "Incredible consistency — will grind out every point",
+      "generalPlay": "Mid-20s guy \u2014 definition of a pusher. Slices 90% of the time. Rallies last 10-20 shots each. Gives no pace, just slice and some topspin forehands. Looks a very frustrating player to play against.",
+      "strengths": "Incredible consistency \u2014 will grind out every point",
       "weaknesses": "Doesn't like pace on the run, but hitting with pace is risky (high error rate). Try varying pace and angles to disrupt rhythm."
     },
     "Monash Uni::Srinivas Tirumalasetty": {
@@ -53,7 +53,7 @@ window.SITE_DATA = {
       "serving": "Average serve with short toss/swing (similar to Devraj). Serves wide to Deuce side; served down the line on Ad side.",
       "generalPlay": "Indian guy, early 20s. Played doubles only. Probably a 2 or 3 on Tuesday. Lost to Shannon & DT in doubles 6-2, 7-5.",
       "strengths": "",
-      "weaknesses": "Doesn't last long in a rally. No surprise shots down the tramline. Not good at volleying. Consistently hits DT's slice serve to backhand straight to the net player — use that serve."
+      "weaknesses": "Doesn't last long in a rally. No surprise shots down the tramline. Not good at volleying. Consistently hits DT's slice serve to backhand straight to the net player \u2014 use that serve."
     },
     "Monash Uni::Kevin Chen": {
       "plays": "Right",
@@ -64,16 +64,16 @@ window.SITE_DATA = {
     },
     "Monash Uni::Zachary Lee": {
       "plays": "Right",
-      "serving": "Slow tossing action (similar to Craig) — restarts toss a lot. Very quick to hit 2nd serve. 1st serve is average. 2nd serve is close to a lollipop.",
+      "serving": "Slow tossing action (similar to Craig) \u2014 restarts toss a lot. Very quick to hit 2nd serve. 1st serve is average. 2nd serve is close to a lollipop.",
       "generalPlay": "Young Asian guy, average height, skinny, early 20s. Played singles only. ~2 on Tuesday. Lost to DT in singles 7-5, 6-3.",
-      "strengths": "Very quick around the court. Good passing shots when opponent comes to net. Great dropshots — hit ~4-5 winners in the match.",
-      "weaknesses": "Backhand is very slow and bounces short — rush the net for a volley after a decent shot to his backhand corner. Tell him to slow down his 2nd serve next time."
+      "strengths": "Very quick around the court. Good passing shots when opponent comes to net. Great dropshots \u2014 hit ~4-5 winners in the match.",
+      "weaknesses": "Backhand is very slow and bounces short \u2014 rush the net for a volley after a decent shot to his backhand corner. Tell him to slow down his 2nd serve next time."
     },
     "Monash Uni::Matthew Lee": {
       "plays": "Right",
       "serving": "",
       "generalPlay": "Young Asian guy. Played singles only. ~1/2 on Tuesday. Lost to Nick in singles 6-3, 6-4. Plays long rallies with moonball/deep topspin shots.",
-      "strengths": "Deep topspin baseline game — moonballs and high heavy balls",
+      "strengths": "Deep topspin baseline game \u2014 moonballs and high heavy balls",
       "weaknesses": ""
     }
   },
@@ -327,7 +327,7 @@ window.SITE_DATA = {
       "home": null,
       "away": null,
       "byeDate": true,
-      "note": "Christmas break — resumes 30 Jan 27"
+      "note": "Christmas break \u2014 resumes 30 Jan 27"
     },
     {
       "round": 10,
@@ -796,6 +796,414 @@ window.SITE_DATA = {
               "homeGames": 9,
               "awayGames": 14,
               "winner": "away"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "date": "2026-10-17",
+      "matches": [
+        {
+          "home": "Berwick",
+          "away": "Centenary Park",
+          "homePts": 7.0,
+          "homeR": 2,
+          "homeS": 5,
+          "homeG": 38,
+          "awayPts": 2.0,
+          "awayR": 1,
+          "awayS": 2,
+          "awayG": 21,
+          "homePlayers": [
+            "David Thurmond",
+            "Shannon Watson",
+            "Tom Maloney",
+            "John Keecherer"
+          ],
+          "awayPlayers": [
+            "Eddie Meach",
+            "Eddie Schroeder"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "David Thurmond"
+              ],
+              "awayPlayers": [
+                "Eddie Meach"
+              ],
+              "sets": [
+                [
+                  4,
+                  6
+                ],
+                [
+                  6,
+                  2
+                ],
+                [
+                  4,
+                  6
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 14,
+              "awayGames": 14,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Shannon Watson"
+              ],
+              "awayPlayers": [
+                "Eddie Schroeder"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 6,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Tom Maloney",
+                "John Keecherer"
+              ],
+              "awayPlayers": [
+                "Eddie Meach",
+                "Eddie Schroeder"
+              ],
+              "sets": [
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 1,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "home": "Upwey South",
+          "away": "N'hill P'wood Blue",
+          "homePts": 2.0,
+          "homeR": 1,
+          "homeS": 2,
+          "homeG": 24,
+          "awayPts": 6.0,
+          "awayR": 2,
+          "awayS": 4,
+          "awayG": 29,
+          "homePlayers": [
+            "Jethro Cousins",
+            "Charlotte Wilson"
+          ],
+          "awayPlayers": [
+            "Darsh Chauhan",
+            "Benjamin Ong"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Jethro Cousins"
+              ],
+              "awayPlayers": [
+                "Darsh Chauhan"
+              ],
+              "sets": [
+                [
+                  1,
+                  6
+                ],
+                [
+                  3,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 4,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Charlotte Wilson"
+              ],
+              "awayPlayers": [
+                "Benjamin Ong"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 5,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Jethro Cousins",
+                "Charlotte Wilson"
+              ],
+              "awayPlayers": [
+                "Darsh Chauhan",
+                "Benjamin Ong"
+              ],
+              "sets": [
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 8,
+              "awayGames": 12,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "home": "Vermont South",
+          "away": "N'hill P'wood White",
+          "homePts": 0.0,
+          "homeR": 0,
+          "homeS": 0,
+          "homeG": 24,
+          "awayPts": 8.0,
+          "awayR": 3,
+          "awayS": 6,
+          "awayG": 38,
+          "homePlayers": [
+            "Owen Jones",
+            "Kevin Pan"
+          ],
+          "awayPlayers": [
+            "Lawrence Botton",
+            "George Hildebrand"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Owen Jones"
+              ],
+              "awayPlayers": [
+                "Lawrence Botton"
+              ],
+              "sets": [
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 8,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Kevin Pan"
+              ],
+              "awayPlayers": [
+                "George Hildebrand"
+              ],
+              "sets": [
+                [
+                  5,
+                  7
+                ],
+                [
+                  2,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 7,
+              "awayGames": 13,
+              "winner": "away"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Owen Jones",
+                "Kevin Pan"
+              ],
+              "awayPlayers": [
+                "Lawrence Botton",
+                "George Hildebrand"
+              ],
+              "sets": [
+                [
+                  5,
+                  7
+                ],
+                [
+                  4,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 9,
+              "awayGames": 13,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "home": "Essex Heights",
+          "away": "Eildon Park",
+          "homePts": 8.0,
+          "homeR": 3,
+          "homeS": 6,
+          "homeG": 37,
+          "awayPts": 0.0,
+          "awayR": 0,
+          "awayS": 0,
+          "awayG": 15,
+          "homePlayers": [
+            "Maksim Gigovic",
+            "Mateja Gigovic"
+          ],
+          "awayPlayers": [
+            "Bradley Voysey",
+            "Gary Robinson"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Maksim Gigovic"
+              ],
+              "awayPlayers": [
+                "Bradley Voysey"
+              ],
+              "sets": [
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 1,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Mateja Gigovic"
+              ],
+              "awayPlayers": [
+                "Gary Robinson"
+              ],
+              "sets": [
+                [
+                  6,
+                  3
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 5,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Maksim Gigovic",
+                "Mateja Gigovic"
+              ],
+              "awayPlayers": [
+                "Bradley Voysey",
+                "Gary Robinson"
+              ],
+              "sets": [
+                [
+                  6,
+                  3
+                ],
+                [
+                  7,
+                  6
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 13,
+              "awayGames": 9,
+              "winner": "home"
             }
           ]
         }
