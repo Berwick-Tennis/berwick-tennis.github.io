@@ -4,13 +4,13 @@ window.SITE_DATA = {
     "section": "Open Singles/Doubles A Reserve 2",
     "sectionCode": "AP020",
     "ourTeam": "Berwick",
-    "lastUpdated": "2026-10-14",
+    "lastUpdated": "2026-10-17",
     "resultsLoadedFromSite": "13th October 26 @ 11:02:12 PM",
     "sourceUrl": "https://www.trols.org.au/wdta/results.php?daytime=AP&section=AP020&style=",
     "fixtureUrl": "https://www.trols.org.au/wdta/fixture.php?daytime=AP&section=AP020&style=",
     "archives": [
       {
-        "label": "Winter 2026 \u2014 A Reserve 4",
+        "label": "Winter 2026 — A Reserve 4",
         "path": "winter-2026/"
       }
     ],
@@ -31,21 +31,21 @@ window.SITE_DATA = {
       "plays": "Right",
       "serving": "Average serves",
       "generalPlay": "20 y/o Asian girl, small build. Plays both singles and doubles. DT won 6-0, 6-1 vs her in singles.",
-      "strengths": "Great backhand \u2014 much stronger on that side, go to backhand",
-      "weaknesses": "Forehand is a weakness \u2014 not much power. Average serves."
+      "strengths": "Great backhand — much stronger on that side, go to backhand",
+      "weaknesses": "Forehand is a weakness — not much power. Average serves."
     },
     "Burden Park::Alan": {
       "plays": "Right",
-      "serving": "Decent serve \u2014 likes to go out wide",
+      "serving": "Decent serve — likes to go out wide",
       "generalPlay": "Late 40s Asian guy. Only played doubles. Okay at rallies. Possibly listed as Lun Wang in results.",
       "strengths": "Decent serve, comfortable at baseline rallies",
-      "weaknesses": "Very bad at the net \u2014 missed 4-5 easy volleys from about 1 metre away. Target him at net."
+      "weaknesses": "Very bad at the net — missed 4-5 easy volleys from about 1 metre away. Target him at net."
     },
     "Burden Park::Isaac Khaoula": {
       "plays": "Right",
       "serving": "Average pusher-style serve",
-      "generalPlay": "Mid-20s guy \u2014 definition of a pusher. Slices 90% of the time. Rallies last 10-20 shots each. Gives no pace, just slice and some topspin forehands. Looks a very frustrating player to play against.",
-      "strengths": "Incredible consistency \u2014 will grind out every point",
+      "generalPlay": "Mid-20s guy — definition of a pusher. Slices 90% of the time. Rallies last 10-20 shots each. Gives no pace, just slice and some topspin forehands. Looks a very frustrating player to play against.",
+      "strengths": "Incredible consistency — will grind out every point",
       "weaknesses": "Doesn't like pace on the run, but hitting with pace is risky (high error rate). Try varying pace and angles to disrupt rhythm."
     },
     "Monash Uni::Srinivas Tirumalasetty": {
@@ -53,7 +53,7 @@ window.SITE_DATA = {
       "serving": "Average serve with short toss/swing (similar to Devraj). Serves wide to Deuce side; served down the line on Ad side.",
       "generalPlay": "Indian guy, early 20s. Played doubles only. Probably a 2 or 3 on Tuesday. Lost to Shannon & DT in doubles 6-2, 7-5.",
       "strengths": "",
-      "weaknesses": "Doesn't last long in a rally. No surprise shots down the tramline. Not good at volleying. Consistently hits DT's slice serve to backhand straight to the net player \u2014 use that serve."
+      "weaknesses": "Doesn't last long in a rally. No surprise shots down the tramline. Not good at volleying. Consistently hits DT's slice serve to backhand straight to the net player — use that serve."
     },
     "Monash Uni::Kevin Chen": {
       "plays": "Right",
@@ -64,16 +64,16 @@ window.SITE_DATA = {
     },
     "Monash Uni::Zachary Lee": {
       "plays": "Right",
-      "serving": "Slow tossing action (similar to Craig) \u2014 restarts toss a lot. Very quick to hit 2nd serve. 1st serve is average. 2nd serve is close to a lollipop.",
+      "serving": "Slow tossing action (similar to Craig) — restarts toss a lot. Very quick to hit 2nd serve. 1st serve is average. 2nd serve is close to a lollipop.",
       "generalPlay": "Young Asian guy, average height, skinny, early 20s. Played singles only. ~2 on Tuesday. Lost to DT in singles 7-5, 6-3.",
-      "strengths": "Very quick around the court. Good passing shots when opponent comes to net. Great dropshots \u2014 hit ~4-5 winners in the match.",
-      "weaknesses": "Backhand is very slow and bounces short \u2014 rush the net for a volley after a decent shot to his backhand corner. Tell him to slow down his 2nd serve next time."
+      "strengths": "Very quick around the court. Good passing shots when opponent comes to net. Great dropshots — hit ~4-5 winners in the match.",
+      "weaknesses": "Backhand is very slow and bounces short — rush the net for a volley after a decent shot to his backhand corner. Tell him to slow down his 2nd serve next time."
     },
     "Monash Uni::Matthew Lee": {
       "plays": "Right",
       "serving": "",
       "generalPlay": "Young Asian guy. Played singles only. ~1/2 on Tuesday. Lost to Nick in singles 6-3, 6-4. Plays long rallies with moonball/deep topspin shots.",
-      "strengths": "Deep topspin baseline game \u2014 moonballs and high heavy balls",
+      "strengths": "Deep topspin baseline game — moonballs and high heavy balls",
       "weaknesses": ""
     }
   },
@@ -85,8 +85,8 @@ window.SITE_DATA = {
       "address": "Arch Brown Reserve, Buchanan Road, Berwick",
       "courtType": "Synthetic grass & Plexipave",
       "clubhousePhone": "9796 1698",
-      "contactName": "Craig Kitner",
-      "contactPhone": "0414 596 310",
+      "contactName": "David Ng",
+      "contactPhone": "0437 672 779",
       "notes": ""
     },
     {
@@ -151,8 +151,19 @@ window.SITE_DATA = {
       "address": "Eloera Street, Upwey",
       "courtType": "",
       "clubhousePhone": "",
-      "contactName": "Jim Tsorlinis",
-      "contactPhone": "0417 868 363",
+      "contactName": "Sebastian Sutterby",
+      "contactPhone": "0431 387 200",
+      "notes": ""
+    },
+    {
+      "id": "vermont-south",
+      "name": "Vermont South",
+      "melway": "62 G6",
+      "address": "Charlesworth Park, 30a Livingstone Road, Vermont South",
+      "courtType": "",
+      "clubhousePhone": "1300 911 145",
+      "contactName": "Sean Wilkeson",
+      "contactPhone": "0434 700 446",
       "notes": ""
     }
   ],
@@ -271,10 +282,9 @@ window.SITE_DATA = {
     {
       "round": 4,
       "date": "2026-11-07",
-      "home": null,
-      "away": null,
-      "byeDate": true,
-      "note": "Bye"
+      "home": "Berwick",
+      "away": "Vermont South",
+      "byeDate": false
     },
     {
       "round": 5,
@@ -307,10 +317,9 @@ window.SITE_DATA = {
     {
       "round": 9,
       "date": "2026-12-12",
-      "home": null,
-      "away": null,
-      "byeDate": true,
-      "note": "Bye"
+      "home": "Vermont South",
+      "away": "Berwick",
+      "byeDate": false
     },
     {
       "round": null,
@@ -318,7 +327,7 @@ window.SITE_DATA = {
       "home": null,
       "away": null,
       "byeDate": true,
-      "note": "Christmas break \u2014 resumes 30 Jan 27"
+      "note": "Christmas break — resumes 30 Jan 27"
     },
     {
       "round": 10,
@@ -795,8 +804,8 @@ window.SITE_DATA = {
   ],
   "teamRosters": {},
   "remainingFixtures": {
-    "asOfDate": "2026-10-01",
-    "note": "Full 14-round fixture for all 7 teams (plus a bye each round), sourced from trols.org.au fixture pages for every team in AP020.",
+    "asOfDate": "2026-10-17",
+    "note": "Full 14-round fixture for all 8 teams (Vermont South added by WDTA after the original draw, replacing the bye), sourced from trols.org.au fixture pages for every team in AP020.",
     "rounds": [
       {
         "round": 1,
@@ -811,11 +820,14 @@ window.SITE_DATA = {
             "away": "Berwick"
           },
           {
+            "home": "N'hill P'wood Blue",
+            "away": "Vermont South"
+          },
+          {
             "home": "N'hill P'wood White",
             "away": "Upwey South"
           }
-        ],
-        "bye": "N'hill P'wood Blue"
+        ]
       },
       {
         "round": 2,
@@ -832,9 +844,12 @@ window.SITE_DATA = {
           {
             "home": "Upwey South",
             "away": "N'hill P'wood Blue"
+          },
+          {
+            "home": "Vermont South",
+            "away": "N'hill P'wood White"
           }
-        ],
-        "bye": "N'hill P'wood White"
+        ]
       },
       {
         "round": 3,
@@ -851,14 +866,21 @@ window.SITE_DATA = {
           {
             "home": "Upwey South",
             "away": "Berwick"
+          },
+          {
+            "home": "Vermont South",
+            "away": "Essex Heights"
           }
-        ],
-        "bye": "Essex Heights"
+        ]
       },
       {
         "round": 4,
         "date": "2026-11-07",
         "matches": [
+          {
+            "home": "Berwick",
+            "away": "Vermont South"
+          },
           {
             "home": "Centenary Park",
             "away": "N'hill P'wood White"
@@ -871,8 +893,7 @@ window.SITE_DATA = {
             "home": "Essex Heights",
             "away": "Upwey South"
           }
-        ],
-        "bye": "Berwick"
+        ]
       },
       {
         "round": 5,
@@ -889,9 +910,12 @@ window.SITE_DATA = {
           {
             "home": "N'hill P'wood White",
             "away": "Essex Heights"
+          },
+          {
+            "home": "Vermont South",
+            "away": "Upwey South"
           }
-        ],
-        "bye": "Upwey South"
+        ]
       },
       {
         "round": 6,
@@ -908,9 +932,12 @@ window.SITE_DATA = {
           {
             "home": "Upwey South",
             "away": "Eildon Park"
+          },
+          {
+            "home": "Vermont South",
+            "away": "Centenary Park"
           }
-        ],
-        "bye": "Centenary Park"
+        ]
       },
       {
         "round": 7,
@@ -927,9 +954,12 @@ window.SITE_DATA = {
           {
             "home": "N'hill P'wood Blue",
             "away": "Upwey South"
+          },
+          {
+            "home": "N'hill P'wood White",
+            "away": "Vermont South"
           }
-        ],
-        "bye": "N'hill P'wood White"
+        ]
       },
       {
         "round": 8,
@@ -944,11 +974,14 @@ window.SITE_DATA = {
             "away": "Upwey South"
           },
           {
+            "home": "Eildon Park",
+            "away": "Vermont South"
+          },
+          {
             "home": "Essex Heights",
             "away": "N'hill P'wood Blue"
           }
-        ],
-        "bye": "Eildon Park"
+        ]
       },
       {
         "round": 9,
@@ -965,9 +998,12 @@ window.SITE_DATA = {
           {
             "home": "Upwey South",
             "away": "Essex Heights"
+          },
+          {
+            "home": "Vermont South",
+            "away": "Berwick"
           }
-        ],
-        "bye": "Berwick"
+        ]
       },
       {
         "round": 10,
@@ -984,14 +1020,21 @@ window.SITE_DATA = {
           {
             "home": "Essex Heights",
             "away": "N'hill P'wood White"
+          },
+          {
+            "home": "Upwey South",
+            "away": "Vermont South"
           }
-        ],
-        "bye": "Upwey South"
+        ]
       },
       {
         "round": 11,
         "date": "2027-02-06",
         "matches": [
+          {
+            "home": "Centenary Park",
+            "away": "Vermont South"
+          },
           {
             "home": "Eildon Park",
             "away": "Upwey South"
@@ -1004,8 +1047,7 @@ window.SITE_DATA = {
             "home": "N'hill P'wood Blue",
             "away": "N'hill P'wood White"
           }
-        ],
-        "bye": "Centenary Park"
+        ]
       },
       {
         "round": 12,
@@ -1022,9 +1064,12 @@ window.SITE_DATA = {
           {
             "home": "Upwey South",
             "away": "N'hill P'wood White"
+          },
+          {
+            "home": "Vermont South",
+            "away": "N'hill P'wood Blue"
           }
-        ],
-        "bye": "N'hill P'wood Blue"
+        ]
       },
       {
         "round": 13,
@@ -1041,9 +1086,12 @@ window.SITE_DATA = {
           {
             "home": "Upwey South",
             "away": "Centenary Park"
+          },
+          {
+            "home": "Vermont South",
+            "away": "Eildon Park"
           }
-        ],
-        "bye": "Eildon Park"
+        ]
       },
       {
         "round": 14,
@@ -1060,9 +1108,12 @@ window.SITE_DATA = {
           {
             "home": "Eildon Park",
             "away": "N'hill P'wood White"
+          },
+          {
+            "home": "Essex Heights",
+            "away": "Vermont South"
           }
-        ],
-        "bye": "Essex Heights"
+        ]
       }
     ],
     "finals": {
