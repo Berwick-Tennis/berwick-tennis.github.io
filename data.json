@@ -4,8 +4,8 @@
     "section": "Open Singles/Doubles A Reserve 2",
     "sectionCode": "AP020",
     "ourTeam": "Berwick",
-    "lastUpdated": "2026-10-20",
-    "resultsLoadedFromSite": "20th October 26 @ 09:36:50 PM",
+    "lastUpdated": "2026-10-27",
+    "resultsLoadedFromSite": "27th October 26 @ 07:26:11 PM",
     "sourceUrl": "https://www.trols.org.au/wdta/results.php?daytime=AP&section=AP020&style=",
     "fixtureUrl": "https://www.trols.org.au/wdta/fixture.php?daytime=AP&section=AP020&style=",
     "archives": [
@@ -1204,6 +1204,428 @@
               "homeGames": 13,
               "awayGames": 9,
               "winner": "home"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "date": "2026-10-24",
+      "matches": [
+        {
+          "home": "N'hill P'wood Blue",
+          "away": "Centenary Park",
+          "homePts": 8.0,
+          "homeR": 3,
+          "homeS": 6,
+          "homeG": 36,
+          "awayPts": 0.0,
+          "awayR": 0,
+          "awayS": 0,
+          "awayG": 5,
+          "homePlayers": [
+            "Sasha Jain",
+            "Will Jiang"
+          ],
+          "awayPlayers": [
+            "James Emery",
+            "Eddie Schroeder"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Sasha Jain"
+              ],
+              "awayPlayers": [
+                "James Emery"
+              ],
+              "sets": [
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  0
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 0,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Will Jiang"
+              ],
+              "awayPlayers": [
+                "Eddie Schroeder"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 3,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Sasha Jain",
+                "Will Jiang"
+              ],
+              "awayPlayers": [
+                "James Emery",
+                "Eddie Schroeder"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 2,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "home": "Upwey South",
+          "away": "Berwick",
+          "homePts": 3.0,
+          "homeR": 1,
+          "homeS": 3,
+          "homeG": 32,
+          "awayPts": 7.0,
+          "awayR": 2,
+          "awayS": 5,
+          "awayG": 43,
+          "homePlayers": [
+            "Jethro Cousins",
+            "Charlotte Wilson"
+          ],
+          "awayPlayers": [
+            "Soe Min Tun",
+            "Tom Maloney",
+            "Shannon Watson",
+            "John Keecherer"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Jethro Cousins"
+              ],
+              "awayPlayers": [
+                "Soe Min Tun"
+              ],
+              "sets": [
+                [
+                  6,
+                  3
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  2,
+                  6
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 11,
+              "awayGames": 15,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Charlotte Wilson"
+              ],
+              "awayPlayers": [
+                "Tom Maloney"
+              ],
+              "sets": [
+                [
+                  2,
+                  6
+                ],
+                [
+                  3,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 5,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Jethro Cousins",
+                "Charlotte Wilson"
+              ],
+              "awayPlayers": [
+                "Shannon Watson",
+                "John Keecherer"
+              ],
+              "sets": [
+                [
+                  7,
+                  6
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 16,
+              "awayGames": 16,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "home": "Vermont South",
+          "away": "Essex Heights",
+          "homePts": 1.0,
+          "homeR": 0,
+          "homeS": 1,
+          "homeG": 15,
+          "awayPts": 8.0,
+          "awayR": 3,
+          "awayS": 6,
+          "awayG": 37,
+          "homePlayers": [
+            "Barry Jiang",
+            "Owen Jones"
+          ],
+          "awayPlayers": [
+            "Maksim Gigovic",
+            "Mateja Gigovic",
+            "Darko Gigovic"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Barry Jiang"
+              ],
+              "awayPlayers": [
+                "Maksim Gigovic"
+              ],
+              "sets": [
+                [
+                  1,
+                  6
+                ],
+                [
+                  0,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 1,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Owen Jones"
+              ],
+              "awayPlayers": [
+                "Mateja Gigovic"
+              ],
+              "sets": [
+                [
+                  2,
+                  6
+                ],
+                [
+                  0,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 2,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Barry Jiang",
+                "Owen Jones"
+              ],
+              "awayPlayers": [
+                "Mateja Gigovic",
+                "Darko Gigovic"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  3,
+                  6
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 12,
+              "awayGames": 13,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "home": "N'hill P'wood White",
+          "away": "Eildon Park",
+          "homePts": 1.0,
+          "homeR": 0,
+          "homeS": 1,
+          "homeG": 26,
+          "awayPts": 8.0,
+          "awayR": 3,
+          "awayS": 6,
+          "awayG": 40,
+          "homePlayers": [
+            "Lawrence Botton",
+            "Lucas Yip"
+          ],
+          "awayPlayers": [
+            "Tom Robinson",
+            "Stuart King",
+            "Gary Robinson"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Lawrence Botton"
+              ],
+              "awayPlayers": [
+                "Tom Robinson"
+              ],
+              "sets": [
+                [
+                  1,
+                  6
+                ],
+                [
+                  6,
+                  7
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 7,
+              "awayGames": 13,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Lucas Yip"
+              ],
+              "awayPlayers": [
+                "Stuart King"
+              ],
+              "sets": [
+                [
+                  6,
+                  7
+                ],
+                [
+                  6,
+                  2
+                ],
+                [
+                  4,
+                  6
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 16,
+              "awayGames": 15,
+              "winner": "away"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Lawrence Botton",
+                "Lucas Yip"
+              ],
+              "awayPlayers": [
+                "Tom Robinson",
+                "Gary Robinson"
+              ],
+              "sets": [
+                [
+                  1,
+                  6
+                ],
+                [
+                  2,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 3,
+              "awayGames": 12,
+              "winner": "away"
             }
           ]
         }
