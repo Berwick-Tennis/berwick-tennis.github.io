@@ -603,3 +603,5 @@ a.hub-label{text-decoration:none}
 .em-chip{display:inline-block;font-size:.78rem;padding:.1rem .45rem;margin:.1rem .2rem .1rem 0;border-radius:999px;border:1px solid var(--border)}
 tr.em-row-alert td{background:rgba(198,40,40,.12)}
 .team-switch select{width:auto}
+.em-mobile{display:none}
+@media (max-width:640px){.em-wide{display:none}.em-mobile{display:block;margin-top:.25rem;white-space:normal}}

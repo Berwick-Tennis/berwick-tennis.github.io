@@ -128,13 +128,13 @@ function renderEmergencies(club) {
   document.getElementById("emergencies").innerHTML = `
     <p class="muted">${esc(club.emergencyRule)} Counted from the <b>E</b> marks on trols scoresheets, plus any you've added by hand.</p>
     ${rows.length ? `<div class="table-wrap"><table>
-      <thead><tr><th>Player</th><th>Own team</th><th>Used</th><th></th><th>Emergency appearances</th></tr></thead>
+      <thead><tr><th>Player</th><th>Own team</th><th>Used</th><th class="em-wide"></th><th class="em-wide">Emergency appearances</th></tr></thead>
       <tbody>${rows.map(p => `<tr class="${p.emergencyCount >= limit ? "em-row-alert" : ""}">
-        <td><b>${esc(p.name)}</b></td>
+        <td><b>${esc(p.name)}</b><div class="em-mobile">${p.emergencies.map(e => `<span class="em-chip">${fmtDate(e.date)} &middot; ${esc(label(e.team))}${e.source === "manual" ? " ✎" : ""}</span>`).join("")}</div></td>
         <td>${p.homeTeam ? esc(label(p.homeTeam)) : `<span class="muted">Unknown</span>`}${p.homeTeamSource === "manual" ? "" : p.homeTeam ? ` <span class="muted small" title="Worked out from scoresheets — tell Claude if wrong">(auto)</span>` : ""}</td>
         <td><span class="em-count ${cls(p.emergencyCount)}">${p.emergencyCount}/${limit}</span></td>
-        <td>${meter(p.emergencyCount)}</td>
-        <td class="em-list">${p.emergencies.map(e => `<span class="em-chip" title="${esc(e.source === "manual" ? "Added by hand" + (e.note ? " — " + e.note : "") : "From trols scoresheet")}">${fmtDate(e.date)} &middot; ${esc(label(e.team))}${e.opponent ? ` v ${esc(e.opponent)}` : ""}${e.source === "manual" ? " ✎" : ""}</span>`).join("")}</td>
+        <td class="em-wide">${meter(p.emergencyCount)}</td>
+        <td class="em-list em-wide">${p.emergencies.map(e => `<span class="em-chip" title="${esc(e.source === "manual" ? "Added by hand" + (e.note ? " — " + e.note : "") : "From trols scoresheet")}">${fmtDate(e.date)} &middot; ${esc(label(e.team))}${e.opponent ? ` v ${esc(e.opponent)}` : ""}${e.source === "manual" ? " ✎" : ""}</span>`).join("")}</td>
       </tr>`).join("")}</tbody>
     </table></div>` : `<p>No emergency appearances yet this season.</p>`}
     <p class="muted small">Amber = one left before the limit; red = at the limit (any further emergency game rules them out of their own section). To record a fill-in that isn't on a scoresheet, or correct someone's own team, tell Claude.</p>`;
