@@ -1,6 +1,6 @@
 # Berwick Tennis Club — WDTA Saturday PM site
 
-Live: https://davidthurmond-gif.github.io/berwick-a-reserve-4/
+Live: https://berwick-tennis.github.io/
 
 ## Layout
 - `index.html` + `hub.js` — **club home**: next round for every Berwick team, ladder positions, emergency tracker, club players.

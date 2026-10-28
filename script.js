@@ -58,7 +58,7 @@ async function saveNotesToGitHub() {
     pat = pat.trim();
   }
 
-  const repo = "davidthurmond-gif/berwick-a-reserve-4";
+  const repo = "Berwick-Tennis/berwick-tennis.github.io";
   const filePath = (DATA.meta && DATA.meta.dataPath) || "data.json";
   const apiBase = `https://api.github.com/repos/${repo}/contents/${filePath}`;
   const headers = { "Authorization": `token ${pat}`, "Content-Type": "application/json" };
