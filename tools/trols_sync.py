@@ -315,7 +315,7 @@ def sync_team(cfg, club_manual, refetch=False):
         for m in rnd["matches"]:
             p = prev.get(m["matchId"])
             if p and p.get("rubbers") and not refetch:
-                for k in ("homePlayers", "awayPlayers", "homeEmergencies", "awayEmergencies", "rubbers"):
+                for k in ("homePlayers", "awayPlayers", "homePositions", "awayPositions", "homeEmergencies", "awayEmergencies", "rubbers"):
                     m[k] = p.get(k, [])
             elif m["matchId"]:
                 home, away, rr, totals = parse_match(fetch(f"match_popup.php?matchid={m['matchId']}&seasonid="))
