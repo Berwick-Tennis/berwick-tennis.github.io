@@ -1,6 +1,10 @@
-/* Berwick Saturday Comp site logic — current season (archived seasons live in sub-folders, e.g. winter-2026/) */
+/* Berwick Tennis Club — team page logic, shared by every team under teams/<slug>/ (club hub: index.html + hub.js).
+   Archived seasons keep their own copy (e.g. winter-2026/). */
 
-const OVERRIDES_KEY = "berwickComp_summer2627_overrides_v1";
+function overridesKey() {
+  const m = (window.SITE_DATA && window.SITE_DATA.meta) || {};
+  return m.overridesKey || `berwickComp_${m.sectionCode || "team"}_overrides_v1`;
+}
 const PREV_OVERRIDES_KEY = "berwickComp_overrides_v1"; // Winter 2026 (archived) — roster UTR/contact edits carried over once
 const PAT_KEY = "berwickComp_ghPat";
 const OUR_TEAM = "Berwick";
@@ -12,11 +16,11 @@ function loadOverrides() {
   // Seed playerNotes from data.json (committed notes available on all devices)
   const siteNotes = (window.SITE_DATA && window.SITE_DATA.playerNotes) || {};
   try {
-    let raw = localStorage.getItem(OVERRIDES_KEY);
+    let raw = localStorage.getItem(overridesKey());
     let parsed = raw ? JSON.parse(raw) : null;
     if (!parsed) {
       // First visit this season: carry over roster edits (UTR, mobile, email) and player notes from last season
-      const prev = JSON.parse(localStorage.getItem(PREV_OVERRIDES_KEY) || "{}");
+      const prev = (window.SITE_DATA.meta.sectionCode === "AP020") ? JSON.parse(localStorage.getItem(PREV_OVERRIDES_KEY) || "{}") : {};
       parsed = { roster: prev.roster || {}, clubs: {}, playerNotes: prev.playerNotes || {} };
     }
     // Merge: site notes are the base, local edits (localStorage) sit on top
@@ -32,7 +36,7 @@ function loadOverrides() {
 }
 
 function saveOverrides() {
-  localStorage.setItem(OVERRIDES_KEY, JSON.stringify(OVERRIDES));
+  localStorage.setItem(overridesKey(), JSON.stringify(OVERRIDES));
 }
 
 /* ---------------- Save notes to GitHub (cross-device persistence) ---------------- */
@@ -55,7 +59,7 @@ async function saveNotesToGitHub() {
   }
 
   const repo = "davidthurmond-gif/berwick-a-reserve-4";
-  const filePath = "data.json";
+  const filePath = (DATA.meta && DATA.meta.dataPath) || "data.json";
   const apiBase = `https://api.github.com/repos/${repo}/contents/${filePath}`;
   const headers = { "Authorization": `token ${pat}`, "Content-Type": "application/json" };
 
@@ -91,7 +95,7 @@ async function saveNotesToGitHub() {
     if (!putRes.ok) throw new Error(`GitHub PUT data.json failed: ${putRes.status}`);
 
     // Also commit data.js (the file the site actually loads)
-    const jsApiBase = `https://api.github.com/repos/${repo}/contents/data.js`;
+    const jsApiBase = `https://api.github.com/repos/${repo}/contents/${filePath.replace(/\.json$/, ".js")}`;
     const getJs = await fetch(jsApiBase, { headers });
     if (!getJs.ok) throw new Error(`GitHub GET data.js failed: ${getJs.status}`);
     const jsFile = await getJs.json();
@@ -161,13 +165,18 @@ function slug(s) {
 
 // DATA.availability = { "YYYY-MM-DD": { "Player Name": { status: "out" | "maybe", note: "" } } }
 // Anyone on the roster not listed for a date is assumed available.
+// Regular team members (emergency fill-ins from other teams aren't part of availability)
+function regulars() {
+  return DATA.roster.filter(p => !p.emergency);
+}
+
 function playersNeeded() {
   return (DATA.meta && DATA.meta.playersNeeded) || 3;
 }
 
 function availabilityFor(date) {
   const byDate = (DATA.availability && DATA.availability[date]) || {};
-  const roster = [...DATA.roster].sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
+  const roster = regulars().sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
   const out = { available: [], maybe: [], out: [] };
   roster.forEach(p => {
     const entry = byDate[p.name];
@@ -194,11 +203,11 @@ function availabilityChips(date, opts = {}) {
     if (a.out.length) bits.push(`<span class="avail-note no">Out: ${a.out.map(p => escapeHtml(firstName(p.name))).join(", ")}</span>`);
     if (a.maybe.length) bits.push(`<span class="avail-note maybe">TBC: ${a.maybe.map(p => escapeHtml(firstName(p.name))).join(", ")}</span>`);
     if (!bits.length) bits.push(`<span class="avail-note muted">All available</span>`);
-    return `<div class="avail-compact" title="${escapeAttr("Available: " + a.available.map(p => p.name).join(", "))}"><span class="avail-count ${status}">${confirmed}/${DATA.roster.length}</span> ${bits.join(" ")}</div>`;
+    return `<div class="avail-compact" title="${escapeAttr("Available: " + a.available.map(p => p.name).join(", "))}"><span class="avail-count ${status}">${confirmed}/${regulars().length}</span> ${bits.join(" ")}</div>`;
   }
   return `
     <div class="avail-wrap">
-      <span class="avail-count ${status}" title="${confirmed} confirmed of ${DATA.roster.length}; ${need} needed">${confirmed}/${DATA.roster.length}</span>
+      <span class="avail-count ${status}" title="${confirmed} confirmed of ${regulars().length}; ${need} needed">${confirmed}/${regulars().length}</span>
       ${a.available.map(p => chip(p, "yes", "")).join("")}
       ${a.maybe.map(p => chip(p, "maybe", "? ")).join("")}
       ${a.out.map(p => chip(p, "no", "")).join("")}
@@ -213,7 +222,7 @@ function playingDates() {
 function renderAvailabilityGrid() {
   const el = document.getElementById("availability-grid");
   if (!el) return;
-  const roster = [...DATA.roster].sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
+  const roster = regulars().sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
   const today = todayISO();
   const rows = playingDates().map(s => {
     const byDate = (DATA.availability && DATA.availability[s.date]) || {};
@@ -259,7 +268,7 @@ function lineupBlock(date) {
   const byDate = (DATA.availability && DATA.availability[date]) || {};
   const others = l ? [...DATA.roster]
     .sort((a, b) => (a.order ?? 999) - (b.order ?? 999))
-    .filter(p => !picked.includes(p.name))
+    .filter(p => !picked.includes(p.name) && !p.emergency)
     .map(p => {
       const e = byDate[p.name];
       const status = e ? (e.status === "out" ? (e.note || "Unavailable") : `TBC${e.note ? " — " + e.note : ""}`) : "Reserve";
@@ -781,6 +790,48 @@ function todayISO() {
   return d.toISOString().slice(0, 10);
 }
 
+/* ---------------- Club context (club.js) ---------------- */
+
+function clubData() { return window.CLUB_DATA || null; }
+
+function clubEmergencyCell(name) {
+  const c = clubData();
+  const p = c && c.players && c.players[canonName(name)];
+  const limit = (c && c.emergencyLimit) || 3;
+  if (!p) return `<span class="muted">-</span>`;
+  const n = p.emergencyCount || 0;
+  const cls = n > limit ? "over" : n === limit ? "limit" : n === limit - 1 ? "warn" : n ? "ok" : "none";
+  const tip = (p.emergencies || []).map(e => `${e.date} ${teamLabel(e.team)} v ${e.opponent || ""}`).join("\n");
+  return `<span class="em-count ${cls}" title="${escapeAttr(tip || "No emergency appearances")}">${n}/${limit}</span>`;
+}
+
+function teamLabel(slug) {
+  const c = clubData();
+  const t = c && (c.teams || []).find(x => x.slug === slug);
+  return t ? t.label : slug;
+}
+
+function fillPageChrome() {
+  const m = DATA.meta || {};
+  const label = m.label || sectionShort();
+  document.title = `Berwick ${label} — ${m.competition || ""}`;
+  const sub = document.getElementById("page-sub");
+  if (sub) sub.innerHTML = `${escapeHtml(m.competition || "")} &middot; ${escapeHtml(m.section || "")}`;
+  document.querySelectorAll(".sec-short").forEach(el => el.textContent = sectionShort());
+  const sw = document.getElementById("team-switch");
+  const c = clubData();
+  if (sw && c) {
+    sw.innerHTML = `<option value="../../">Club home</option>` + c.teams.map(t =>
+      `<option value="../${t.slug}/"${t.slug === m.slug ? " selected" : ""}>${escapeHtml(t.label)} — ${escapeHtml(t.sectionName.replace("Open Singles/Doubles ", ""))}</option>`).join("");
+    sw.addEventListener("change", () => { location.href = sw.value + location.hash; });
+  } else if (sw) sw.parentElement.style.display = "none";
+  const f = document.getElementById("page-footer");
+  if (f) {
+    const arch = (m.archives || []).map(a => `<a href="${a.path}">${escapeHtml(a.label)}</a>`).join(" &middot; ");
+    f.innerHTML = `Berwick ${escapeHtml(label)} &middot; ${escapeHtml(m.competition || "")} &middot; Data from <a href="${m.sourceUrl}" target="_blank" rel="noopener">trols.org.au</a> &middot; Updated weekly (Wednesdays)<br><a href="../../">← All Berwick teams</a>${arch ? ` &middot; Past seasons: ${arch}` : ""}`;
+  }
+}
+
 function sectionShort() {
   return ((DATA.meta && DATA.meta.section) || "").replace("Open Singles/Doubles ", "");
 }
@@ -1260,7 +1311,7 @@ function renderRoster() {
     <div class="table-wrap">
     <table>
       <thead>
-        <tr><th></th><th>Player</th><th>Order</th><th>Played</th><th>Mobile</th><th>Email</th><th>UTR Singles</th><th>UTR Doubles</th></tr>
+        <tr><th></th><th>Player</th><th>Order</th><th>Played</th><th title="Times played as an emergency for another Berwick team this season (club-wide)">Emerg. elsewhere</th><th>Mobile</th><th>Email</th><th>UTR Singles</th><th>UTR Doubles</th></tr>
       </thead>
       <tbody>
         ${sortedRoster.map(p => `
@@ -1269,6 +1320,7 @@ function renderRoster() {
             <td>${escapeHtml(p.name)}</td>
             <td>${p.order ?? "-"}</td>
             <td>${p.played}</td>
+            <td>${clubEmergencyCell(p.name)}</td>
             <td><input type="text" class="editable roster-contact" data-name="${escapeAttr(p.name)}" data-field="mobile" placeholder="Mobile" value="${escapeAttr(p.mobile || "")}"></td>
             <td><input type="text" class="editable roster-contact" data-name="${escapeAttr(p.name)}" data-field="email" placeholder="Email" value="${escapeAttr(p.email || "")}"></td>
             <td><input type="text" class="editable roster-utr utr-input" data-name="${escapeAttr(p.name)}" data-field="utrSingles" placeholder="e.g. 7.50 or 5.xx" value="${escapeAttr(p.utrSingles ?? "")}"></td>
@@ -1501,6 +1553,7 @@ async function init() {
   DATA = window.SITE_DATA;
   OVERRIDES = loadOverrides();
   applyOverrides();
+  fillPageChrome();
 
   document.getElementById("last-updated").textContent =
     `Results loaded: ${DATA.meta.resultsLoadedFromSite || DATA.meta.lastUpdated}`;

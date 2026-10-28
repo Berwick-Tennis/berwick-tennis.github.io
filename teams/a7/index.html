@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berwick Tennis Club</title>
+  <link rel="stylesheet" href="../../style.css?v=202610281200">
+</head>
+<body>
+  <header>
+    <h1><a class="home-link" href="../../">🎾 Berwick Tennis Club</a></h1>
+    <div class="team-switch"><select id="team-switch" aria-label="Switch team"></select></div>
+    <div class="sub" id="page-sub">&nbsp;</div>
+    <div class="updated" id="last-updated">Results loaded: —</div>
+  </header>
+
+  <nav>
+    <button class="active" data-tab="dashboard">Dashboard</button>
+    <button data-tab="ladder">Ladder</button>
+    <button data-tab="finals">Finals</button>
+    <button data-tab="results">Results</button>
+    <button data-tab="players">Players</button>
+    <button data-tab="stats">Stats</button>
+    <button data-tab="schedule">Schedule</button>
+    <button data-tab="venues">Venues</button>
+    <button data-tab="roster">Berwick</button>
+  </nav>
+
+  <main>
+    <section id="dashboard" class="tab active">
+      <div class="card">
+        <h2>Next Match</h2>
+        <div id="next-match">Loading…</div>
+      </div>
+      <div class="card">
+        <h2>Ladder Snapshot</h2>
+        <div id="ladder-snapshot">Loading…</div>
+        <p class="finals-note muted"><span class="swatch"></span>Line marks the top 4 — finals qualification cutoff.</p>
+      </div>
+    </section>
+
+    <section id="ladder" class="tab">
+      <div class="card">
+        <h2>Ladder — <span class="sec-short"></span></h2>
+        <div id="ladder-table">Loading…</div>
+        <p class="finals-note muted"><span class="swatch"></span>Line marks the top 4 — finals qualification cutoff.</p>
+      </div>
+    </section>
+
+    <section id="finals" class="tab">
+      <h2 style="margin-top:0;">Run Home to Finals</h2>
+      <p class="muted">Top 4 make the finals; 1st and 2nd host the semi final. Ranked by the average current ladder points of each team's remaining opponents — lower means an easier run home. Updates automatically from the ladder and fixture data below.</p>
+      <div id="finals-content">Loading…</div>
+    </section>
+
+    <section id="results" class="tab">
+      <h2 style="margin-top:0;">Results</h2>
+      <div class="card">
+        <h3>Ladder points progression</h3>
+        <div id="results-chart">Loading…</div>
+      </div>
+      <div id="results-list">Loading…</div>
+    </section>
+
+    <section id="players" class="tab">
+      <div class="card">
+        <h2>Players — <span class="sec-short"></span></h2>
+        <p class="muted">Win/loss records, sets and games for every player across every team in the section, compiled from each round's rubber-by-rubber results. UTR and Emergency columns apply to Berwick players. Click a player's name to view or edit scouting notes.</p>
+        <div class="opponent-select">
+          <label class="muted">Filter by team</label>
+          <select id="players-team"></select>
+        </div>
+        <div id="players-table">Loading…</div>
+      </div>
+      <div id="player-notes-section"></div>
+    </section>
+
+    <section id="stats" class="tab">
+      <div class="card">
+        <h2>Stats — Player Rankings</h2>
+        <p class="muted">Players ranked by win % (min. 1 rubber played) and UTR (Berwick roster, masked values where ratings aren't public).</p>
+      </div>
+      <div class="card">
+        <h3>Ranking</h3>
+        <div class="stats-toggle" id="stats-toggle">
+          <button class="btn secondary active" data-mode="singles">Singles</button>
+          <button class="btn secondary" data-mode="doubles">Doubles</button>
+        </div>
+        <div id="stats-ranking">Loading…</div>
+      </div>
+      <div class="card">
+        <h3>Berwick games %</h3>
+        <div id="stats-utr">Loading…</div>
+      </div>
+    </section>
+
+    <section id="schedule" class="tab">
+      <div class="card">
+        <h2>Season Schedule</h2>
+        <div id="schedule-table">Loading…</div>
+      </div>
+    </section>
+
+    <section id="venues" class="tab">
+      <h2 style="margin-top:0;">Clubs &amp; Venues</h2>
+      <div id="venues-list">Loading…</div>
+    </section>
+
+    <section id="roster" class="tab">
+      <div class="card">
+        <h2>Berwick Roster</h2>
+        <div class="actions-row">
+          <button class="btn secondary" id="export-btn">Export notes (JSON)</button>
+          <label class="btn secondary" style="cursor:pointer;">
+            Import notes
+            <input type="file" id="import-input" accept="application/json" style="display:none;">
+          </label>
+          <button class="btn danger" id="clear-pat-btn">Clear GitHub token</button>
+        </div>
+        <div id="roster-table">Loading…</div>
+      </div>
+      <div class="card">
+        <h2>Availability</h2>
+        <div id="availability-grid">Loading…</div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="page-footer">&nbsp;</footer>
+
+  <script src="../../club.js?v=202610281200"></script>
+  <script src="data.js?v=202610281200"></script>
+  <script src="../../script.js?v=202610281200"></script>
+</body>
+</html>

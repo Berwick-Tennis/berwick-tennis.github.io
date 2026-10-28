@@ -1,0 +1,2109 @@
+{
+  "meta": {
+    "club": "Berwick",
+    "slug": "a10",
+    "label": "A10",
+    "competition": "Saturday PM - Summer 26/27",
+    "section": "Open Singles/Doubles A 10",
+    "sectionCode": "AP012",
+    "teamCode": "AP089",
+    "ourTeam": "Berwick",
+    "lastUpdated": "2026-10-28",
+    "resultsLoadedFromSite": "27th October 26 @ 07:26:11 PM",
+    "sourceUrl": "https://www.trols.org.au/wdta/results.php?daytime=AP&section=AP012&style=",
+    "fixtureUrl": "https://www.trols.org.au/wdta/fixture.php?daytime=AP&section=AP012&style=",
+    "dataPath": "teams/a10/data.json",
+    "playersNeeded": 3,
+    "overridesKey": "berwickComp_AP012_overrides_v1"
+  },
+  "teams": [
+    "Berwick",
+    "Burwood",
+    "Langwarrin",
+    "MCC Glen Iris",
+    "Mayfield Park Blue",
+    "Mayfield Park Red",
+    "N'hill P'wood",
+    "Wellington"
+  ],
+  "clubs": [
+    {
+      "id": "berwick",
+      "name": "Berwick",
+      "melway": "111 F6",
+      "address": "Arch Brown Reserve, Buchanan Road, Berwick",
+      "courtType": "",
+      "clubhousePhone": "9796 1698",
+      "contactName": "David Ng",
+      "contactPhone": "0437 672 779",
+      "notes": ""
+    },
+    {
+      "id": "burwood",
+      "name": "Burwood",
+      "melway": "60 G7",
+      "address": "Warrigal Rd, Burwood Reserve. Enter via Queens Pde, Glen Iris",
+      "courtType": "",
+      "clubhousePhone": "",
+      "contactName": "Tim Shackleton",
+      "contactPhone": "0411 299 017",
+      "notes": ""
+    },
+    {
+      "id": "langwarrin",
+      "name": "Langwarrin",
+      "melway": "103 H4",
+      "address": "13 Shute Drive, Langwarrin 3910, Langwarrin",
+      "courtType": "",
+      "clubhousePhone": "0408 123 240",
+      "contactName": "Peter Dawson",
+      "contactPhone": "0424 647 579",
+      "notes": ""
+    },
+    {
+      "id": "mcc-glen-iris",
+      "name": "MCC Glen Iris",
+      "melway": "61 C11",
+      "address": "260-270 High Street Road, Opposite Surrey Road, Mount Waverley",
+      "courtType": "",
+      "clubhousePhone": "9807 7755",
+      "contactName": "Angelo Giampaolo",
+      "contactPhone": "0407 477 798",
+      "notes": ""
+    },
+    {
+      "id": "mayfield-park-blue",
+      "name": "Mayfield Park Blue",
+      "melway": "70 B4",
+      "address": "34 - 38 Mayfield Drive, Mount Waverley",
+      "courtType": "",
+      "clubhousePhone": "",
+      "contactName": "Brad Hasler",
+      "contactPhone": "0417 327 880",
+      "notes": ""
+    },
+    {
+      "id": "mayfield-park-red",
+      "name": "Mayfield Park Red",
+      "melway": "70 B4",
+      "address": "34 - 38 Mayfield Drive, Mount Waverley",
+      "courtType": "",
+      "clubhousePhone": "",
+      "contactName": "Brad Hasler",
+      "contactPhone": "0417 327 880",
+      "notes": ""
+    },
+    {
+      "id": "n-hill-p-wood",
+      "name": "N'hill P'wood",
+      "melway": "70 K6",
+      "address": "1 - 9 Baker Avenue, (Off Herriotts Blvd), Glen Waverley",
+      "courtType": "",
+      "clubhousePhone": "9560 1533",
+      "contactName": "Tony Mallios",
+      "contactPhone": "0411 801 211",
+      "notes": ""
+    },
+    {
+      "id": "wellington",
+      "name": "Wellington",
+      "melway": "80 F5",
+      "address": "27 Rupert Drive, Via entry to Southern Reserve, Mulgrave",
+      "courtType": "",
+      "clubhousePhone": "0419 564 506",
+      "contactName": "Nick Hetrelezis",
+      "contactPhone": "0439 898 616",
+      "notes": ""
+    }
+  ],
+  "roster": [
+    {
+      "mobile": "",
+      "email": "",
+      "gender": "",
+      "dob": "",
+      "grade": "",
+      "utrId": null,
+      "utrSingles": null,
+      "utrSinglesReliability": null,
+      "utrDoubles": null,
+      "utrDoublesReliability": null,
+      "name": "Ben Holmes",
+      "played": 2,
+      "emergencyApps": 0,
+      "order": 1,
+      "emergency": false
+    },
+    {
+      "mobile": "",
+      "email": "",
+      "gender": "",
+      "dob": "",
+      "grade": "",
+      "utrId": null,
+      "utrSingles": null,
+      "utrSinglesReliability": null,
+      "utrDoubles": null,
+      "utrDoublesReliability": null,
+      "name": "Vignesh Pakkiam",
+      "played": 2,
+      "emergencyApps": 0,
+      "order": 1,
+      "emergency": false
+    },
+    {
+      "mobile": "",
+      "email": "",
+      "gender": "",
+      "dob": "",
+      "grade": "",
+      "utrId": null,
+      "utrSingles": null,
+      "utrSinglesReliability": null,
+      "utrDoubles": null,
+      "utrDoublesReliability": null,
+      "name": "Huss Shafai",
+      "played": 2,
+      "emergencyApps": 0,
+      "order": 2,
+      "emergency": false
+    },
+    {
+      "mobile": "",
+      "email": "",
+      "gender": "",
+      "dob": "",
+      "grade": "",
+      "utrId": null,
+      "utrSingles": null,
+      "utrSinglesReliability": null,
+      "utrDoubles": null,
+      "utrDoublesReliability": null,
+      "name": "Tom Maloney",
+      "played": 1,
+      "emergencyApps": 1,
+      "order": null,
+      "emergency": true
+    }
+  ],
+  "schedule": [
+    {
+      "round": 1,
+      "date": "2026-10-10",
+      "home": "Berwick",
+      "away": "Langwarrin",
+      "byeDate": false
+    },
+    {
+      "round": 2,
+      "date": "2026-10-17",
+      "home": "MCC Glen Iris",
+      "away": "Berwick",
+      "byeDate": false
+    },
+    {
+      "round": 3,
+      "date": "2026-10-24",
+      "home": "Wellington",
+      "away": "Berwick",
+      "byeDate": false
+    },
+    {
+      "round": null,
+      "date": "2026-10-31",
+      "home": null,
+      "away": null,
+      "byeDate": true,
+      "note": "No Play"
+    },
+    {
+      "round": 4,
+      "date": "2026-11-07",
+      "home": "Berwick",
+      "away": "N'hill P'wood",
+      "byeDate": false
+    },
+    {
+      "round": 5,
+      "date": "2026-11-14",
+      "home": "Burwood",
+      "away": "Berwick",
+      "byeDate": false
+    },
+    {
+      "round": 6,
+      "date": "2026-11-21",
+      "home": "Mayfield Park Blue",
+      "away": "Berwick",
+      "byeDate": false
+    },
+    {
+      "round": 7,
+      "date": "2026-11-28",
+      "home": "Berwick",
+      "away": "MCC Glen Iris",
+      "byeDate": false
+    },
+    {
+      "round": 8,
+      "date": "2026-12-05",
+      "home": "Berwick",
+      "away": "Mayfield Park Red",
+      "byeDate": false
+    },
+    {
+      "round": 9,
+      "date": "2026-12-12",
+      "home": "N'hill P'wood",
+      "away": "Berwick",
+      "byeDate": false
+    },
+    {
+      "round": null,
+      "date": "2026-12-19",
+      "home": null,
+      "away": null,
+      "byeDate": true,
+      "note": "Christmas break — resumes 30 Jan 27"
+    },
+    {
+      "round": 10,
+      "date": "2027-01-30",
+      "home": "Berwick",
+      "away": "Burwood",
+      "byeDate": false
+    },
+    {
+      "round": 11,
+      "date": "2027-02-06",
+      "home": "Berwick",
+      "away": "Mayfield Park Blue",
+      "byeDate": false
+    },
+    {
+      "round": 12,
+      "date": "2027-02-13",
+      "home": "Langwarrin",
+      "away": "Berwick",
+      "byeDate": false
+    },
+    {
+      "round": 13,
+      "date": "2027-02-20",
+      "home": "Mayfield Park Red",
+      "away": "Berwick",
+      "byeDate": false
+    },
+    {
+      "round": 14,
+      "date": "2027-02-27",
+      "home": "Berwick",
+      "away": "Wellington",
+      "byeDate": false
+    },
+    {
+      "round": null,
+      "date": "2027-03-06",
+      "home": null,
+      "away": null,
+      "byeDate": false,
+      "note": "FinalsNo Play"
+    },
+    {
+      "round": "SF",
+      "date": "2027-03-13",
+      "home": null,
+      "away": null,
+      "byeDate": false,
+      "note": "Semi Final"
+    },
+    {
+      "round": "GF",
+      "date": "2027-03-20",
+      "home": null,
+      "away": null,
+      "byeDate": false,
+      "note": "Grand Final"
+    }
+  ],
+  "results": [
+    {
+      "round": 1,
+      "date": "2026-10-10",
+      "matches": [
+        {
+          "matchId": "AP012011",
+          "home": "N'hill P'wood",
+          "away": "Mayfield Park Red",
+          "homePts": 8.0,
+          "homeR": 3,
+          "homeS": 6,
+          "homeG": 41,
+          "awayPts": 1.0,
+          "awayR": 0,
+          "awayS": 1,
+          "awayG": 27,
+          "homePlayers": [
+            "Max Nguyen",
+            "Eliot Lee",
+            "Dao Trinh"
+          ],
+          "awayPlayers": [
+            "Daniel Baroudi",
+            "Henry Wilde",
+            "Ashleigh Hasler"
+          ],
+          "homePositions": {
+            "Max Nguyen": 1,
+            "Eliot Lee": 2,
+            "Dao Trinh": 3
+          },
+          "awayPositions": {
+            "Daniel Baroudi": 1,
+            "Henry Wilde": 2,
+            "Ashleigh Hasler": 3
+          },
+          "homeEmergencies": [
+            "Eliot Lee"
+          ],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Max Nguyen"
+              ],
+              "awayPlayers": [
+                "Daniel Baroudi"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  7,
+                  5
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 13,
+              "awayGames": 7,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Eliot Lee"
+              ],
+              "awayPlayers": [
+                "Henry Wilde"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  2,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 15,
+              "awayGames": 13,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Max Nguyen",
+                "Dao Trinh"
+              ],
+              "awayPlayers": [
+                "Daniel Baroudi",
+                "Ashleigh Hasler"
+              ],
+              "sets": [
+                [
+                  7,
+                  5
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 13,
+              "awayGames": 7,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "matchId": "AP012012",
+          "home": "Burwood",
+          "away": "MCC Glen Iris",
+          "homePts": 2.0,
+          "homeR": 1,
+          "homeS": 2,
+          "homeG": 22,
+          "awayPts": 6.0,
+          "awayR": 2,
+          "awayS": 4,
+          "awayG": 30,
+          "homePlayers": [
+            "Brendon Deng",
+            "Sudhansu Barkataki"
+          ],
+          "awayPlayers": [
+            "Heath Kamphuis",
+            "Tihana Razumic"
+          ],
+          "homePositions": {
+            "Brendon Deng": 1,
+            "Sudhansu Barkataki": 2
+          },
+          "awayPositions": {
+            "Heath Kamphuis": 1,
+            "Tihana Razumic": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Brendon Deng"
+              ],
+              "awayPlayers": [
+                "Heath Kamphuis"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 6,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Sudhansu Barkataki"
+              ],
+              "awayPlayers": [
+                "Tihana Razumic"
+              ],
+              "sets": [
+                [
+                  3,
+                  6
+                ],
+                [
+                  0,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 3,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Brendon Deng",
+                "Sudhansu Barkataki"
+              ],
+              "awayPlayers": [
+                "Heath Kamphuis",
+                "Tihana Razumic"
+              ],
+              "sets": [
+                [
+                  4,
+                  6
+                ],
+                [
+                  3,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 7,
+              "awayGames": 12,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "matchId": "AP012013",
+          "home": "Berwick",
+          "away": "Langwarrin",
+          "homePts": 8.0,
+          "homeR": 3,
+          "homeS": 6,
+          "homeG": 43,
+          "awayPts": 2.0,
+          "awayR": 0,
+          "awayS": 2,
+          "awayG": 34,
+          "homePlayers": [
+            "Vignesh Pakkiam",
+            "Huss Shafai",
+            "Tom Maloney"
+          ],
+          "awayPlayers": [
+            "Jack Smith",
+            "Ben Kirchert"
+          ],
+          "homePositions": {
+            "Vignesh Pakkiam": 1,
+            "Huss Shafai": 2,
+            "Tom Maloney": 3
+          },
+          "awayPositions": {
+            "Jack Smith": 1,
+            "Ben Kirchert": 2
+          },
+          "homeEmergencies": [
+            "Tom Maloney"
+          ],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Vignesh Pakkiam"
+              ],
+              "awayPlayers": [
+                "Jack Smith"
+              ],
+              "sets": [
+                [
+                  6,
+                  4
+                ],
+                [
+                  6,
+                  3
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 7,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Huss Shafai"
+              ],
+              "awayPlayers": [
+                "Ben Kirchert"
+              ],
+              "sets": [
+                [
+                  7,
+                  5
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 16,
+              "awayGames": 15,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Huss Shafai",
+                "Tom Maloney"
+              ],
+              "awayPlayers": [
+                "Jack Smith",
+                "Ben Kirchert"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 15,
+              "awayGames": 12,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "matchId": "AP012014",
+          "home": "Wellington",
+          "away": "Mayfield Park Blue",
+          "homePts": 7.0,
+          "homeR": 2,
+          "homeS": 5,
+          "homeG": 42,
+          "awayPts": 2.0,
+          "awayR": 1,
+          "awayS": 2,
+          "awayG": 29,
+          "homePlayers": [
+            "Jerome Sallai",
+            "Nick Hetrelezis"
+          ],
+          "awayPlayers": [
+            "Adam Majdan",
+            "Sanjeet Mihiripenna"
+          ],
+          "homePositions": {
+            "Jerome Sallai": 1,
+            "Nick Hetrelezis": 2
+          },
+          "awayPositions": {
+            "Adam Majdan": 1,
+            "Sanjeet Mihiripenna": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [
+            "Sanjeet Mihiripenna"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Jerome Sallai"
+              ],
+              "awayPlayers": [
+                "Adam Majdan"
+              ],
+              "sets": [
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 1,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Nick Hetrelezis"
+              ],
+              "awayPlayers": [
+                "Sanjeet Mihiripenna"
+              ],
+              "sets": [
+                [
+                  7,
+                  5
+                ],
+                [
+                  7,
+                  5
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 14,
+              "awayGames": 10,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Jerome Sallai",
+                "Nick Hetrelezis"
+              ],
+              "awayPlayers": [
+                "Adam Majdan",
+                "Sanjeet Mihiripenna"
+              ],
+              "sets": [
+                [
+                  6,
+                  7
+                ],
+                [
+                  7,
+                  5
+                ],
+                [
+                  3,
+                  6
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 16,
+              "awayGames": 18,
+              "winner": "away"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "date": "2026-10-17",
+      "matches": [
+        {
+          "matchId": "AP012021",
+          "home": "Langwarrin",
+          "away": "Burwood",
+          "homePts": 6.0,
+          "homeR": 2,
+          "homeS": 4,
+          "homeG": 33,
+          "awayPts": 3.0,
+          "awayR": 1,
+          "awayS": 3,
+          "awayG": 28,
+          "homePlayers": [
+            "Jack Smith",
+            "Ben Kirchert"
+          ],
+          "awayPlayers": [
+            "Brendon Deng",
+            "Sudhansu Barkataki"
+          ],
+          "homePositions": {
+            "Jack Smith": 1,
+            "Ben Kirchert": 2
+          },
+          "awayPositions": {
+            "Brendon Deng": 1,
+            "Sudhansu Barkataki": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Jack Smith"
+              ],
+              "awayPlayers": [
+                "Brendon Deng"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  7,
+                  5
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 13,
+              "awayGames": 6,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Ben Kirchert"
+              ],
+              "awayPlayers": [
+                "Sudhansu Barkataki"
+              ],
+              "sets": [
+                [
+                  4,
+                  6
+                ],
+                [
+                  2,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 6,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Jack Smith",
+                "Ben Kirchert"
+              ],
+              "awayPlayers": [
+                "Brendon Deng",
+                "Sudhansu Barkataki"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  2,
+                  6
+                ],
+                [
+                  6,
+                  3
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 14,
+              "awayGames": 10,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "matchId": "AP012022",
+          "home": "Mayfield Park Blue",
+          "away": "N'hill P'wood",
+          "homePts": 6.0,
+          "homeR": 2,
+          "homeS": 4,
+          "homeG": 29,
+          "awayPts": 2.0,
+          "awayR": 1,
+          "awayS": 2,
+          "awayG": 24,
+          "homePlayers": [
+            "Adam Majdan",
+            "Daniel Baroudi"
+          ],
+          "awayPlayers": [
+            "Dao Trinh",
+            "Tom Wood",
+            "Eliot Lee"
+          ],
+          "homePositions": {
+            "Adam Majdan": 1,
+            "Daniel Baroudi": 2
+          },
+          "awayPositions": {
+            "Dao Trinh": 1,
+            "Tom Wood": 2,
+            "Eliot Lee": 3
+          },
+          "homeEmergencies": [
+            "Daniel Baroudi"
+          ],
+          "awayEmergencies": [
+            "Tom Wood",
+            "Eliot Lee"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Adam Majdan"
+              ],
+              "awayPlayers": [
+                "Dao Trinh"
+              ],
+              "sets": [
+                [
+                  6,
+                  3
+                ],
+                [
+                  6,
+                  3
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 6,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Daniel Baroudi"
+              ],
+              "awayPlayers": [
+                "Tom Wood"
+              ],
+              "sets": [
+                [
+                  2,
+                  6
+                ],
+                [
+                  3,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 5,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Adam Majdan",
+                "Daniel Baroudi"
+              ],
+              "awayPlayers": [
+                "Tom Wood",
+                "Eliot Lee"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 6,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "matchId": "AP012023",
+          "home": "Mayfield Park Red",
+          "away": "Wellington",
+          "homePts": 0.0,
+          "homeR": 0,
+          "homeS": 0,
+          "homeG": 11,
+          "awayPts": 8.0,
+          "awayR": 3,
+          "awayS": 6,
+          "awayG": 37,
+          "homePlayers": [
+            "Brendan Parr",
+            "Sanjeet Mirihipeena",
+            "Henry Wilde",
+            "Ashleigh Hasler"
+          ],
+          "awayPlayers": [
+            "Jerome Sallai",
+            "Nick Hetrelezis"
+          ],
+          "homePositions": {
+            "Brendan Parr": 1,
+            "Sanjeet Mirihipeena": 2,
+            "Henry Wilde": 3,
+            "Ashleigh Hasler": 4
+          },
+          "awayPositions": {
+            "Jerome Sallai": 1,
+            "Nick Hetrelezis": 2
+          },
+          "homeEmergencies": [
+            "Brendan Parr"
+          ],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Brendan Parr"
+              ],
+              "awayPlayers": [
+                "Jerome Sallai"
+              ],
+              "sets": [
+                [
+                  0,
+                  6
+                ],
+                [
+                  1,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 1,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Sanjeet Mirihipeena"
+              ],
+              "awayPlayers": [
+                "Nick Hetrelezis"
+              ],
+              "sets": [
+                [
+                  5,
+                  7
+                ],
+                [
+                  0,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 5,
+              "awayGames": 13,
+              "winner": "away"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Henry Wilde",
+                "Ashleigh Hasler"
+              ],
+              "awayPlayers": [
+                "Jerome Sallai",
+                "Nick Hetrelezis"
+              ],
+              "sets": [
+                [
+                  4,
+                  6
+                ],
+                [
+                  1,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 5,
+              "awayGames": 12,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "matchId": "AP012024",
+          "home": "MCC Glen Iris",
+          "away": "Berwick",
+          "homePts": 8.0,
+          "homeR": 3,
+          "homeS": 6,
+          "homeG": 40,
+          "awayPts": 1.0,
+          "awayR": 0,
+          "awayS": 1,
+          "awayG": 17,
+          "homePlayers": [
+            "Heath Kamphuis",
+            "Tihana Razumic"
+          ],
+          "awayPlayers": [
+            "Vignesh Pakkiam",
+            "Ben Holmes"
+          ],
+          "homePositions": {
+            "Heath Kamphuis": 1,
+            "Tihana Razumic": 2
+          },
+          "awayPositions": {
+            "Vignesh Pakkiam": 1,
+            "Ben Holmes": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Heath Kamphuis"
+              ],
+              "awayPlayers": [
+                "Vignesh Pakkiam"
+              ],
+              "sets": [
+                [
+                  6,
+                  3
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 16,
+              "awayGames": 10,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Tihana Razumic"
+              ],
+              "awayPlayers": [
+                "Ben Holmes"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  0
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 1,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Heath Kamphuis",
+                "Tihana Razumic"
+              ],
+              "awayPlayers": [
+                "Vignesh Pakkiam",
+                "Ben Holmes"
+              ],
+              "sets": [
+                [
+                  6,
+                  3
+                ],
+                [
+                  6,
+                  3
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 6,
+              "winner": "home"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "date": "2026-10-24",
+      "matches": [
+        {
+          "matchId": "AP012032",
+          "home": "Mayfield Park Blue",
+          "away": "Langwarrin",
+          "homePts": 7.0,
+          "homeR": 2,
+          "homeS": 5,
+          "homeG": 35,
+          "awayPts": 2.0,
+          "awayR": 1,
+          "awayS": 2,
+          "awayG": 27,
+          "homePlayers": [
+            "Adam Majdan",
+            "Joel Burgess-Heath"
+          ],
+          "awayPlayers": [
+            "Jack Smith",
+            "Meho Cordalija"
+          ],
+          "homePositions": {
+            "Adam Majdan": 1,
+            "Joel Burgess-Heath": 2
+          },
+          "awayPositions": {
+            "Jack Smith": 1,
+            "Meho Cordalija": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [
+            "Meho Cordalija"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Adam Majdan"
+              ],
+              "awayPlayers": [
+                "Jack Smith"
+              ],
+              "sets": [
+                [
+                  6,
+                  4
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 5,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Joel Burgess-Heath"
+              ],
+              "awayPlayers": [
+                "Meho Cordalija"
+              ],
+              "sets": [
+                [
+                  6,
+                  3
+                ],
+                [
+                  6,
+                  3
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 6,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Adam Majdan",
+                "Joel Burgess-Heath"
+              ],
+              "awayPlayers": [
+                "Jack Smith",
+                "Meho Cordalija"
+              ],
+              "sets": [
+                [
+                  6,
+                  4
+                ],
+                [
+                  2,
+                  6
+                ],
+                [
+                  3,
+                  6
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 11,
+              "awayGames": 16,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "matchId": "AP012033",
+          "home": "Mayfield Park Red",
+          "away": "MCC Glen Iris",
+          "homePts": 6.0,
+          "homeR": 2,
+          "homeS": 4,
+          "homeG": 32,
+          "awayPts": 4.0,
+          "awayR": 1,
+          "awayS": 4,
+          "awayG": 39,
+          "homePlayers": [
+            "Daniel Baroudi",
+            "Leigh Webster",
+            "Ashleigh Hasler"
+          ],
+          "awayPlayers": [
+            "Tihana Razumic",
+            "Geoff Patouris"
+          ],
+          "homePositions": {
+            "Daniel Baroudi": 1,
+            "Leigh Webster": 2,
+            "Ashleigh Hasler": 3
+          },
+          "awayPositions": {
+            "Tihana Razumic": 1,
+            "Geoff Patouris": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [
+            "Geoff Patouris"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Daniel Baroudi"
+              ],
+              "awayPlayers": [
+                "Tihana Razumic"
+              ],
+              "sets": [
+                [
+                  3,
+                  6
+                ],
+                [
+                  0,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 3,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Leigh Webster"
+              ],
+              "awayPlayers": [
+                "Geoff Patouris"
+              ],
+              "sets": [
+                [
+                  6,
+                  3
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 15,
+              "awayGames": 13,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Daniel Baroudi",
+                "Ashleigh Hasler"
+              ],
+              "awayPlayers": [
+                "Tihana Razumic",
+                "Geoff Patouris"
+              ],
+              "sets": [
+                [
+                  6,
+                  4
+                ],
+                [
+                  2,
+                  6
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 14,
+              "awayGames": 14,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "matchId": "AP012034",
+          "home": "Wellington",
+          "away": "Berwick",
+          "homePts": 8.0,
+          "homeR": 3,
+          "homeS": 6,
+          "homeG": 37,
+          "awayPts": 0.0,
+          "awayR": 0,
+          "awayS": 0,
+          "awayG": 15,
+          "homePlayers": [
+            "Jerome Sallai",
+            "Nick Hetrelezis"
+          ],
+          "awayPlayers": [
+            "Ben Holmes",
+            "Huss Shafai"
+          ],
+          "homePositions": {
+            "Jerome Sallai": 1,
+            "Nick Hetrelezis": 2
+          },
+          "awayPositions": {
+            "Ben Holmes": 1,
+            "Huss Shafai": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Jerome Sallai"
+              ],
+              "awayPlayers": [
+                "Ben Holmes"
+              ],
+              "sets": [
+                [
+                  7,
+                  5
+                ],
+                [
+                  6,
+                  0
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 13,
+              "awayGames": 5,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Nick Hetrelezis"
+              ],
+              "awayPlayers": [
+                "Huss Shafai"
+              ],
+              "sets": [
+                [
+                  6,
+                  3
+                ],
+                [
+                  6,
+                  3
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 6,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Jerome Sallai",
+                "Nick Hetrelezis"
+              ],
+              "awayPlayers": [
+                "Ben Holmes",
+                "Huss Shafai"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 4,
+              "winner": "home"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "teamRosters": {
+    "N'hill P'wood": [
+      {
+        "name": "Dao Trinh",
+        "order": 1,
+        "emergency": false,
+        "played": 2
+      },
+      {
+        "name": "Max Nguyen",
+        "order": 1,
+        "emergency": false,
+        "played": 1
+      },
+      {
+        "name": "Eliot Lee",
+        "order": null,
+        "emergency": true,
+        "played": 2
+      },
+      {
+        "name": "Tom Wood",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      }
+    ],
+    "Mayfield Park Red": [
+      {
+        "name": "Daniel Baroudi",
+        "order": 1,
+        "emergency": false,
+        "played": 2
+      },
+      {
+        "name": "Henry Wilde",
+        "order": 2,
+        "emergency": false,
+        "played": 2
+      },
+      {
+        "name": "Leigh Webster",
+        "order": 2,
+        "emergency": false,
+        "played": 1
+      },
+      {
+        "name": "Sanjeet Mirihipeena",
+        "order": 2,
+        "emergency": false,
+        "played": 1
+      },
+      {
+        "name": "Ashleigh Hasler",
+        "order": 3,
+        "emergency": false,
+        "played": 3
+      },
+      {
+        "name": "Brendan Parr",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      }
+    ],
+    "Burwood": [
+      {
+        "name": "Brendon Deng",
+        "order": 1,
+        "emergency": false,
+        "played": 2
+      },
+      {
+        "name": "Sudhansu Barkataki",
+        "order": 2,
+        "emergency": false,
+        "played": 2
+      }
+    ],
+    "MCC Glen Iris": [
+      {
+        "name": "Heath Kamphuis",
+        "order": 1,
+        "emergency": false,
+        "played": 2
+      },
+      {
+        "name": "Tihana Razumic",
+        "order": 2,
+        "emergency": false,
+        "played": 3
+      },
+      {
+        "name": "Geoff Patouris",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      }
+    ],
+    "Langwarrin": [
+      {
+        "name": "Jack Smith",
+        "order": 1,
+        "emergency": false,
+        "played": 3
+      },
+      {
+        "name": "Ben Kirchert",
+        "order": 2,
+        "emergency": false,
+        "played": 2
+      },
+      {
+        "name": "Meho Cordalija",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      }
+    ],
+    "Wellington": [
+      {
+        "name": "Jerome Sallai",
+        "order": 1,
+        "emergency": false,
+        "played": 3
+      },
+      {
+        "name": "Nick Hetrelezis",
+        "order": 2,
+        "emergency": false,
+        "played": 3
+      }
+    ],
+    "Mayfield Park Blue": [
+      {
+        "name": "Adam Majdan",
+        "order": 1,
+        "emergency": false,
+        "played": 3
+      },
+      {
+        "name": "Joel Burgess-Heath",
+        "order": 2,
+        "emergency": false,
+        "played": 1
+      },
+      {
+        "name": "Daniel Baroudi",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      },
+      {
+        "name": "Sanjeet Mihiripenna",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      }
+    ]
+  },
+  "remainingFixtures": {
+    "asOfDate": "2026-10-28",
+    "note": "Full fixture for all 8 teams in Open Singles/Doubles A 10, from trols.org.au.",
+    "rounds": [
+      {
+        "round": 1,
+        "date": "2026-10-10",
+        "matches": [
+          {
+            "home": "Berwick",
+            "away": "Langwarrin"
+          },
+          {
+            "home": "Burwood",
+            "away": "MCC Glen Iris"
+          },
+          {
+            "home": "N'hill P'wood",
+            "away": "Mayfield Park Red"
+          },
+          {
+            "home": "Wellington",
+            "away": "Mayfield Park Blue"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "date": "2026-10-17",
+        "matches": [
+          {
+            "home": "Langwarrin",
+            "away": "Burwood"
+          },
+          {
+            "home": "MCC Glen Iris",
+            "away": "Berwick"
+          },
+          {
+            "home": "Mayfield Park Blue",
+            "away": "N'hill P'wood"
+          },
+          {
+            "home": "Mayfield Park Red",
+            "away": "Wellington"
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "date": "2026-10-24",
+        "matches": [
+          {
+            "home": "Mayfield Park Blue",
+            "away": "Langwarrin"
+          },
+          {
+            "home": "Mayfield Park Red",
+            "away": "MCC Glen Iris"
+          },
+          {
+            "home": "N'hill P'wood",
+            "away": "Burwood"
+          },
+          {
+            "home": "Wellington",
+            "away": "Berwick"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "date": "2026-11-07",
+        "matches": [
+          {
+            "home": "Berwick",
+            "away": "N'hill P'wood"
+          },
+          {
+            "home": "Burwood",
+            "away": "Wellington"
+          },
+          {
+            "home": "Langwarrin",
+            "away": "Mayfield Park Red"
+          },
+          {
+            "home": "MCC Glen Iris",
+            "away": "Mayfield Park Blue"
+          }
+        ]
+      },
+      {
+        "round": 5,
+        "date": "2026-11-14",
+        "matches": [
+          {
+            "home": "Burwood",
+            "away": "Berwick"
+          },
+          {
+            "home": "Mayfield Park Red",
+            "away": "Mayfield Park Blue"
+          },
+          {
+            "home": "N'hill P'wood",
+            "away": "Langwarrin"
+          },
+          {
+            "home": "Wellington",
+            "away": "MCC Glen Iris"
+          }
+        ]
+      },
+      {
+        "round": 6,
+        "date": "2026-11-21",
+        "matches": [
+          {
+            "home": "Langwarrin",
+            "away": "MCC Glen Iris"
+          },
+          {
+            "home": "Mayfield Park Blue",
+            "away": "Berwick"
+          },
+          {
+            "home": "Mayfield Park Red",
+            "away": "Burwood"
+          },
+          {
+            "home": "Wellington",
+            "away": "N'hill P'wood"
+          }
+        ]
+      },
+      {
+        "round": 7,
+        "date": "2026-11-28",
+        "matches": [
+          {
+            "home": "Berwick",
+            "away": "MCC Glen Iris"
+          },
+          {
+            "home": "Burwood",
+            "away": "Langwarrin"
+          },
+          {
+            "home": "N'hill P'wood",
+            "away": "Mayfield Park Blue"
+          },
+          {
+            "home": "Wellington",
+            "away": "Mayfield Park Red"
+          }
+        ]
+      },
+      {
+        "round": 8,
+        "date": "2026-12-05",
+        "matches": [
+          {
+            "home": "Berwick",
+            "away": "Mayfield Park Red"
+          },
+          {
+            "home": "Burwood",
+            "away": "Mayfield Park Blue"
+          },
+          {
+            "home": "Langwarrin",
+            "away": "Wellington"
+          },
+          {
+            "home": "MCC Glen Iris",
+            "away": "N'hill P'wood"
+          }
+        ]
+      },
+      {
+        "round": 9,
+        "date": "2026-12-12",
+        "matches": [
+          {
+            "home": "Mayfield Park Blue",
+            "away": "MCC Glen Iris"
+          },
+          {
+            "home": "Mayfield Park Red",
+            "away": "Langwarrin"
+          },
+          {
+            "home": "N'hill P'wood",
+            "away": "Berwick"
+          },
+          {
+            "home": "Wellington",
+            "away": "Burwood"
+          }
+        ]
+      },
+      {
+        "round": 10,
+        "date": "2027-01-30",
+        "matches": [
+          {
+            "home": "Berwick",
+            "away": "Burwood"
+          },
+          {
+            "home": "Langwarrin",
+            "away": "N'hill P'wood"
+          },
+          {
+            "home": "MCC Glen Iris",
+            "away": "Wellington"
+          },
+          {
+            "home": "Mayfield Park Blue",
+            "away": "Mayfield Park Red"
+          }
+        ]
+      },
+      {
+        "round": 11,
+        "date": "2027-02-06",
+        "matches": [
+          {
+            "home": "Berwick",
+            "away": "Mayfield Park Blue"
+          },
+          {
+            "home": "Burwood",
+            "away": "Mayfield Park Red"
+          },
+          {
+            "home": "MCC Glen Iris",
+            "away": "Langwarrin"
+          },
+          {
+            "home": "N'hill P'wood",
+            "away": "Wellington"
+          }
+        ]
+      },
+      {
+        "round": 12,
+        "date": "2027-02-13",
+        "matches": [
+          {
+            "home": "Langwarrin",
+            "away": "Berwick"
+          },
+          {
+            "home": "MCC Glen Iris",
+            "away": "Burwood"
+          },
+          {
+            "home": "Mayfield Park Blue",
+            "away": "Wellington"
+          },
+          {
+            "home": "Mayfield Park Red",
+            "away": "N'hill P'wood"
+          }
+        ]
+      },
+      {
+        "round": 13,
+        "date": "2027-02-20",
+        "matches": [
+          {
+            "home": "Mayfield Park Blue",
+            "away": "Burwood"
+          },
+          {
+            "home": "Mayfield Park Red",
+            "away": "Berwick"
+          },
+          {
+            "home": "N'hill P'wood",
+            "away": "MCC Glen Iris"
+          },
+          {
+            "home": "Wellington",
+            "away": "Langwarrin"
+          }
+        ]
+      },
+      {
+        "round": 14,
+        "date": "2027-02-27",
+        "matches": [
+          {
+            "home": "Berwick",
+            "away": "Wellington"
+          },
+          {
+            "home": "Burwood",
+            "away": "N'hill P'wood"
+          },
+          {
+            "home": "Langwarrin",
+            "away": "Mayfield Park Blue"
+          },
+          {
+            "home": "MCC Glen Iris",
+            "away": "Mayfield Park Red"
+          }
+        ]
+      }
+    ],
+    "finals": {
+      "semiFinal": "2027-03-13",
+      "grandFinal": "2027-03-20",
+      "note": "Top 4 make finals; 1st and 2nd host the semi final."
+    }
+  },
+  "playerAliases": {},
+  "playerNotes": {},
+  "availability": {},
+  "lineups": {}
+}

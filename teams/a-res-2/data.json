@@ -4,17 +4,23 @@
     "section": "Open Singles/Doubles A Reserve 2",
     "sectionCode": "AP020",
     "ourTeam": "Berwick",
-    "lastUpdated": "2026-10-27",
+    "lastUpdated": "2026-10-28",
     "resultsLoadedFromSite": "27th October 26 @ 07:26:11 PM",
     "sourceUrl": "https://www.trols.org.au/wdta/results.php?daytime=AP&section=AP020&style=",
     "fixtureUrl": "https://www.trols.org.au/wdta/fixture.php?daytime=AP&section=AP020&style=",
     "archives": [
       {
-        "label": "Winter 2026 \u2014 A Reserve 4",
-        "path": "winter-2026/"
+        "label": "Winter 2026 — A Reserve 4",
+        "path": "../../winter-2026/"
       }
     ],
-    "playersNeeded": 3
+    "playersNeeded": 3,
+    "overridesKey": "berwickComp_summer2627_overrides_v1",
+    "club": "Berwick",
+    "slug": "a-res-2",
+    "label": "A Res 2",
+    "teamCode": "AP153",
+    "dataPath": "teams/a-res-2/data.json"
   },
   "teams": [
     "Berwick",
@@ -26,57 +32,6 @@
     "Upwey South",
     "Vermont South"
   ],
-  "playerNotes": {
-    "Burden Park::Ciara Norng": {
-      "plays": "Right",
-      "serving": "Average serves",
-      "generalPlay": "20 y/o Asian girl, small build. Plays both singles and doubles. DT won 6-0, 6-1 vs her in singles.",
-      "strengths": "Great backhand \u2014 much stronger on that side, go to backhand",
-      "weaknesses": "Forehand is a weakness \u2014 not much power. Average serves."
-    },
-    "Burden Park::Alan": {
-      "plays": "Right",
-      "serving": "Decent serve \u2014 likes to go out wide",
-      "generalPlay": "Late 40s Asian guy. Only played doubles. Okay at rallies. Possibly listed as Lun Wang in results.",
-      "strengths": "Decent serve, comfortable at baseline rallies",
-      "weaknesses": "Very bad at the net \u2014 missed 4-5 easy volleys from about 1 metre away. Target him at net."
-    },
-    "Burden Park::Isaac Khaoula": {
-      "plays": "Right",
-      "serving": "Average pusher-style serve",
-      "generalPlay": "Mid-20s guy \u2014 definition of a pusher. Slices 90% of the time. Rallies last 10-20 shots each. Gives no pace, just slice and some topspin forehands. Looks a very frustrating player to play against.",
-      "strengths": "Incredible consistency \u2014 will grind out every point",
-      "weaknesses": "Doesn't like pace on the run, but hitting with pace is risky (high error rate). Try varying pace and angles to disrupt rhythm."
-    },
-    "Monash Uni::Srinivas Tirumalasetty": {
-      "plays": "Right",
-      "serving": "Average serve with short toss/swing (similar to Devraj). Serves wide to Deuce side; served down the line on Ad side.",
-      "generalPlay": "Indian guy, early 20s. Played doubles only. Probably a 2 or 3 on Tuesday. Lost to Shannon & DT in doubles 6-2, 7-5.",
-      "strengths": "",
-      "weaknesses": "Doesn't last long in a rally. No surprise shots down the tramline. Not good at volleying. Consistently hits DT's slice serve to backhand straight to the net player \u2014 use that serve."
-    },
-    "Monash Uni::Kevin Chen": {
-      "plays": "Right",
-      "serving": "Decent 1st serve but only hits it ~20% of the time. 2nd serve is a slow slice with a big bounce.",
-      "generalPlay": "Tallish Asian guy. Played doubles only. Probably a 2 on Tuesday. Lost to Shannon & DT in doubles 6-2, 7-5.",
-      "strengths": "Good at rallies from the baseline",
-      "weaknesses": "Struggles with serves to his backhand."
-    },
-    "Monash Uni::Zachary Lee": {
-      "plays": "Right",
-      "serving": "Slow tossing action (similar to Craig) \u2014 restarts toss a lot. Very quick to hit 2nd serve. 1st serve is average. 2nd serve is close to a lollipop.",
-      "generalPlay": "Young Asian guy, average height, skinny, early 20s. Played singles only. ~2 on Tuesday. Lost to DT in singles 7-5, 6-3.",
-      "strengths": "Very quick around the court. Good passing shots when opponent comes to net. Great dropshots \u2014 hit ~4-5 winners in the match.",
-      "weaknesses": "Backhand is very slow and bounces short \u2014 rush the net for a volley after a decent shot to his backhand corner. Tell him to slow down his 2nd serve next time."
-    },
-    "Monash Uni::Matthew Lee": {
-      "plays": "Right",
-      "serving": "",
-      "generalPlay": "Young Asian guy. Played singles only. ~1/2 on Tuesday. Lost to Nick in singles 6-3, 6-4. Plays long rallies with moonball/deep topspin shots.",
-      "strengths": "Deep topspin baseline game \u2014 moonballs and high heavy balls",
-      "weaknesses": ""
-    }
-  },
   "clubs": [
     {
       "id": "berwick",
@@ -104,7 +59,7 @@
       "id": "eildon-park",
       "name": "Eildon Park",
       "melway": "82 C1",
-      "address": "69/75 Eildon Parade (off Taylors Lane), Rowville",
+      "address": "69/75 Eildon Parade, (off Taylors Lane), Rowville",
       "courtType": "",
       "clubhousePhone": "",
       "contactName": "Stuart Draffin",
@@ -117,16 +72,16 @@
       "melway": "61 D9",
       "address": "Federal Reserve, Barton St, Mount Waverley",
       "courtType": "Plexipave (hard)",
-      "clubhousePhone": "0408 651 371",
+      "clubhousePhone": "",
       "contactName": "Jonathan Papailiou",
       "contactPhone": "0425 806 284",
       "notes": ""
     },
     {
-      "id": "nhill-pwood-blue",
+      "id": "n-hill-p-wood-blue",
       "name": "N'hill P'wood Blue",
       "melway": "70 K6",
-      "address": "1-9 Baker Avenue (off Herriotts Blvd), Glen Waverley",
+      "address": "1 - 9 Baker Avenue, (Off Herriotts Blvd), Glen Waverley",
       "courtType": "",
       "clubhousePhone": "9560 1533",
       "contactName": "Tony Mallios",
@@ -134,10 +89,10 @@
       "notes": ""
     },
     {
-      "id": "nhill-pwood-white",
+      "id": "n-hill-p-wood-white",
       "name": "N'hill P'wood White",
       "melway": "70 K6",
-      "address": "1-9 Baker Avenue (off Herriotts Blvd), Glen Waverley",
+      "address": "1 - 9 Baker Avenue, (Off Herriotts Blvd), Glen Waverley",
       "courtType": "",
       "clubhousePhone": "9560 1533",
       "contactName": "Tony Mallios",
@@ -169,84 +124,89 @@
   ],
   "roster": [
     {
-      "name": "Soe Min Tun",
       "mobile": "0424 072 129",
       "email": "soemintunstar@gmail.com",
       "gender": "M",
       "dob": "",
-      "order": 1,
-      "played": 0,
-      "emergency": false,
       "grade": "",
       "utrId": "5822177",
       "utrSingles": "6.xx",
       "utrSinglesReliability": 100,
       "utrDoubles": null,
-      "utrDoublesReliability": null
+      "utrDoublesReliability": null,
+      "name": "Soe Min Tun",
+      "order": 1,
+      "played": 2,
+      "emergency": false,
+      "emergencyApps": 0
     },
     {
-      "name": "Tom Maloney",
       "mobile": "0434 413 723",
       "email": "tommaloney4@gmail.com",
       "gender": "M",
       "dob": "",
-      "order": 2,
-      "played": 0,
-      "emergency": false,
       "grade": "",
       "utrId": "3220280",
       "utrSingles": "5.xx",
       "utrSinglesReliability": 40,
       "utrDoubles": "5.xx",
-      "utrDoublesReliability": 40
+      "utrDoublesReliability": 40,
+      "name": "Tom Maloney",
+      "order": 2,
+      "played": 2,
+      "emergency": false,
+      "emergencyApps": 0
     },
     {
-      "name": "David Thurmond",
       "mobile": "0431 486 053",
       "email": "david.thurmond@icloud.com",
       "gender": "M",
       "dob": "",
-      "order": 3,
-      "played": 0,
-      "emergency": false,
       "grade": "A Res",
       "utrId": "5599240",
       "utrSingles": "5.xx",
       "utrSinglesReliability": null,
       "utrDoubles": "6.xx",
-      "utrDoublesReliability": null
+      "utrDoublesReliability": null,
+      "name": "David Thurmond",
+      "order": 3,
+      "played": 2,
+      "emergency": false,
+      "emergencyApps": 0
     },
     {
-      "name": "Shannon Watson",
       "mobile": "0421 410 301",
       "email": "stwatsn@gmail.com",
       "gender": "M",
       "dob": "1983-01-01",
-      "order": 4,
-      "played": 0,
-      "emergency": false,
       "grade": "A Res",
       "utrId": "2842650",
       "utrSingles": "5.xx",
       "utrSinglesReliability": 64,
       "utrDoubles": "7.xx",
-      "utrDoublesReliability": 100
+      "utrDoublesReliability": 100,
+      "name": "Shannon Watson",
+      "order": 4,
+      "played": 3,
+      "emergency": false,
+      "emergencyApps": 0
     },
     {
-      "name": "John Keecherer",
       "mobile": "0438 677 437",
       "email": "itkeecom@gmail.com",
       "gender": "M",
       "dob": "",
-      "order": 5,
-      "played": 0,
-      "emergency": false,
       "grade": "A Res",
       "utrId": "2842613",
       "utrSingles": "5.xx",
       "utrSinglesReliability": 100,
       "utrDoubles": "6.xx",
-      "utrDoublesReliability": 100
+      "utrDoublesReliability": 100,
+      "name": "John Keecherer",
+      "order": 5,
+      "played": 3,
+      "emergency": false,
+      "emergencyApps": 0
     }
   ],
   "schedule": [
@@ -327,7 +287,7 @@
       "home": null,
       "away": null,
       "byeDate": true,
-      "note": "Christmas break \u2014 resumes 30 Jan 27"
+      "note": "Christmas break — resumes 30 Jan 27"
     },
     {
       "round": 10,
@@ -369,8 +329,8 @@
       "date": "2027-03-06",
       "home": null,
       "away": null,
-      "byeDate": true,
-      "note": "No Play"
+      "byeDate": false,
+      "note": "FinalsNo Play"
     },
     {
       "round": "SF",
@@ -395,6 +355,7 @@
       "date": "2026-10-10",
       "matches": [
         {
+          "matchId": "AP020011",
           "home": "N'hill P'wood Blue",
           "away": "Vermont South",
           "homePts": 8.0,
@@ -414,6 +375,19 @@
             "Owen Jones",
             "Kevin Pan"
           ],
+          "homePositions": {
+            "Darsh Chauhan": 1,
+            "Lawrence Botton": 2
+          },
+          "awayPositions": {
+            "Barry Jiang": 1,
+            "Owen Jones": 2,
+            "Kevin Pan": 3
+          },
+          "homeEmergencies": [
+            "Lawrence Botton"
+          ],
+          "awayEmergencies": [],
           "rubbers": [
             {
               "rubber": 1,
@@ -495,6 +469,7 @@
           ]
         },
         {
+          "matchId": "AP020012",
           "home": "Centenary Park",
           "away": "Essex Heights",
           "homePts": 0.0,
@@ -513,6 +488,16 @@
             "Maksim Gigovic",
             "Mateja Gigovic"
           ],
+          "homePositions": {
+            "James Emery": 1,
+            "Heron Cruz": 2
+          },
+          "awayPositions": {
+            "Maksim Gigovic": 1,
+            "Mateja Gigovic": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
           "rubbers": [
             {
               "rubber": 1,
@@ -594,6 +579,7 @@
           ]
         },
         {
+          "matchId": "AP020013",
           "home": "Eildon Park",
           "away": "Berwick",
           "homePts": 6.0,
@@ -616,6 +602,20 @@
             "Shannon Watson",
             "David Thurmond"
           ],
+          "homePositions": {
+            "Tom Robinson": 1,
+            "Gary Robinson": 2,
+            "Bradley Voysey": 3,
+            "Stuart King": 4
+          },
+          "awayPositions": {
+            "Soe Min Tun": 1,
+            "John Keecherer": 2,
+            "Shannon Watson": 3,
+            "David Thurmond": 4
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
           "rubbers": [
             {
               "rubber": 1,
@@ -697,6 +697,7 @@
           ]
         },
         {
+          "matchId": "AP020014",
           "home": "N'hill P'wood White",
           "away": "Upwey South",
           "homePts": 3.0,
@@ -715,6 +716,19 @@
             "Jethro Cousins",
             "Charlotte Wilson"
           ],
+          "homePositions": {
+            "George Hildebrand": 1,
+            "Anson Tan": 2
+          },
+          "awayPositions": {
+            "Jethro Cousins": 1,
+            "Charlotte Wilson": 2
+          },
+          "homeEmergencies": [
+            "George Hildebrand",
+            "Anson Tan"
+          ],
+          "awayEmergencies": [],
           "rubbers": [
             {
               "rubber": 1,
@@ -806,6 +820,7 @@
       "date": "2026-10-17",
       "matches": [
         {
+          "matchId": "AP020021",
           "home": "Berwick",
           "away": "Centenary Park",
           "homePts": 7.0,
@@ -825,6 +840,20 @@
           "awayPlayers": [
             "Eddie Meach",
             "Eddie Schroeder"
+          ],
+          "homePositions": {
+            "David Thurmond": 1,
+            "Shannon Watson": 2,
+            "Tom Maloney": 3,
+            "John Keecherer": 4
+          },
+          "awayPositions": {
+            "Eddie Meach": 1,
+            "Eddie Schroeder": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [
+            "Eddie Meach"
           ],
           "rubbers": [
             {
@@ -911,6 +940,7 @@
           ]
         },
         {
+          "matchId": "AP020022",
           "home": "Upwey South",
           "away": "N'hill P'wood Blue",
           "homePts": 2.0,
@@ -927,6 +957,18 @@
           ],
           "awayPlayers": [
             "Darsh Chauhan",
+            "Benjamin Ong"
+          ],
+          "homePositions": {
+            "Jethro Cousins": 1,
+            "Charlotte Wilson": 2
+          },
+          "awayPositions": {
+            "Darsh Chauhan": 1,
+            "Benjamin Ong": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [
             "Benjamin Ong"
           ],
           "rubbers": [
@@ -1010,6 +1052,7 @@
           ]
         },
         {
+          "matchId": "AP020023",
           "home": "Vermont South",
           "away": "N'hill P'wood White",
           "homePts": 0.0,
@@ -1025,6 +1068,19 @@
             "Kevin Pan"
           ],
           "awayPlayers": [
+            "Lawrence Botton",
+            "George Hildebrand"
+          ],
+          "homePositions": {
+            "Owen Jones": 1,
+            "Kevin Pan": 2
+          },
+          "awayPositions": {
+            "Lawrence Botton": 1,
+            "George Hildebrand": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [
             "Lawrence Botton",
             "George Hildebrand"
           ],
@@ -1109,6 +1165,7 @@
           ]
         },
         {
+          "matchId": "AP020024",
           "home": "Essex Heights",
           "away": "Eildon Park",
           "homePts": 8.0,
@@ -1127,6 +1184,16 @@
             "Bradley Voysey",
             "Gary Robinson"
           ],
+          "homePositions": {
+            "Maksim Gigovic": 1,
+            "Mateja Gigovic": 2
+          },
+          "awayPositions": {
+            "Bradley Voysey": 1,
+            "Gary Robinson": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
           "rubbers": [
             {
               "rubber": 1,
@@ -1214,6 +1281,7 @@
       "date": "2026-10-24",
       "matches": [
         {
+          "matchId": "AP020031",
           "home": "N'hill P'wood Blue",
           "away": "Centenary Park",
           "homePts": 8.0,
@@ -1232,6 +1300,18 @@
             "James Emery",
             "Eddie Schroeder"
           ],
+          "homePositions": {
+            "Sasha Jain": 1,
+            "Will Jiang": 2
+          },
+          "awayPositions": {
+            "James Emery": 1,
+            "Eddie Schroeder": 2
+          },
+          "homeEmergencies": [
+            "Will Jiang"
+          ],
+          "awayEmergencies": [],
           "rubbers": [
             {
               "rubber": 1,
@@ -1313,6 +1393,7 @@
           ]
         },
         {
+          "matchId": "AP020032",
           "home": "Upwey South",
           "away": "Berwick",
           "homePts": 3.0,
@@ -1333,6 +1414,18 @@
             "Shannon Watson",
             "John Keecherer"
           ],
+          "homePositions": {
+            "Jethro Cousins": 1,
+            "Charlotte Wilson": 2
+          },
+          "awayPositions": {
+            "Soe Min Tun": 1,
+            "Tom Maloney": 2,
+            "Shannon Watson": 3,
+            "John Keecherer": 4
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
           "rubbers": [
             {
               "rubber": 1,
@@ -1422,6 +1515,7 @@
           ]
         },
         {
+          "matchId": "AP020033",
           "home": "Vermont South",
           "away": "Essex Heights",
           "homePts": 1.0,
@@ -1439,6 +1533,19 @@
           "awayPlayers": [
             "Maksim Gigovic",
             "Mateja Gigovic",
+            "Darko Gigovic"
+          ],
+          "homePositions": {
+            "Barry Jiang": 1,
+            "Owen Jones": 2
+          },
+          "awayPositions": {
+            "Maksim Gigovic": 1,
+            "Mateja Gigovic": 2,
+            "Darko Gigovic": 3
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [
             "Darko Gigovic"
           ],
           "rubbers": [
@@ -1526,6 +1633,7 @@
           ]
         },
         {
+          "matchId": "AP020034",
           "home": "N'hill P'wood White",
           "away": "Eildon Park",
           "homePts": 1.0,
@@ -1545,6 +1653,20 @@
             "Stuart King",
             "Gary Robinson"
           ],
+          "homePositions": {
+            "Lawrence Botton": 1,
+            "Lucas Yip": 2
+          },
+          "awayPositions": {
+            "Tom Robinson": 1,
+            "Stuart King": 2,
+            "Gary Robinson": 3
+          },
+          "homeEmergencies": [
+            "Lawrence Botton",
+            "Lucas Yip"
+          ],
+          "awayEmergencies": [],
           "rubbers": [
             {
               "rubber": 1,
@@ -1632,10 +1754,175 @@
       ]
     }
   ],
-  "teamRosters": {},
+  "teamRosters": {
+    "N'hill P'wood Blue": [
+      {
+        "name": "Darsh Chauhan",
+        "order": 1,
+        "emergency": false,
+        "played": 2
+      },
+      {
+        "name": "Sasha Jain",
+        "order": 1,
+        "emergency": false,
+        "played": 1
+      },
+      {
+        "name": "Benjamin Ong",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      },
+      {
+        "name": "Lawrence Botton",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      },
+      {
+        "name": "Will Jiang",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      }
+    ],
+    "Vermont South": [
+      {
+        "name": "Barry Jiang",
+        "order": 1,
+        "emergency": false,
+        "played": 2
+      },
+      {
+        "name": "Kevin Pan",
+        "order": 2,
+        "emergency": false,
+        "played": 2
+      },
+      {
+        "name": "Owen Jones",
+        "order": 2,
+        "emergency": false,
+        "played": 3
+      }
+    ],
+    "Centenary Park": [
+      {
+        "name": "James Emery",
+        "order": 1,
+        "emergency": false,
+        "played": 2
+      },
+      {
+        "name": "Eddie Schroeder",
+        "order": 2,
+        "emergency": false,
+        "played": 2
+      },
+      {
+        "name": "Heron Cruz",
+        "order": 2,
+        "emergency": false,
+        "played": 1
+      },
+      {
+        "name": "Eddie Meach",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      }
+    ],
+    "Essex Heights": [
+      {
+        "name": "Maksim Gigovic",
+        "order": 1,
+        "emergency": false,
+        "played": 3
+      },
+      {
+        "name": "Mateja Gigovic",
+        "order": 2,
+        "emergency": false,
+        "played": 3
+      },
+      {
+        "name": "Darko Gigovic",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      }
+    ],
+    "Eildon Park": [
+      {
+        "name": "Bradley Voysey",
+        "order": 1,
+        "emergency": false,
+        "played": 2
+      },
+      {
+        "name": "Tom Robinson",
+        "order": 1,
+        "emergency": false,
+        "played": 2
+      },
+      {
+        "name": "Gary Robinson",
+        "order": 2,
+        "emergency": false,
+        "played": 3
+      },
+      {
+        "name": "Stuart King",
+        "order": 2,
+        "emergency": false,
+        "played": 2
+      }
+    ],
+    "N'hill P'wood White": [
+      {
+        "name": "Anson Tan",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      },
+      {
+        "name": "George Hildebrand",
+        "order": null,
+        "emergency": true,
+        "played": 2
+      },
+      {
+        "name": "Lawrence Botton",
+        "order": null,
+        "emergency": true,
+        "played": 2
+      },
+      {
+        "name": "Lucas Yip",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      }
+    ],
+    "Upwey South": [
+      {
+        "name": "Jethro Cousins",
+        "order": 1,
+        "emergency": false,
+        "played": 3
+      },
+      {
+        "name": "Charlotte Wilson",
+        "order": 2,
+        "emergency": false,
+        "played": 3
+      }
+    ]
+  },
   "remainingFixtures": {
-    "asOfDate": "2026-10-17",
-    "note": "Full 14-round fixture for all 8 teams (Vermont South added by WDTA after the original draw, replacing the bye), sourced from trols.org.au fixture pages for every team in AP020.",
+    "asOfDate": "2026-10-28",
+    "note": "Full fixture for all 8 teams in Open Singles/Doubles A Reserve 2, from trols.org.au.",
     "rounds": [
       {
         "round": 1,
@@ -1952,6 +2239,60 @@
       "note": "Top 4 make finals; 1st and 2nd host the semi final."
     }
   },
+  "playerAliases": {
+    "Soe Tun": "Soe Min Tun"
+  },
+  "playerNotes": {
+    "Burden Park::Ciara Norng": {
+      "plays": "Right",
+      "serving": "Average serves",
+      "generalPlay": "20 y/o Asian girl, small build. Plays both singles and doubles. DT won 6-0, 6-1 vs her in singles.",
+      "strengths": "Great backhand — much stronger on that side, go to backhand",
+      "weaknesses": "Forehand is a weakness — not much power. Average serves."
+    },
+    "Burden Park::Alan": {
+      "plays": "Right",
+      "serving": "Decent serve — likes to go out wide",
+      "generalPlay": "Late 40s Asian guy. Only played doubles. Okay at rallies. Possibly listed as Lun Wang in results.",
+      "strengths": "Decent serve, comfortable at baseline rallies",
+      "weaknesses": "Very bad at the net — missed 4-5 easy volleys from about 1 metre away. Target him at net."
+    },
+    "Burden Park::Isaac Khaoula": {
+      "plays": "Right",
+      "serving": "Average pusher-style serve",
+      "generalPlay": "Mid-20s guy — definition of a pusher. Slices 90% of the time. Rallies last 10-20 shots each. Gives no pace, just slice and some topspin forehands. Looks a very frustrating player to play against.",
+      "strengths": "Incredible consistency — will grind out every point",
+      "weaknesses": "Doesn't like pace on the run, but hitting with pace is risky (high error rate). Try varying pace and angles to disrupt rhythm."
+    },
+    "Monash Uni::Srinivas Tirumalasetty": {
+      "plays": "Right",
+      "serving": "Average serve with short toss/swing (similar to Devraj). Serves wide to Deuce side; served down the line on Ad side.",
+      "generalPlay": "Indian guy, early 20s. Played doubles only. Probably a 2 or 3 on Tuesday. Lost to Shannon & DT in doubles 6-2, 7-5.",
+      "strengths": "",
+      "weaknesses": "Doesn't last long in a rally. No surprise shots down the tramline. Not good at volleying. Consistently hits DT's slice serve to backhand straight to the net player — use that serve."
+    },
+    "Monash Uni::Kevin Chen": {
+      "plays": "Right",
+      "serving": "Decent 1st serve but only hits it ~20% of the time. 2nd serve is a slow slice with a big bounce.",
+      "generalPlay": "Tallish Asian guy. Played doubles only. Probably a 2 on Tuesday. Lost to Shannon & DT in doubles 6-2, 7-5.",
+      "strengths": "Good at rallies from the baseline",
+      "weaknesses": "Struggles with serves to his backhand."
+    },
+    "Monash Uni::Zachary Lee": {
+      "plays": "Right",
+      "serving": "Slow tossing action (similar to Craig) — restarts toss a lot. Very quick to hit 2nd serve. 1st serve is average. 2nd serve is close to a lollipop.",
+      "generalPlay": "Young Asian guy, average height, skinny, early 20s. Played singles only. ~2 on Tuesday. Lost to DT in singles 7-5, 6-3.",
+      "strengths": "Very quick around the court. Good passing shots when opponent comes to net. Great dropshots — hit ~4-5 winners in the match.",
+      "weaknesses": "Backhand is very slow and bounces short — rush the net for a volley after a decent shot to his backhand corner. Tell him to slow down his 2nd serve next time."
+    },
+    "Monash Uni::Matthew Lee": {
+      "plays": "Right",
+      "serving": "",
+      "generalPlay": "Young Asian guy. Played singles only. ~1/2 on Tuesday. Lost to Nick in singles 6-3, 6-4. Plays long rallies with moonball/deep topspin shots.",
+      "strengths": "Deep topspin baseline game — moonballs and high heavy balls",
+      "weaknesses": ""
+    }
+  },
   "availability": {
     "2026-10-17": {
       "Soe Min Tun": {
@@ -1993,8 +2334,5 @@
         "Shannon Watson"
       ]
     }
-  },
-  "playerAliases": {
-    "Soe Tun": "Soe Min Tun"
   }
 }

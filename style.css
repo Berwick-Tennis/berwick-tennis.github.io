@@ -574,3 +574,32 @@ th.sortable { cursor: pointer; user-select: none; white-space: nowrap; }
 th.sortable:hover { text-decoration: underline; }
 th.sorted-asc::after { content: " \25B2"; font-size: 0.7em; }
 th.sorted-desc::after { content: " \25BC"; font-size: 0.7em; }
+
+/* Club / multi-team */
+header h1 a.home-link{color:inherit;text-decoration:none}
+.team-switch{margin:.35rem 0 .2rem}
+.team-switch select{background:rgba(0,0,0,.35);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:.3rem .5rem;font-size:.9rem;max-width:100%}
+.em-count{display:inline-block;font-size:.78rem;font-weight:700;padding:.1rem .45rem;border-radius:4px;background:var(--surface);border:1px solid var(--border)}
+.em-count.none{color:var(--muted);font-weight:400}
+.em-count.ok{background:rgba(76,175,80,.2);border-color:rgba(76,175,80,.5)}
+.em-count.warn{background:#ef6c00;color:#fff;border-color:#ef6c00}
+.em-count.limit,.em-count.over{background:#c62828;color:#fff;border-color:#c62828}
+
+/* Club hub */
+.hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.card.hub-team{margin:0;cursor:pointer;transition:border-color .15s}
+a.hub-label{text-decoration:none}
+.card.hub-team:hover{border-color:var(--yellow)}
+.hub-team-head{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;margin-bottom:.4rem}
+.hub-label{font-size:1.25rem;font-weight:800;color:var(--yellow)}
+.hub-vs{font-size:1.1rem;font-weight:700;margin:.2rem 0}
+.hub-lineup{margin-top:.35rem}
+.hub-foot{display:flex;justify-content:space-between;align-items:center;margin-top:.7rem;padding-top:.5rem;border-top:1px solid var(--border)}
+.small{font-size:.82rem}
+.em-meter{display:flex;gap:3px}
+.em-meter span{width:16px;height:8px;border-radius:2px;background:var(--border)}
+.em-meter span.ok{background:#4caf50}.em-meter span.warn{background:#ef6c00}.em-meter span.limit,.em-meter span.over{background:#c62828}
+.em-list{white-space:normal!important}
+.em-chip{display:inline-block;font-size:.78rem;padding:.1rem .45rem;margin:.1rem .2rem .1rem 0;border-radius:999px;border:1px solid var(--border)}
+tr.em-row-alert td{background:rgba(198,40,40,.12)}
+.team-switch select{width:auto}

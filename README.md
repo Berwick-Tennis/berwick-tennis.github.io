@@ -1,55 +1,32 @@
-# Berwick Saturday PM — Team Site
+# Berwick Tennis Club — WDTA Saturday PM site
 
-A simple static site for the Berwick Saturday PM team.
+Live: https://davidthurmond-gif.github.io/berwick-a-reserve-4/
 
-- **Current season (site root):** Summer 26/27 — Open Singles/Doubles **A Reserve 2** (trols section `AP020`, 7 teams + bye). Team: David Thurmond, Shannon Watson, John Keecherer, Tom Maloney, Soe. Season starts 10 Oct 26; finals 13 & 20 Mar 27.
-- **Archive:** `winter-2026/` — Winter 2026, A Reserve 4 (`AP012`), final ladder and all results, frozen.
+## Layout
+- `index.html` + `hub.js` — **club home**: next round for every Berwick team, ladder positions, emergency tracker, club players.
+- `club.json` / `club.js` — club-level data (teams, every Berwick player's appearances per team, emergency appearances). Generated, except the `manual` block.
+- `teams/<slug>/` — one folder per team (`a2`, `a7`, `a10`, `a13`, `a-res-2`, `b2`, `rubbers-a1`): `index.html` (copied from `tools/team_template.html`), `data.json` + `data.js`.
+- `script.js`, `style.css` — shared by all team pages and the hub.
+- `winter-2026/` — archived Winter 2026 (A Reserve 4) site, frozen.
+- `tools/trols_sync.py` — rebuilds all team data + `club.json` straight from trols.org.au (no browser needed; standard-library Python).
 
-To archive a season: copy `index.html style.css script.js data.json data.js` into a new sub-folder, patch that copy's `saveNotesToGitHub()` paths to the sub-folder, add the archive banner, then rebuild the root `data.json` for the new section.
-
-## What it shows
-- **Dashboard** – next match, ladder snapshot, opponent form
-- **Ladder** – calculated live from match results (points, sets, games, form)
-- **Results** – round-by-round results for the whole section
-- **Player Stats** – every player's win/loss record, sets, games, and singles/doubles breakdown, computed from rubber-by-rubber results across all 8 teams. Filter by team.
-- **Roster** – Berwick player list with UTR profile links + editable projected UTR
-- **Schedule** – full season fixture with venue info and results
-- **Venues** – club addresses, Melway refs, contacts, editable court type
-- **Opponent Scouting** – editable notes per opponent (age, hand, serve, strengths)
-
-## Files
-- `index.html` / `style.css` / `script.js` – the site
-- `data.json` – master data (results, roster, schedule, clubs, opponent notes template)
-- `data.js` – generated from `data.json` (loaded by the site as `window.SITE_DATA`)
-
-If you ever edit `data.json` by hand, regenerate `data.js` with:
+## Weekly update
 ```bash
-python3 -c "import json; d=json.load(open('data.json')); f=open('data.js','w'); f.write('window.SITE_DATA = '); json.dump(d,f,indent=2); f.write(';\n')"
+python3 tools/trols_sync.py          # all teams (re-uses stored scoresheets, fetches new ones)
+python3 tools/trols_sync.py --only a2
+python3 tools/trols_sync.py --refetch   # re-download every scoresheet
+python3 tools/trols_sync.py --discover  # list Saturday PM sections with a Berwick team
 ```
+Then commit and push. Scores are posted Tuesday nights; the scheduled task runs Wednesday mornings.
 
-## Editable notes (Roster UTR, Court Type, Opponent Scouting)
-These are saved in your browser's local storage, so they persist between visits on the same browser/device. Use the **Export notes** button on the Opponent Scouting tab to download a backup JSON file, and **Import notes** to load it on another device or browser.
+To add a team, add it to `TEAMS` at the top of `tools/trols_sync.py` and run the sync.
 
-## Hosting on GitHub Pages
-1. Create a new repo (e.g. `berwick-a-reserve-4`) and push these files to the `main` branch.
-2. In the repo, go to **Settings → Pages**, set Source to `main` branch, root folder.
-3. Your site will be live at `https://<your-username>.github.io/berwick-a-reserve-4/`.
+## What's preserved between syncs (hand-maintained)
+Per team (`teams/<slug>/data.json`): `roster` contact details / UTR / order, `availability`, `lineups`, `playerNotes`, `playerAliases`, and each club's `courtType` / `notes`.
+Club (`club.json` → `manual`):
+- `playerHomeTeam`: `{"Player Name": "slug"}` — overrides the auto-detected own team.
+- `emergencies`: `[{"player", "date": "YYYY-MM-DD", "team": "slug", "opponent", "note"}]` — fill-ins not shown on a scoresheet.
+- `playerAliases`: `{"Variant": "Canonical Name"}` across all teams.
 
-## Weekly updates
-A scheduled task ("berwick-tennis-results-update") runs every **Wednesday at 8am** and updates `data.json`/`data.js` with the previous weekend's results (scores are posted Tuesday nights). It uses Claude in Chrome to read:
-https://www.trols.org.au/wdta/results.php?daytime=AP&section=AP020&style=
-
-For each completed match it also clicks into the match-detail popup to capture per-rubber data (players, set scores, winners) for all teams in the section, which feeds the Player Stats tab.
-
-After it runs, if you're using GitHub Pages, commit and push the updated `data.json`/`data.js` files to keep the live site in sync.
-
-## Data shape: results / rubbers
-Each match in `data.json` → `results[].matches[]` has the usual team totals (`homePts/homeR/homeS/homeG`, etc.) plus:
-- `homePlayers` / `awayPlayers` – ordered player lists (position 1, 2, 3...) for that match
-- `rubbers` – array of 3 entries (2 singles + 1 doubles), each with `homePlayers`/`awayPlayers` (resolved names), `sets` (array of `[homeGames, awayGames]`), `homeSets`/`awaySets`, `homeGames`/`awayGames`, `type`, and `winner` ("home"/"away")
-
-The Player Stats tab aggregates these client-side - no extra data file needed.
-
-## Still to do
-- Opponent UTR ratings for opposing players haven't been looked up yet on utrsports.net. Opponent player names are now available via the Player Stats tab (pulled from match-detail data). Ask Claude to look up UTR ratings once Chrome is connected — they could go into the Opponent Scouting tab as a starting point.
-x
+## Emergency tracker
+Every **E** on a trols scoresheet for a Berwick team counts as an emergency appearance (unless it's for the player's own team). WDTA allows 3 a season; the hub flags amber at 2 and red at 3.
