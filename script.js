@@ -823,7 +823,7 @@ function fillPageChrome() {
   if (sw && c) {
     sw.innerHTML = `<option value="../../">Club home</option>` + c.teams.map(t =>
       `<option value="../${t.slug}/"${t.slug === m.slug ? " selected" : ""}>${escapeHtml(t.label)} — ${escapeHtml(t.sectionName.replace("Open Singles/Doubles ", ""))}</option>`).join("");
-    sw.addEventListener("change", () => { location.href = sw.value + location.hash; });
+    sw.addEventListener("change", () => { location.href = sw.value === "../../" ? "../../" : sw.value + location.hash; });
   } else if (sw) sw.parentElement.style.display = "none";
   const f = document.getElementById("page-footer");
   if (f) {
