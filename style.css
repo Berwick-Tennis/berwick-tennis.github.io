@@ -605,3 +605,4 @@ tr.em-row-alert td{background:rgba(198,40,40,.12)}
 .team-switch select{width:auto}
 .em-mobile{display:none}
 @media (max-width:640px){.em-wide{display:none}.em-mobile{display:block;margin-top:.25rem;white-space:normal}}
+#venues-list .court-type-banner{margin-bottom:.7rem}

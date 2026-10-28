@@ -129,14 +129,7 @@ function applyOverrides() {
       if (o.email !== undefined) p.email = o.email;
     }
   });
-  // club court type + notes overrides
-  DATA.clubs.forEach(c => {
-    const o = OVERRIDES.clubs[c.id];
-    if (o) {
-      if (o.courtType !== undefined) c.courtType = o.courtType;
-      if (o.notes !== undefined) c.notes = o.notes;
-    }
-  });
+  // Venue details are read-only (no per-browser overrides any more)
 }
 
 /* ---------------- Player notes (used on Players tab) ---------------- */
@@ -984,7 +977,7 @@ function renderDashboard() {
         <div class="match-venue-block">
           ${venue ? `
             <div><a href="${mapsLink(venue.address)}" target="_blank" rel="noopener">${escapeHtml(venue.address)}</a></div>
-            <div class="court-type-banner">${venue.courtType ? `🎾 ${escapeHtml(venue.courtType)}` : `<span class="muted">Court surface not set — add it on the Venues tab</span>`}</div>
+            <div class="court-type-banner">${venue.courtType ? `🎾 ${escapeHtml(venue.courtType)}` : `<span class="muted">Court surface not known yet</span>`}</div>
             <div class="map-embed">
               <iframe src="https://www.google.com/maps?q=${encodeURIComponent(venue.address)}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               <a class="map-open" href="${mapsLink(venue.address)}" target="_blank" rel="noopener">Directions ↗</a>
@@ -1395,57 +1388,23 @@ function nextMatchDate() {
 /* ---------------- Venues tab ---------------- */
 
 function renderVenues() {
+  // Read-only: venue details come from trols + club research (club.json manual.courtTypes). Ask Claude to change them.
   const el = document.getElementById("venues-list");
   el.innerHTML = DATA.clubs.map(c => `
     <div class="card">
-      <h3>${c.name}${c.name === OUR_TEAM ? ' <span class="tag">us</span>' : ""}</h3>
-      <p class="muted">${c.address} &middot; <a href="${mapsLink(c.address)}" target="_blank" rel="noopener">Map &rarr;</a></p>
-      <div class="court-type-banner">${c.courtType ? `🎾 ${escapeHtml(c.courtType)}` : `<span class="muted">Court surface not set — add it below</span>`}</div>
+      <h3>${escapeHtml(c.name)}${c.name === OUR_TEAM ? ' <span class="tag">us</span>' : ""}</h3>
+      <p class="muted">${escapeHtml(c.address)} &middot; <a href="${mapsLink(c.address)}" target="_blank" rel="noopener">Map &rarr;</a></p>
+      <div class="court-type-banner">${c.courtType ? `🎾 ${escapeHtml(c.courtType)}` : `<span class="muted">Court surface not known yet</span>`}</div>
       <div class="grid-2">
         <div>
-          <label class="muted">Court type</label>
-          <input type="text" class="editable club-court" data-id="${c.id}" placeholder="e.g. Synthetic grass, Plexicushion..." value="${escapeAttr(c.courtType || "")}">
-        </div>
-        <div>
           <label class="muted">Contact</label>
-          <div>${c.contactName || "-"} ${c.contactPhone ? "&middot; " + c.contactPhone : ""}</div>
-          ${c.clubhousePhone ? `<div class="muted">Clubhouse: ${c.clubhousePhone}</div>` : ""}
+          <div>${escapeHtml(c.contactName || "-")} ${c.contactPhone ? "&middot; " + escapeHtml(c.contactPhone) : ""}</div>
+          ${c.clubhousePhone ? `<div class="muted">Clubhouse: ${escapeHtml(c.clubhousePhone)}</div>` : ""}
         </div>
-      </div>
-      <div style="margin-top:0.6rem;">
-        <label class="muted">Notes (shown on Dashboard for the next match at this venue)</label>
-        <textarea class="editable club-notes" data-id="${c.id}" placeholder="e.g. Parking tips, court numbers, dress code...">${escapeHtml(c.notes || "")}</textarea>
+        ${c.notes ? `<div><label class="muted">Notes</label><div>${escapeHtml(c.notes).replace(/\n/g, "<br>")}</div></div>` : ""}
       </div>
     </div>
   `).join("");
-
-  el.querySelectorAll(".club-court").forEach(input => {
-    input.addEventListener("change", () => {
-      const id = input.dataset.id;
-      OVERRIDES.clubs[id] = OVERRIDES.clubs[id] || {};
-      OVERRIDES.clubs[id].courtType = input.value;
-      saveOverrides();
-      const club = DATA.clubs.find(c => c.id === id);
-      if (club) club.courtType = input.value;
-      const banner = input.closest(".card").querySelector(".court-type-banner");
-      if (banner) banner.innerHTML = input.value ? `🎾 ${escapeHtml(input.value)}` : `<span class="muted">Court surface not set — add it below</span>`;
-      flashSaved(input);
-      renderDashboard();
-    });
-  });
-
-  el.querySelectorAll(".club-notes").forEach(input => {
-    input.addEventListener("change", () => {
-      const id = input.dataset.id;
-      OVERRIDES.clubs[id] = OVERRIDES.clubs[id] || {};
-      OVERRIDES.clubs[id].notes = input.value;
-      saveOverrides();
-      const club = DATA.clubs.find(c => c.id === id);
-      if (club) club.notes = input.value;
-      flashSaved(input);
-      renderDashboard();
-    });
-  });
 }
 
 function escapeHtml(s) {
