@@ -1494,6 +1494,7 @@ function renderAll() {
   renderSchedule();
   renderAvailabilityGrid();
   renderVenues();
+  if (typeof renderCharts === "function") renderCharts();
 }
 
 async function init() {

@@ -118,6 +118,32 @@ function renderLadders(teams) {
     </table></div>`;
 }
 
+function renderSnapshot(teams) {
+  const rows = teams.map(({ t, d }) => {
+    const L = ladder(d), us = L.find(x => x.team === "Berwick") || { pos: null, pts: 0 };
+    return { label: t.label, path: t.path, pos: d.results.length ? us.pos : null, N: L.length, pts: us.pts };
+  });
+  const maxN = Math.max(...rows.map(r => r.N)), W = 680, padL = 110, padR = 30, rowH = 36, H = 34 + rowH * rows.length;
+  const sx = p => padL + (p - 1) * (W - padL - padR) / (maxN - 1);
+  const ord = p => p + (p === 1 ? "st" : p === 2 ? "nd" : p === 3 ? "rd" : "th");
+  const s = [`<svg viewBox="0 0 ${W} ${H}" class="cx-chart" role="img" aria-label="Ladder position of every Berwick team">`];
+  for (let p = 1; p <= maxN; p++) s.push(`<text x="${sx(p)}" y="16" class="cx-tick" text-anchor="middle">${ord(p)}</text>`);
+  rows.forEach((r, i) => {
+    const cy = 38 + i * rowH;
+    s.push(`<a href="${r.path}"><text x="${padL - 14}" y="${cy + 4}" class="cx-lab" text-anchor="end">${esc(r.label)}</text></a>`);
+    s.push(`<line x1="${sx(1)}" x2="${sx(r.N)}" y1="${cy}" y2="${cy}" class="cx-track"/>`);
+    if (r.N > 4) s.push(`<line x1="${sx(1)}" x2="${sx(4)}" y1="${cy}" y2="${cy}" class="cx-track-top"/>`);
+    for (let p = 1; p <= r.N; p++) s.push(`<circle cx="${sx(p)}" cy="${cy}" r="2.5" class="cx-tick-dot"/>`);
+    if (r.pos) {
+      s.push(`<circle cx="${sx(r.pos)}" cy="${cy}" r="10" class="cx-dot-us" data-tip="${esc(`${r.label}: ${ord(r.pos)} of ${r.N} (${r.pts} pts)`)}"/>`);
+      s.push(`<text x="${sx(r.pos)}" y="${cy + 4}" class="cx-dot-num" text-anchor="middle">${r.pos}</text>`);
+    }
+  });
+  s.push("</svg>");
+  document.getElementById("club-snapshot").innerHTML =
+    `<div class="cx-wrap">${s.join("")}</div><p class="muted small">Each Berwick team's current ladder position. The green part of each track is the top-4 finals zone (Rubbers A1 has only four teams).</p>`;
+}
+
 function renderEmergencies(club) {
   const limit = club.emergencyLimit || 3;
   const label = slug => (club.teams.find(t => t.slug === slug) || {}).label || slug || "?";
@@ -165,6 +191,7 @@ async function init() {
   document.getElementById("last-updated").textContent = `Results loaded: ${club.resultsLoadedFromSite || club.lastUpdated}`;
   const teams = (await Promise.all(club.teams.map(async t => ({ t, d: await loadJSON(`${t.path}data.json`, null) })))).filter(x => x.d);
   renderWeek(club, teams);
+  renderSnapshot(teams);
   renderLadders(teams);
   renderEmergencies(club);
   renderPlayers(club, teams);
@@ -184,3 +211,12 @@ async function init() {
 }
 
 init();
+
+(() => {
+  const tip = document.createElement("div"); tip.id = "cx-tip"; tip.hidden = true; document.body.appendChild(tip);
+  const show = (el, x, y) => { tip.textContent = el.getAttribute("data-tip"); tip.hidden = false;
+    const r = tip.getBoundingClientRect();
+    tip.style.left = Math.max(8, Math.min(x + 14, innerWidth - r.width - 8)) + "px"; tip.style.top = Math.max(8, y - r.height - 12) + "px"; };
+  ["pointermove", "pointerdown"].forEach(ev => document.addEventListener(ev, e => {
+    const el = e.target.closest && e.target.closest("[data-tip]"); if (el) show(el, e.clientX, e.clientY); else tip.hidden = true; }));
+})();
