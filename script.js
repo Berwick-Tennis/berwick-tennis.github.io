@@ -1430,6 +1430,7 @@ function flashSaved(el) {
 /* ---------------- Export / Import ---------------- */
 
 function initDataTools() {
+  if (!document.getElementById("export-btn")) return; // notes export/import/token buttons removed from the page
   document.getElementById("export-btn").addEventListener("click", () => {
     const blob = new Blob([JSON.stringify(OVERRIDES, null, 2)], { type: "application/json" });
     const a = document.createElement("a");
