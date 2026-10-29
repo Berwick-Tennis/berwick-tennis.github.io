@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Berwick Tennis Club — Saturday PM</title>
-  <link rel="stylesheet" href="style.css?v=202610291400">
+  <link rel="stylesheet" href="style.css?v=202610291610">
 </head>
 <body>
   <header>
@@ -17,6 +17,7 @@
     <button class="active" data-tab="week">This Round</button>
     <button data-tab="ladders">Teams</button>
     <button data-tab="emergency">Emergencies</button>
+    <button data-tab="clubstats">Stats</button>
     <button data-tab="people">Players</button>
   </nav>
 
@@ -35,6 +36,12 @@
         <h2>Berwick teams — ladder positions</h2>
         <div id="ladders-table">Loading…</div>
       </div>
+    </section>
+
+    <section id="clubstats" class="tab">
+      <h2 style="margin-top:0;">Berwick player stats</h2>
+      <p class="muted" style="margin-top:-.4rem;">Every Berwick player across all our Saturday PM teams this season.</p>
+      <div id="club-stats">Loading…</div>
     </section>
 
     <section id="emergency" class="tab">
@@ -57,7 +64,8 @@
     Past seasons: <span id="archives"></span>
   </footer>
 
-  <script src="club.js?v=202610291400"></script>
-  <script src="hub.js?v=202610291400"></script>
+  <script src="club.js?v=202610291610"></script>
+  <script src="hubstats.js?v=202610291610"></script>
+  <script src="hub.js?v=202610291610"></script>
 </body>
 </html>

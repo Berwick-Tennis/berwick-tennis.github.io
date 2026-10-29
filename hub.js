@@ -192,6 +192,7 @@ async function init() {
   const teams = (await Promise.all(club.teams.map(async t => ({ t, d: await loadJSON(`${t.path}data.json`, null) })))).filter(x => x.d);
   renderWeek(club, teams);
   renderSnapshot(teams);
+  if (typeof renderClubStats === "function") renderClubStats(club, teams);
   renderLadders(teams);
   renderEmergencies(club);
   renderPlayers(club, teams);
