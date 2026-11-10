@@ -223,6 +223,7 @@ tr.finals-cutoff td {
 }
 .pill.W { background: var(--win); }
 .pill.L { background: var(--loss); }
+.pill.R { background: transparent; font-size: 0.85em; }
 
 .opp-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; }
 .opp-chip {

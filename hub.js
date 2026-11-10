@@ -25,9 +25,10 @@ function ladder(d) {
     [["home", "away"], ["away", "home"]].forEach(([s, o]) => {
       const x = t[m[s]] || (t[m[s]] = { team: m[s], played: 0, pts: 0, w: 0, l: 0, sF: 0, sA: 0, gF: 0, gA: 0, form: [] });
       const won = m[`${s}Pts`] > m[`${o}Pts`];
-      x.played++; x.pts += m[`${s}Pts`]; won ? x.w++ : x.l++;
+      const wash = !!m.washout || !(m.homePts || m.awayPts || m.homeR || m.awayR || m.homeS || m.awayS || m.homeG || m.awayG);
+      x.played++; x.pts += m[`${s}Pts`]; if (!wash) { won ? x.w++ : x.l++; }
       x.sF += m[`${s}S`]; x.sA += m[`${o}S`]; x.gF += m[`${s}G`]; x.gA += m[`${o}G`];
-      x.form.push({ r: won ? "W" : "L", round: r.round, opp: m[o], score: `${m[`${s}Pts`]}-${m[`${o}Pts`]}` });
+      x.form.push({ r: wash ? "R" : won ? "W" : "L", round: r.round, opp: m[o], score: `${m[`${s}Pts`]}-${m[`${o}Pts`]}` });
     });
   }));
   const pct = (a, b) => a + b ? a / (a + b) : 0;
@@ -58,7 +59,7 @@ function lastResult(d) {
   return null;
 }
 
-function pill(f) { return `<span class="pill ${f.r}" title="Rd${f.round} v ${esc(f.opp)} (${f.score})">${f.r}</span>`; }
+function pill(f) { return `<span class="pill ${f.r}" title="Rd${f.round} v ${esc(f.opp)} (${f.r === "R" ? "washed out" : f.score})">${f.r === "R" ? "🌧️" : f.r}</span>`; }
 
 function renderWeek(club, teams) {
   const el = document.getElementById("this-week");

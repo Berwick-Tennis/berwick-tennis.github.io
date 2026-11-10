@@ -278,6 +278,18 @@ function lineupBlock(date) {
 
 /* ---------------- Ladder computation ---------------- */
 
+// A washed-out match: flagged by the sync, or nothing scored at all (no points, rubbers, sets or games).
+function isWashout(m) {
+  if (m.washout) return true;
+  return !(m.homePts || m.awayPts || m.homeR || m.awayR || m.homeS || m.awayS || m.homeG || m.awayG);
+}
+
+// Ladder form pill: green W / red L, or a rain cloud for a washout.
+function formPill(f) {
+  const tip = f.result === "R" ? `Rd${f.round} vs ${f.opponent} — washed out` : `Rd${f.round} vs ${f.opponent} (${f.pts}-${f.oppPts})`;
+  return `<span class="pill ${f.result}" title="${escapeHtml(tip)}">${f.result === "R" ? "🌧️" : f.result}</span>`;
+}
+
 function computeLadder() {
   const teams = {};
   function ensure(name) {
@@ -301,8 +313,9 @@ function computeLadder() {
       a.sFor += m.awayS; a.sAgainst += m.homeS;
       h.gFor += m.homeG; h.gAgainst += m.awayG;
       a.gFor += m.awayG; a.gAgainst += m.homeG;
-      h.form.push({ round: round.round, result: m.homePts > m.awayPts ? "W" : "L", opponent: m.away, pts: m.homePts, oppPts: m.awayPts });
-      a.form.push({ round: round.round, result: m.awayPts > m.homePts ? "W" : "L", opponent: m.home, pts: m.awayPts, oppPts: m.homePts });
+      const washout = isWashout(m);
+      h.form.push({ round: round.round, result: washout ? "R" : (m.homePts > m.awayPts ? "W" : "L"), opponent: m.away, pts: m.homePts, oppPts: m.awayPts });
+      a.form.push({ round: round.round, result: washout ? "R" : (m.awayPts > m.homePts ? "W" : "L"), opponent: m.home, pts: m.awayPts, oppPts: m.homePts });
     });
   });
 
@@ -951,9 +964,7 @@ function renderDashboard() {
     const oppLadder = ladder.find(t => t.team === opponent || t.team.replace(" U/C", "") === opponent.replace(" U/C", ""));
     const usLadder = ladder.find(t => t.team === OUR_TEAM);
 
-    const pillsFor = (ladderEntry) => (ladderEntry ? ladderEntry.form.slice(-5) : []).map(f =>
-      `<span class="pill ${f.result}" title="Rd${f.round} vs ${f.opponent} (${f.pts}-${f.oppPts})">${f.result}</span>`
-    ).join("");
+    const pillsFor = (ladderEntry) => (ladderEntry ? ladderEntry.form.slice(-5) : []).map(formPill).join("");
     const usForm = pillsFor(usLadder);
     const oppForm = pillsFor(oppLadder);
 
@@ -1041,7 +1052,7 @@ function renderDashboard() {
             <td>${escapeHtml(t.team)}</td>
             <td>${t.played}</td>
             <td>${t.pts.toFixed(1)}</td>
-            <td><div class="form-pills">${t.form.slice(-5).map(f => `<span class="pill ${f.result}" title="Rd${f.round} vs ${f.opponent} (${f.pts}-${f.oppPts})">${f.result}</span>`).join("")}</div></td>
+            <td><div class="form-pills">${t.form.slice(-5).map(formPill).join("")}</div></td>
           </tr>`).join("")}
       </tbody>
     </table>
@@ -1101,7 +1112,7 @@ function renderLadder() {
             <td>${t.sFor}-${t.sAgainst}</td>
             <td>${t.gFor}-${t.gAgainst}</td>
             <td>${(t.gamePct * 100).toFixed(1)}%</td>
-            <td><div class="form-pills">${t.form.slice(-5).map(f => `<span class="pill ${f.result}" title="Rd${f.round} vs ${f.opponent} (${f.pts}-${f.oppPts})">${f.result}</span>`).join("")}</div></td>
+            <td><div class="form-pills">${t.form.slice(-5).map(formPill).join("")}</div></td>
           </tr>`).join("")}
       </tbody>
     </table>
@@ -1124,7 +1135,7 @@ function renderFinals() {
       <td>${escapeHtml(t.team)}</td>
       <td>${t.played}</td>
       <td>${t.pts.toFixed(1)}</td>
-      <td><div class="form-pills">${t.form.slice(-5).map(f => `<span class="pill ${f.result}" title="Rd${f.round} vs ${f.opponent} (${f.pts}-${f.oppPts})">${f.result}</span>`).join("")}</div></td>
+      <td><div class="form-pills">${t.form.slice(-5).map(formPill).join("")}</div></td>
     </tr>`).join("");
 
   const withGames = strength.filter(t => t.games.length);
@@ -1341,26 +1352,32 @@ function renderRoster() {
 function renderSchedule() {
   const el = document.getElementById("schedule-table");
   const today = todayISO();
+  const ladderNow = computeLadder();
+  const posOf = name => {
+    const t = ladderNow.find(x => x.team === name || x.team.replace(" U/C", "") === String(name).replace(" U/C", ""));
+    return t ? t.position : null;
+  };
   el.innerHTML = `
     <div class="table-wrap">
     <table>
-      <thead><tr><th>Rd</th><th>Date</th><th>Home</th><th>Away</th><th>Venue</th><th>Available</th><th></th></tr></thead>
+      <thead><tr><th>Rd</th><th>Date</th><th>Home</th><th>Away</th><th>Opp. ladder</th><th>Venue</th><th>Available</th><th></th></tr></thead>
       <tbody>
         ${DATA.schedule.map(s => {
           if (s.byeDate || (!s.home && !s.away)) {
             const finals = !s.byeDate && s.note;
-            return `<tr><td>${s.round ?? ""}</td><td>${fmtDate(s.date)}</td><td colspan="3" class="muted">${s.note || "No Play"}</td><td>${finals ? availabilityChips(s.date, { compact: true }) : ""}</td><td></td></tr>`;
+            return `<tr><td>${s.round ?? ""}</td><td>${fmtDate(s.date)}</td><td colspan="4" class="muted">${s.note || "No Play"}</td><td>${finals ? availabilityChips(s.date, { compact: true }) : ""}</td><td></td></tr>`;
           }
           const isHome = s.home === OUR_TEAM;
           const venue = clubByName(s.home);
           const isPast = s.date < today;
+          const oppPos = posOf(isHome ? s.away : s.home);
           const result = isPast ? DATA.results.find(r => r.round === s.round) : null;
           let resultBadge = "";
           if (result) {
             const m = result.matches.find(mm => mm.home === s.home && mm.away === s.away);
             if (m) {
               const usWon = (isHome && m.homePts > m.awayPts) || (!isHome && m.awayPts > m.homePts);
-              resultBadge = `<span class="badge ${usWon ? "win" : "loss"}">${usWon ? "W" : "L"} ${m.homePts.toFixed(0)}-${m.awayPts.toFixed(0)}</span>`;
+              resultBadge = isWashout(m) ? `<span class="badge" title="Washed out">🌧️ Washout</span>` : `<span class="badge ${usWon ? "win" : "loss"}">${usWon ? "W" : "L"} ${m.homePts.toFixed(0)}-${m.awayPts.toFixed(0)}</span>`;
             }
           }
           return `<tr class="${s.date === nextMatchDate() ? "us-row" : ""}">
@@ -1368,6 +1385,7 @@ function renderSchedule() {
             <td>${fmtDate(s.date)}</td>
             <td>${s.home === OUR_TEAM ? `<strong>${escapeHtml(s.home)}</strong>` : escapeHtml(s.home)}</td>
             <td>${s.away === OUR_TEAM ? `<strong>${escapeHtml(s.away)}</strong>` : escapeHtml(s.away)}</td>
+            <td>${oppPos ? `<strong>#${oppPos}</strong>` : ""}</td>
             <td>${venue ? `${escapeHtml(venue.address)} &middot; <a href="${mapsLink(venue.address)}" target="_blank" rel="noopener">Map</a>` : ""}</td>
             <td>${availabilityChips(s.date, { compact: true })}</td>
             <td>${resultBadge}</td>
