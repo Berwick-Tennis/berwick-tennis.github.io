@@ -2605,6 +2605,13 @@ window.SITE_DATA = {
   },
   "playerAliases": {},
   "playerNotes": {},
-  "availability": {},
+  "availability": {
+    "2026-11-14": {
+      "Tom Maloney": {
+        "status": "out",
+        "note": "Not available (told David, 10 Nov)"
+      }
+    }
+  },
   "lineups": {}
 };
