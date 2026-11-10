@@ -8,8 +8,8 @@ window.SITE_DATA = {
     "sectionCode": "AP015",
     "teamCode": "AP113",
     "ourTeam": "Berwick",
-    "lastUpdated": "2026-10-28",
-    "resultsLoadedFromSite": "27th October 26 @ 07:26:11 PM",
+    "lastUpdated": "2026-11-10",
+    "resultsLoadedFromSite": "10th November 26 @ 09:08:36 PM",
     "sourceUrl": "https://www.trols.org.au/wdta/results.php?daytime=AP&section=AP015&style=",
     "fixtureUrl": "https://www.trols.org.au/wdta/fixture.php?daytime=AP&section=AP015&style=",
     "dataPath": "teams/a13/data.json",
@@ -146,7 +146,7 @@ window.SITE_DATA = {
       "utrDoubles": null,
       "utrDoublesReliability": null,
       "name": "Simranjeev Chawla",
-      "played": 2,
+      "played": 3,
       "emergencyApps": 0,
       "order": 1,
       "emergency": false
@@ -163,7 +163,7 @@ window.SITE_DATA = {
       "utrDoubles": null,
       "utrDoublesReliability": null,
       "name": "Justin Herrmann",
-      "played": 2,
+      "played": 3,
       "emergencyApps": 0,
       "order": 2,
       "emergency": false
@@ -1703,6 +1703,466 @@ window.SITE_DATA = {
           ]
         }
       ]
+    },
+    {
+      "round": 4,
+      "date": "2026-11-07",
+      "matches": [
+        {
+          "matchId": "AP015041",
+          "home": "Pakenham",
+          "away": "Hampton Park",
+          "homePts": 6.0,
+          "homeR": 2,
+          "homeS": 4,
+          "homeG": 29,
+          "awayPts": 2.0,
+          "awayR": 1,
+          "awayS": 2,
+          "awayG": 19,
+          "homePlayers": [
+            "Henry Grattan",
+            "Eshan Shankar"
+          ],
+          "awayPlayers": [
+            "Peter Halat",
+            "Denesh Balendra",
+            "Rod Leplastrier"
+          ],
+          "homePositions": {
+            "Henry Grattan": 1,
+            "Eshan Shankar": 2
+          },
+          "awayPositions": {
+            "Peter Halat": 1,
+            "Denesh Balendra": 2,
+            "Rod Leplastrier": 3
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Henry Grattan"
+              ],
+              "awayPlayers": [
+                "Peter Halat"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 3,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Eshan Shankar"
+              ],
+              "awayPlayers": [
+                "Denesh Balendra"
+              ],
+              "sets": [
+                [
+                  6,
+                  3
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 4,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Henry Grattan",
+                "Eshan Shankar"
+              ],
+              "awayPlayers": [
+                "Peter Halat",
+                "Rod Leplastrier"
+              ],
+              "sets": [
+                [
+                  2,
+                  6
+                ],
+                [
+                  3,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 5,
+              "awayGames": 12,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "matchId": "AP015042",
+          "home": "W'Lane Mulgrave",
+          "away": "Knox City",
+          "homePts": 8.0,
+          "homeR": 3,
+          "homeS": 6,
+          "homeG": 42,
+          "awayPts": 1.0,
+          "awayR": 0,
+          "awayS": 1,
+          "awayG": 16,
+          "homePlayers": [
+            "Steve Mastropolous",
+            "Filippos Symeonidis-Syvridis"
+          ],
+          "awayPlayers": [
+            "Noah Sharestani",
+            "Abel Sharestani",
+            "Zaki Sharestani"
+          ],
+          "homePositions": {
+            "Steve Mastropolous": 1,
+            "Filippos Symeonidis-Syvridis": 2
+          },
+          "awayPositions": {
+            "Noah Sharestani": 1,
+            "Abel Sharestani": 2,
+            "Zaki Sharestani": 3
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [
+            "Abel Sharestani"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Steve Mastropolous"
+              ],
+              "awayPlayers": [
+                "Noah Sharestani"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 3,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Filippos Symeonidis-Syvridis"
+              ],
+              "awayPlayers": [
+                "Abel Sharestani"
+              ],
+              "sets": [
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  0
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 0,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Steve Mastropolous",
+                "Filippos Symeonidis-Syvridis"
+              ],
+              "awayPlayers": [
+                "Noah Sharestani",
+                "Zaki Sharestani"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  5,
+                  7
+                ],
+                [
+                  7,
+                  5
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 18,
+              "awayGames": 13,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "matchId": "AP015043",
+          "home": "Eley Park",
+          "away": "Berwick",
+          "homePts": 0.0,
+          "homeR": 0,
+          "homeS": 0,
+          "homeG": 6,
+          "awayPts": 8.0,
+          "awayR": 3,
+          "awayS": 6,
+          "awayG": 36,
+          "homePlayers": [
+            "Chen Li",
+            "Yulong Chen",
+            "Neo Liang"
+          ],
+          "awayPlayers": [
+            "Simranjeev Chawla",
+            "Justin Herrmann"
+          ],
+          "homePositions": {
+            "Chen Li": 1,
+            "Yulong Chen": 2,
+            "Neo Liang": 3
+          },
+          "awayPositions": {
+            "Simranjeev Chawla": 1,
+            "Justin Herrmann": 2
+          },
+          "homeEmergencies": [
+            "Yulong Chen"
+          ],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Chen Li"
+              ],
+              "awayPlayers": [
+                "Simranjeev Chawla"
+              ],
+              "sets": [
+                [
+                  2,
+                  6
+                ],
+                [
+                  1,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 3,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Yulong Chen"
+              ],
+              "awayPlayers": [
+                "Justin Herrmann"
+              ],
+              "sets": [
+                [
+                  0,
+                  6
+                ],
+                [
+                  1,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 1,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Chen Li",
+                "Neo Liang"
+              ],
+              "awayPlayers": [
+                "Simranjeev Chawla",
+                "Justin Herrmann"
+              ],
+              "sets": [
+                [
+                  1,
+                  6
+                ],
+                [
+                  1,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 2,
+              "awayGames": 12,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "matchId": "AP015044",
+          "home": "N'hill P'wood",
+          "away": "Oakleigh",
+          "homePts": 8.0,
+          "homeR": 3,
+          "homeS": 6,
+          "homeG": 37,
+          "awayPts": 0.0,
+          "awayR": 0,
+          "awayS": 0,
+          "awayG": 17,
+          "homePlayers": [
+            "Nanda Jiang",
+            "Andy Duan"
+          ],
+          "awayPlayers": [
+            "Rushi Raparel",
+            "Anusheyan Raveendiran"
+          ],
+          "homePositions": {
+            "Nanda Jiang": 1,
+            "Andy Duan": 2
+          },
+          "awayPositions": {
+            "Rushi Raparel": 1,
+            "Anusheyan Raveendiran": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Nanda Jiang"
+              ],
+              "awayPlayers": [
+                "Rushi Raparel"
+              ],
+              "sets": [
+                [
+                  6,
+                  4
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 6,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Andy Duan"
+              ],
+              "awayPlayers": [
+                "Anusheyan Raveendiran"
+              ],
+              "sets": [
+                [
+                  6,
+                  3
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 5,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Nanda Jiang",
+                "Andy Duan"
+              ],
+              "awayPlayers": [
+                "Rushi Raparel",
+                "Anusheyan Raveendiran"
+              ],
+              "sets": [
+                [
+                  7,
+                  6
+                ],
+                [
+                  6,
+                  0
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 13,
+              "awayGames": 6,
+              "winner": "home"
+            }
+          ]
+        }
+      ]
     }
   ],
   "teamRosters": {
@@ -1711,19 +2171,19 @@ window.SITE_DATA = {
         "name": "Peter Halat",
         "order": 1,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Denesh Balendra",
         "order": 2,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Rod Leplastrier",
         "order": 3,
         "emergency": false,
-        "played": 2
+        "played": 3
       }
     ],
     "W'Lane Mulgrave": [
@@ -1731,25 +2191,25 @@ window.SITE_DATA = {
         "name": "Steve Mastropolous",
         "order": 1,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Filippos Symeonidis-Syvridis",
         "order": 2,
         "emergency": false,
-        "played": 3
+        "played": 4
       }
     ],
     "N'hill P'wood": [
       {
-        "name": "Andy Duan",
-        "order": 1,
-        "emergency": false,
-        "played": 2
-      },
-      {
         "name": "Nanda Jiang",
         "order": 1,
+        "emergency": false,
+        "played": 4
+      },
+      {
+        "name": "Andy Duan",
+        "order": 2,
         "emergency": false,
         "played": 3
       },
@@ -1762,26 +2222,26 @@ window.SITE_DATA = {
     ],
     "Eley Park": [
       {
+        "name": "Chen Li",
+        "order": 1,
+        "emergency": false,
+        "played": 3
+      },
+      {
         "name": "Mingyu Liu",
         "order": 1,
         "emergency": false,
         "played": 3
       },
       {
-        "name": "Chen Li",
-        "order": 2,
+        "name": "Neo Liang",
+        "order": 3,
         "emergency": false,
         "played": 2
       },
       {
         "name": "Song Song",
         "order": 3,
-        "emergency": false,
-        "played": 1
-      },
-      {
-        "name": "Neo Liang",
-        "order": 4,
         "emergency": false,
         "played": 1
       },
@@ -1801,7 +2261,7 @@ window.SITE_DATA = {
         "name": "Yulong Chen",
         "order": null,
         "emergency": true,
-        "played": 1
+        "played": 2
       }
     ],
     "Pakenham": [
@@ -1809,13 +2269,13 @@ window.SITE_DATA = {
         "name": "Henry Grattan",
         "order": 1,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Eshan Shankar",
         "order": 2,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Luke Aungier",
@@ -1829,19 +2289,19 @@ window.SITE_DATA = {
         "name": "Noah Sharestani",
         "order": 1,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Zaki Sharestani",
         "order": 3,
         "emergency": false,
-        "played": 1
+        "played": 2
       },
       {
         "name": "Abel Sharestani",
         "order": null,
         "emergency": true,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Laiton Underwood",
@@ -1852,22 +2312,28 @@ window.SITE_DATA = {
     ],
     "Oakleigh": [
       {
-        "name": "Anusheyan Raveendiran",
-        "order": 1,
-        "emergency": false,
-        "played": 2
-      },
-      {
         "name": "Chris Kalaitzis",
         "order": 1,
         "emergency": false,
         "played": 2
       },
       {
+        "name": "Rushi Raparel",
+        "order": 1,
+        "emergency": false,
+        "played": 1
+      },
+      {
         "name": "Rushi Ruparal",
         "order": 1,
         "emergency": false,
         "played": 2
+      },
+      {
+        "name": "Anusheyan Raveendiran",
+        "order": 2,
+        "emergency": false,
+        "played": 3
       },
       {
         "name": "Hari Babu",
@@ -1878,7 +2344,7 @@ window.SITE_DATA = {
     ]
   },
   "remainingFixtures": {
-    "asOfDate": "2026-10-28",
+    "asOfDate": "2026-11-10",
     "note": "Full fixture for all 8 teams in Open Singles/Doubles A 13, from trols.org.au.",
     "rounds": [
       {

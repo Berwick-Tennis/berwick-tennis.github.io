@@ -8,8 +8,8 @@
     "sectionCode": "AP004",
     "teamCode": "AP025",
     "ourTeam": "Berwick",
-    "lastUpdated": "2026-10-28",
-    "resultsLoadedFromSite": "27th October 26 @ 07:26:11 PM",
+    "lastUpdated": "2026-11-10",
+    "resultsLoadedFromSite": "10th November 26 @ 09:08:36 PM",
     "sourceUrl": "https://www.trols.org.au/wdta/results.php?daytime=AP&section=AP004&style=",
     "fixtureUrl": "https://www.trols.org.au/wdta/fixture.php?daytime=AP&section=AP004&style=",
     "dataPath": "teams/a2/data.json",
@@ -129,7 +129,7 @@
       "utrDoubles": null,
       "utrDoublesReliability": null,
       "name": "Chris Wickenton",
-      "played": 2,
+      "played": 3,
       "emergencyApps": 0,
       "order": 1,
       "emergency": false
@@ -146,7 +146,7 @@
       "utrDoubles": null,
       "utrDoublesReliability": null,
       "name": "Rod McKenzie",
-      "played": 2,
+      "played": 3,
       "emergencyApps": 0,
       "order": 1,
       "emergency": false
@@ -1728,6 +1728,461 @@
           ]
         }
       ]
+    },
+    {
+      "round": 4,
+      "date": "2026-11-07",
+      "matches": [
+        {
+          "matchId": "AP004041",
+          "home": "Langwarrin",
+          "away": "Berwick",
+          "homePts": 4.0,
+          "homeR": 0,
+          "homeS": 1,
+          "homeG": 15,
+          "awayPts": 5.0,
+          "awayR": 1,
+          "awayS": 2,
+          "awayG": 16,
+          "homePlayers": [
+            "Tim Scott-sandvik",
+            "Thomas George"
+          ],
+          "awayPlayers": [
+            "Chris Wickenton",
+            "Rod McKenzie"
+          ],
+          "homePositions": {
+            "Tim Scott-sandvik": 1,
+            "Thomas George": 2
+          },
+          "awayPositions": {
+            "Chris Wickenton": 1,
+            "Rod McKenzie": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Tim Scott-sandvik"
+              ],
+              "awayPlayers": [
+                "Chris Wickenton"
+              ],
+              "sets": [],
+              "homeSets": 0,
+              "awaySets": 0,
+              "homeGames": 0,
+              "awayGames": 0,
+              "winner": "away",
+              "incomplete": true
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Thomas George"
+              ],
+              "awayPlayers": [
+                "Rod McKenzie"
+              ],
+              "sets": [],
+              "homeSets": 0,
+              "awaySets": 0,
+              "homeGames": 0,
+              "awayGames": 0,
+              "winner": "away",
+              "incomplete": true
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Tim Scott-sandvik",
+                "Thomas George"
+              ],
+              "awayPlayers": [
+                "Chris Wickenton",
+                "Rod McKenzie"
+              ],
+              "sets": [
+                [
+                  3,
+                  6
+                ],
+                [
+                  6,
+                  3
+                ],
+                [
+                  6,
+                  7
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 15,
+              "awayGames": 16,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "matchId": "AP004042",
+          "home": "Burwood",
+          "away": "Oakleigh",
+          "homePts": 1.0,
+          "homeR": 0,
+          "homeS": 1,
+          "homeG": 19,
+          "awayPts": 8.0,
+          "awayR": 3,
+          "awayS": 6,
+          "awayG": 40,
+          "homePlayers": [
+            "Lindsay Newbry",
+            "Max Chew Lee",
+            "Hamish May"
+          ],
+          "awayPlayers": [
+            "Toby Terrell",
+            "Zac Waterston"
+          ],
+          "homePositions": {
+            "Lindsay Newbry": 1,
+            "Max Chew Lee": 2,
+            "Hamish May": 3
+          },
+          "awayPositions": {
+            "Toby Terrell": 1,
+            "Zac Waterston": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [
+            "Toby Terrell"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Lindsay Newbry"
+              ],
+              "awayPlayers": [
+                "Toby Terrell"
+              ],
+              "sets": [
+                [
+                  0,
+                  6
+                ],
+                [
+                  3,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 3,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Max Chew Lee"
+              ],
+              "awayPlayers": [
+                "Zac Waterston"
+              ],
+              "sets": [
+                [
+                  4,
+                  6
+                ],
+                [
+                  1,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 5,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Lindsay Newbry",
+                "Hamish May"
+              ],
+              "awayPlayers": [
+                "Toby Terrell",
+                "Zac Waterston"
+              ],
+              "sets": [
+                [
+                  2,
+                  6
+                ],
+                [
+                  6,
+                  4
+                ],
+                [
+                  3,
+                  6
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 11,
+              "awayGames": 16,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "matchId": "AP004043",
+          "home": "MCC Glen Iris",
+          "away": "Chadstone",
+          "homePts": 6.0,
+          "homeR": 2,
+          "homeS": 4,
+          "homeG": 34,
+          "awayPts": 2.0,
+          "awayR": 1,
+          "awayS": 2,
+          "awayG": 22,
+          "homePlayers": [
+            "Alistair Cairns",
+            "Henry Seeber",
+            "Ben Rowler"
+          ],
+          "awayPlayers": [
+            "Oscar Darke",
+            "Ran Li"
+          ],
+          "homePositions": {
+            "Alistair Cairns": 1,
+            "Henry Seeber": 2,
+            "Ben Rowler": 3
+          },
+          "awayPositions": {
+            "Oscar Darke": 1,
+            "Ran Li": 2
+          },
+          "homeEmergencies": [
+            "Henry Seeber",
+            "Ben Rowler"
+          ],
+          "awayEmergencies": [
+            "Ran Li"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Alistair Cairns"
+              ],
+              "awayPlayers": [
+                "Oscar Darke"
+              ],
+              "sets": [
+                [
+                  6,
+                  7
+                ],
+                [
+                  4,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 10,
+              "awayGames": 13,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Henry Seeber"
+              ],
+              "awayPlayers": [
+                "Ran Li"
+              ],
+              "sets": [
+                [
+                  6,
+                  4
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 5,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Henry Seeber",
+                "Ben Rowler"
+              ],
+              "awayPlayers": [
+                "Oscar Darke",
+                "Ran Li"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 4,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "matchId": "AP004044",
+          "home": "Narre Warren",
+          "away": "Burden Park",
+          "homePts": 8.0,
+          "homeR": 3,
+          "homeS": 6,
+          "homeG": 36,
+          "awayPts": 0.0,
+          "awayR": 0,
+          "awayS": 0,
+          "awayG": 6,
+          "homePlayers": [
+            "Tyler Robinson",
+            "Tyson Mitchell",
+            "Max Mitchell"
+          ],
+          "awayPlayers": [
+            "Joanna Koniuszewski",
+            "Bond Phu"
+          ],
+          "homePositions": {
+            "Tyler Robinson": 1,
+            "Tyson Mitchell": 2,
+            "Max Mitchell": 3
+          },
+          "awayPositions": {
+            "Joanna Koniuszewski": 1,
+            "Bond Phu": 2
+          },
+          "homeEmergencies": [
+            "Max Mitchell"
+          ],
+          "awayEmergencies": [
+            "Bond Phu"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Tyler Robinson"
+              ],
+              "awayPlayers": [
+                "Joanna Koniuszewski"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 2,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Tyson Mitchell"
+              ],
+              "awayPlayers": [
+                "Bond Phu"
+              ],
+              "sets": [
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  0
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 0,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Tyson Mitchell",
+                "Max Mitchell"
+              ],
+              "awayPlayers": [
+                "Joanna Koniuszewski",
+                "Bond Phu"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 4,
+              "winner": "home"
+            }
+          ]
+        }
+      ]
     }
   ],
   "teamRosters": {
@@ -1736,7 +2191,7 @@
         "name": "Oscar Darke",
         "order": 1,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Paul Munoz",
@@ -1754,7 +2209,7 @@
         "name": "Ran Li",
         "order": null,
         "emergency": true,
-        "played": 1
+        "played": 2
       }
     ],
     "Burwood": [
@@ -1762,19 +2217,19 @@
         "name": "Lindsay Newbry",
         "order": 1,
         "emergency": false,
-        "played": 1
+        "played": 2
       },
       {
         "name": "Max Chew Lee",
         "order": 1,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Hamish May",
         "order": 2,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Indiana Wittingslow",
@@ -1788,13 +2243,13 @@
         "name": "Tyler Robinson",
         "order": 1,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Tyson Mitchell",
         "order": 1,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Christian D'Angelo",
@@ -1806,7 +2261,7 @@
         "name": "Max Mitchell",
         "order": null,
         "emergency": true,
-        "played": 2
+        "played": 3
       }
     ],
     "MCC Glen Iris": [
@@ -1814,13 +2269,25 @@
         "name": "Alistair Cairns",
         "order": 1,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Roman Shrestha",
         "order": 2,
         "emergency": false,
         "played": 3
+      },
+      {
+        "name": "Ben Rowler",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      },
+      {
+        "name": "Henry Seeber",
+        "order": null,
+        "emergency": true,
+        "played": 1
       }
     ],
     "Langwarrin": [
@@ -1828,13 +2295,13 @@
         "name": "Tim Scott-sandvik",
         "order": 1,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Thomas George",
         "order": 2,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Dylan Schmitt",
@@ -1854,7 +2321,7 @@
         "name": "Zac Waterston",
         "order": 2,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "George Noble",
@@ -1866,7 +2333,7 @@
         "name": "Toby Terrell",
         "order": null,
         "emergency": true,
-        "played": 1
+        "played": 2
       }
     ],
     "Burden Park": [
@@ -1874,7 +2341,7 @@
         "name": "Joanna Koniuszewski",
         "order": 1,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Mark Young",
@@ -1898,7 +2365,7 @@
         "name": "Bond Phu",
         "order": null,
         "emergency": true,
-        "played": 1
+        "played": 2
       },
       {
         "name": "Chhun Lim",
@@ -1909,7 +2376,7 @@
     ]
   },
   "remainingFixtures": {
-    "asOfDate": "2026-10-28",
+    "asOfDate": "2026-11-10",
     "note": "Full fixture for all 8 teams in Open Singles/Doubles A 2, from trols.org.au.",
     "rounds": [
       {

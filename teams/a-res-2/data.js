@@ -4,8 +4,8 @@ window.SITE_DATA = {
     "section": "Open Singles/Doubles A Reserve 2",
     "sectionCode": "AP020",
     "ourTeam": "Berwick",
-    "lastUpdated": "2026-10-28",
-    "resultsLoadedFromSite": "27th October 26 @ 07:26:11 PM",
+    "lastUpdated": "2026-11-10",
+    "resultsLoadedFromSite": "10th November 26 @ 09:08:36 PM",
     "sourceUrl": "https://www.trols.org.au/wdta/results.php?daytime=AP&section=AP020&style=",
     "fixtureUrl": "https://www.trols.org.au/wdta/fixture.php?daytime=AP&section=AP020&style=",
     "archives": [
@@ -136,7 +136,7 @@ window.SITE_DATA = {
       "utrDoublesReliability": null,
       "name": "Soe Min Tun",
       "order": 1,
-      "played": 2,
+      "played": 3,
       "emergency": false,
       "emergencyApps": 0
     },
@@ -153,7 +153,7 @@ window.SITE_DATA = {
       "utrDoublesReliability": 40,
       "name": "Tom Maloney",
       "order": 2,
-      "played": 2,
+      "played": 3,
       "emergency": false,
       "emergencyApps": 0
     },
@@ -170,7 +170,7 @@ window.SITE_DATA = {
       "utrDoublesReliability": null,
       "name": "David Thurmond",
       "order": 3,
-      "played": 2,
+      "played": 3,
       "emergency": false,
       "emergencyApps": 0
     },
@@ -1752,6 +1752,364 @@ window.SITE_DATA = {
           ]
         }
       ]
+    },
+    {
+      "round": 4,
+      "date": "2026-11-07",
+      "matches": [
+        {
+          "matchId": "AP020041",
+          "home": "Berwick",
+          "away": "Vermont South",
+          "homePts": 8.0,
+          "homeR": 3,
+          "homeS": 6,
+          "homeG": 36,
+          "awayPts": 0.0,
+          "awayR": 0,
+          "awayS": 0,
+          "awayG": 14,
+          "homePlayers": [
+            "Soe Min Tun",
+            "David Thurmond",
+            "Tom Maloney"
+          ],
+          "awayPlayers": [
+            "Barry Jiang",
+            "Kevin Pan"
+          ],
+          "homePositions": {
+            "Soe Min Tun": 1,
+            "David Thurmond": 2,
+            "Tom Maloney": 3
+          },
+          "awayPositions": {
+            "Barry Jiang": 1,
+            "Kevin Pan": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Soe Min Tun"
+              ],
+              "awayPlayers": [
+                "Barry Jiang"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  3
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 5,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "David Thurmond"
+              ],
+              "awayPlayers": [
+                "Kevin Pan"
+              ],
+              "sets": [
+                [
+                  6,
+                  3
+                ],
+                [
+                  6,
+                  0
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 3,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "David Thurmond",
+                "Tom Maloney"
+              ],
+              "awayPlayers": [
+                "Barry Jiang",
+                "Kevin Pan"
+              ],
+              "sets": [
+                [
+                  6,
+                  3
+                ],
+                [
+                  6,
+                  3
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 6,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "matchId": "AP020043",
+          "home": "Eildon Park",
+          "away": "N'hill P'wood Blue",
+          "homePts": 7.0,
+          "homeR": 2,
+          "homeS": 5,
+          "homeG": 42,
+          "awayPts": 2.0,
+          "awayR": 1,
+          "awayS": 2,
+          "awayG": 28,
+          "homePlayers": [
+            "Bradley Voysey",
+            "Gary Robinson",
+            "Stuart King"
+          ],
+          "awayPlayers": [
+            "Darsh Chauhan",
+            "Will Jiang"
+          ],
+          "homePositions": {
+            "Bradley Voysey": 1,
+            "Gary Robinson": 2,
+            "Stuart King": 3
+          },
+          "awayPositions": {
+            "Darsh Chauhan": 1,
+            "Will Jiang": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [
+            "Will Jiang"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Bradley Voysey"
+              ],
+              "awayPlayers": [
+                "Darsh Chauhan"
+              ],
+              "sets": [
+                [
+                  7,
+                  5
+                ],
+                [
+                  6,
+                  3
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 13,
+              "awayGames": 8,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Gary Robinson"
+              ],
+              "awayPlayers": [
+                "Will Jiang"
+              ],
+              "sets": [
+                [
+                  6,
+                  4
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 5,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Bradley Voysey",
+                "Stuart King"
+              ],
+              "awayPlayers": [
+                "Darsh Chauhan",
+                "Will Jiang"
+              ],
+              "sets": [
+                [
+                  5,
+                  7
+                ],
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  7
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 17,
+              "awayGames": 15,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "matchId": "AP020044",
+          "home": "Essex Heights",
+          "away": "Upwey South",
+          "homePts": 7.0,
+          "homeR": 2,
+          "homeS": 5,
+          "homeG": 38,
+          "awayPts": 3.0,
+          "awayR": 1,
+          "awayS": 3,
+          "awayG": 33,
+          "homePlayers": [
+            "Maksim Gigovic",
+            "Mateja Gigovic",
+            "Darko Gigovic"
+          ],
+          "awayPlayers": [
+            "Jethro Cousins",
+            "Charlotte Wilson"
+          ],
+          "homePositions": {
+            "Maksim Gigovic": 1,
+            "Mateja Gigovic": 2,
+            "Darko Gigovic": 3
+          },
+          "awayPositions": {
+            "Jethro Cousins": 1,
+            "Charlotte Wilson": 2
+          },
+          "homeEmergencies": [
+            "Darko Gigovic"
+          ],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Maksim Gigovic"
+              ],
+              "awayPlayers": [
+                "Jethro Cousins"
+              ],
+              "sets": [
+                [
+                  6,
+                  7
+                ],
+                [
+                  6,
+                  4
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 18,
+              "awayGames": 15,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Mateja Gigovic"
+              ],
+              "awayPlayers": [
+                "Charlotte Wilson"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  0
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 1,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Maksim Gigovic",
+                "Darko Gigovic"
+              ],
+              "awayPlayers": [
+                "Jethro Cousins",
+                "Charlotte Wilson"
+              ],
+              "sets": [
+                [
+                  7,
+                  5
+                ],
+                [
+                  0,
+                  6
+                ],
+                [
+                  1,
+                  6
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 8,
+              "awayGames": 17,
+              "winner": "away"
+            }
+          ]
+        }
+      ]
     }
   ],
   "teamRosters": {
@@ -1760,7 +2118,7 @@ window.SITE_DATA = {
         "name": "Darsh Chauhan",
         "order": 1,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Sasha Jain",
@@ -1784,7 +2142,7 @@ window.SITE_DATA = {
         "name": "Will Jiang",
         "order": null,
         "emergency": true,
-        "played": 1
+        "played": 2
       }
     ],
     "Vermont South": [
@@ -1792,13 +2150,13 @@ window.SITE_DATA = {
         "name": "Barry Jiang",
         "order": 1,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Kevin Pan",
         "order": 2,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Owen Jones",
@@ -1838,19 +2196,19 @@ window.SITE_DATA = {
         "name": "Maksim Gigovic",
         "order": 1,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Mateja Gigovic",
         "order": 2,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Darko Gigovic",
         "order": null,
         "emergency": true,
-        "played": 1
+        "played": 2
       }
     ],
     "Eildon Park": [
@@ -1858,7 +2216,7 @@ window.SITE_DATA = {
         "name": "Bradley Voysey",
         "order": 1,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Tom Robinson",
@@ -1870,13 +2228,13 @@ window.SITE_DATA = {
         "name": "Gary Robinson",
         "order": 2,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Stuart King",
         "order": 2,
         "emergency": false,
-        "played": 2
+        "played": 3
       }
     ],
     "N'hill P'wood White": [
@@ -1910,18 +2268,18 @@ window.SITE_DATA = {
         "name": "Jethro Cousins",
         "order": 1,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Charlotte Wilson",
         "order": 2,
         "emergency": false,
-        "played": 3
+        "played": 4
       }
     ]
   },
   "remainingFixtures": {
-    "asOfDate": "2026-10-28",
+    "asOfDate": "2026-11-10",
     "note": "Full fixture for all 8 teams in Open Singles/Doubles A Reserve 2, from trols.org.au.",
     "rounds": [
       {

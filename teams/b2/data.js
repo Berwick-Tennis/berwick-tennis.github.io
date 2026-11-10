@@ -8,8 +8,8 @@ window.SITE_DATA = {
     "sectionCode": "AP031",
     "teamCode": "AP241",
     "ourTeam": "Berwick",
-    "lastUpdated": "2026-10-28",
-    "resultsLoadedFromSite": "27th October 26 @ 07:26:11 PM",
+    "lastUpdated": "2026-11-10",
+    "resultsLoadedFromSite": "10th November 26 @ 09:08:36 PM",
     "sourceUrl": "https://www.trols.org.au/wdta/results.php?daytime=AP&section=AP031&style=",
     "fixtureUrl": "https://www.trols.org.au/wdta/fixture.php?daytime=AP&section=AP031&style=",
     "dataPath": "teams/b2/data.json",
@@ -146,7 +146,7 @@ window.SITE_DATA = {
       "utrDoubles": null,
       "utrDoublesReliability": null,
       "name": "Ethan Van Weeghel",
-      "played": 2,
+      "played": 3,
       "emergencyApps": 0,
       "order": 1,
       "emergency": false
@@ -163,7 +163,7 @@ window.SITE_DATA = {
       "utrDoubles": null,
       "utrDoublesReliability": null,
       "name": "Declan Pope",
-      "played": 2,
+      "played": 3,
       "emergencyApps": 0,
       "order": 2,
       "emergency": false
@@ -1698,6 +1698,477 @@ window.SITE_DATA = {
           ]
         }
       ]
+    },
+    {
+      "round": 4,
+      "date": "2026-11-07",
+      "matches": [
+        {
+          "matchId": "AP031041",
+          "home": "Legend Park Yellow",
+          "away": "Endeavour Hills",
+          "homePts": 7.0,
+          "homeR": 2,
+          "homeS": 5,
+          "homeG": 41,
+          "awayPts": 3.0,
+          "awayR": 1,
+          "awayS": 3,
+          "awayG": 31,
+          "homePlayers": [
+            "Lara Dumsday",
+            "Sulagna Ghosal",
+            "Carrera Kanhalikham",
+            "Aditi Gunturu"
+          ],
+          "awayPlayers": [
+            "Caleb Cervenjak",
+            "Aiyaz Koya"
+          ],
+          "homePositions": {
+            "Lara Dumsday": 1,
+            "Sulagna Ghosal": 2,
+            "Carrera Kanhalikham": 3,
+            "Aditi Gunturu": 4
+          },
+          "awayPositions": {
+            "Caleb Cervenjak": 1,
+            "Aiyaz Koya": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Lara Dumsday"
+              ],
+              "awayPlayers": [
+                "Caleb Cervenjak"
+              ],
+              "sets": [
+                [
+                  6,
+                  4
+                ],
+                [
+                  2,
+                  6
+                ],
+                [
+                  6,
+                  7
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 14,
+              "awayGames": 17,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Sulagna Ghosal"
+              ],
+              "awayPlayers": [
+                "Aiyaz Koya"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  3
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 5,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Carrera Kanhalikham",
+                "Aditi Gunturu"
+              ],
+              "awayPlayers": [
+                "Caleb Cervenjak",
+                "Aiyaz Koya"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 15,
+              "awayGames": 9,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "matchId": "AP031042",
+          "home": "Berwick",
+          "away": "Narre Warren Green",
+          "homePts": 6.0,
+          "homeR": 2,
+          "homeS": 4,
+          "homeG": 34,
+          "awayPts": 3.0,
+          "awayR": 1,
+          "awayS": 3,
+          "awayG": 25,
+          "homePlayers": [
+            "Ethan Van Weeghel",
+            "Declan Pope"
+          ],
+          "awayPlayers": [
+            "Harry Aulaku",
+            "Rajeev Nair"
+          ],
+          "homePositions": {
+            "Ethan Van Weeghel": 1,
+            "Declan Pope": 2
+          },
+          "awayPositions": {
+            "Harry Aulaku": 1,
+            "Rajeev Nair": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [
+            "Harry Aulaku"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Ethan Van Weeghel"
+              ],
+              "awayPlayers": [
+                "Harry Aulaku"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 3,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Declan Pope"
+              ],
+              "awayPlayers": [
+                "Rajeev Nair"
+              ],
+              "sets": [
+                [
+                  5,
+                  7
+                ],
+                [
+                  2,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 7,
+              "awayGames": 13,
+              "winner": "away"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Ethan Van Weeghel",
+                "Declan Pope"
+              ],
+              "awayPlayers": [
+                "Harry Aulaku",
+                "Rajeev Nair"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 15,
+              "awayGames": 9,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "matchId": "AP031043",
+          "home": "Pakenham",
+          "away": "Legend Park Green",
+          "homePts": 6.0,
+          "homeR": 2,
+          "homeS": 4,
+          "homeG": 30,
+          "awayPts": 2.0,
+          "awayR": 1,
+          "awayS": 2,
+          "awayG": 16,
+          "homePlayers": [
+            "Josh Reeve",
+            "Chaminda Thambawita"
+          ],
+          "awayPlayers": [
+            "Nariman Rezaie",
+            "David Hu",
+            "Shreyans Jains"
+          ],
+          "homePositions": {
+            "Josh Reeve": 1,
+            "Chaminda Thambawita": 2
+          },
+          "awayPositions": {
+            "Nariman Rezaie": 1,
+            "David Hu": 2,
+            "Shreyans Jains": 3
+          },
+          "homeEmergencies": [
+            "Josh Reeve"
+          ],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Josh Reeve"
+              ],
+              "awayPlayers": [
+                "Nariman Rezaie"
+              ],
+              "sets": [
+                [
+                  4,
+                  6
+                ],
+                [
+                  2,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 6,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Chaminda Thambawita"
+              ],
+              "awayPlayers": [
+                "David Hu"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  0
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 2,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Josh Reeve",
+                "Chaminda Thambawita"
+              ],
+              "awayPlayers": [
+                "David Hu",
+                "Shreyans Jains"
+              ],
+              "sets": [
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 2,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "matchId": "AP031044",
+          "home": "Narre Warren Gold",
+          "away": "St. Paul Apostle",
+          "homePts": 4.5,
+          "homeR": 1,
+          "homeS": 3,
+          "homeG": 26,
+          "awayPts": 3.5,
+          "awayR": 1,
+          "awayS": 2,
+          "awayG": 26,
+          "homePlayers": [
+            "Kim Sherlock",
+            "Brandon Allen",
+            "Luke Engler"
+          ],
+          "awayPlayers": [
+            "Isaiah Boltadzijah",
+            "Maddox Scerri"
+          ],
+          "homePositions": {
+            "Kim Sherlock": 1,
+            "Brandon Allen": 2,
+            "Luke Engler": 3
+          },
+          "awayPositions": {
+            "Isaiah Boltadzijah": 1,
+            "Maddox Scerri": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Kim Sherlock"
+              ],
+              "awayPlayers": [
+                "Isaiah Boltadzijah"
+              ],
+              "sets": [
+                [
+                  3,
+                  6
+                ],
+                [
+                  1,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 4,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Brandon Allen"
+              ],
+              "awayPlayers": [
+                "Maddox Scerri"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  7,
+                  6
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 13,
+              "awayGames": 8,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Brandon Allen",
+                "Luke Engler"
+              ],
+              "awayPlayers": [
+                "Isaiah Boltadzijah",
+                "Maddox Scerri"
+              ],
+              "sets": [
+                [
+                  7,
+                  6
+                ],
+                [
+                  2,
+                  0
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 9,
+              "awayGames": 6,
+              "winner": "away",
+              "incomplete": true
+            }
+          ]
+        }
+      ]
     }
   ],
   "teamRosters": {
@@ -1706,19 +2177,19 @@ window.SITE_DATA = {
         "name": "Nariman Rezaie",
         "order": 1,
         "emergency": false,
-        "played": 3
+        "played": 4
+      },
+      {
+        "name": "David Hu",
+        "order": 2,
+        "emergency": false,
+        "played": 4
       },
       {
         "name": "Shreyans Jains",
         "order": 2,
         "emergency": false,
-        "played": 3
-      },
-      {
-        "name": "David Hu",
-        "order": 3,
-        "emergency": false,
-        "played": 3
+        "played": 4
       }
     ],
     "Endeavour Hills": [
@@ -1726,13 +2197,13 @@ window.SITE_DATA = {
         "name": "Caleb Cervenjak",
         "order": 1,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Aiyaz Koya",
         "order": 2,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Adam Aiyaz",
@@ -1746,19 +2217,19 @@ window.SITE_DATA = {
         "name": "Kim Sherlock",
         "order": 1,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Luke Engler",
         "order": 1,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Brandon Allen",
         "order": 2,
         "emergency": false,
-        "played": 2
+        "played": 3
       }
     ],
     "Pakenham": [
@@ -1772,10 +2243,16 @@ window.SITE_DATA = {
         "name": "Chaminda Thambawita",
         "order": 2,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Fabin Kallarakkal",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      },
+      {
+        "name": "Josh Reeve",
         "order": null,
         "emergency": true,
         "played": 1
@@ -1786,25 +2263,25 @@ window.SITE_DATA = {
         "name": "Aditi Gunturu",
         "order": 1,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Lara Dumsday",
         "order": 1,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Carrera Kanhalikham",
         "order": 2,
         "emergency": false,
-        "played": 1
+        "played": 2
       },
       {
         "name": "Sulagna Ghosal",
         "order": 2,
         "emergency": false,
-        "played": 2
+        "played": 3
       }
     ],
     "Narre Warren Green": [
@@ -1818,7 +2295,7 @@ window.SITE_DATA = {
         "name": "Rajeev Nair",
         "order": 2,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Aarav Nair",
@@ -1830,7 +2307,7 @@ window.SITE_DATA = {
         "name": "Harry Aulaku",
         "order": null,
         "emergency": true,
-        "played": 1
+        "played": 2
       }
     ],
     "St. Paul Apostle": [
@@ -1838,7 +2315,7 @@ window.SITE_DATA = {
         "name": "Isaiah Boltadzijah",
         "order": 1,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Eka Nair",
@@ -1850,7 +2327,7 @@ window.SITE_DATA = {
         "name": "Maddox Scerri",
         "order": 2,
         "emergency": false,
-        "played": 1
+        "played": 2
       },
       {
         "name": "Marlan Wickramasinghe",
@@ -1867,7 +2344,7 @@ window.SITE_DATA = {
     ]
   },
   "remainingFixtures": {
-    "asOfDate": "2026-10-28",
+    "asOfDate": "2026-11-10",
     "note": "Full fixture for all 8 teams in Open Singles/Doubles B 2, from trols.org.au.",
     "rounds": [
       {
