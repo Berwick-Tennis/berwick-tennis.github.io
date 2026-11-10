@@ -1353,6 +1353,7 @@ function renderSchedule() {
   const el = document.getElementById("schedule-table");
   const today = todayISO();
   const ladderNow = computeLadder();
+  const posTag = p => p ? ` <span class="muted" title="Current ladder position">(${p})</span>` : "";
   const posOf = name => {
     const t = ladderNow.find(x => x.team === name || x.team.replace(" U/C", "") === String(name).replace(" U/C", ""));
     return t ? t.position : null;
@@ -1360,12 +1361,12 @@ function renderSchedule() {
   el.innerHTML = `
     <div class="table-wrap">
     <table>
-      <thead><tr><th>Rd</th><th>Date</th><th>Home</th><th>Away</th><th>Opp. ladder</th><th>Venue</th><th>Available</th><th></th></tr></thead>
+      <thead><tr><th>Rd</th><th>Date</th><th>Home</th><th>Away</th><th>Venue</th><th>Available</th><th></th></tr></thead>
       <tbody>
         ${DATA.schedule.map(s => {
           if (s.byeDate || (!s.home && !s.away)) {
             const finals = !s.byeDate && s.note;
-            return `<tr><td>${s.round ?? ""}</td><td>${fmtDate(s.date)}</td><td colspan="4" class="muted">${s.note || "No Play"}</td><td>${finals ? availabilityChips(s.date, { compact: true }) : ""}</td><td></td></tr>`;
+            return `<tr><td>${s.round ?? ""}</td><td>${fmtDate(s.date)}</td><td colspan="3" class="muted">${s.note || "No Play"}</td><td>${finals ? availabilityChips(s.date, { compact: true }) : ""}</td><td></td></tr>`;
           }
           const isHome = s.home === OUR_TEAM;
           const venue = clubByName(s.home);
@@ -1383,9 +1384,8 @@ function renderSchedule() {
           return `<tr class="${s.date === nextMatchDate() ? "us-row" : ""}">
             <td>${s.round}</td>
             <td>${fmtDate(s.date)}</td>
-            <td>${s.home === OUR_TEAM ? `<strong>${escapeHtml(s.home)}</strong>` : escapeHtml(s.home)}</td>
-            <td>${s.away === OUR_TEAM ? `<strong>${escapeHtml(s.away)}</strong>` : escapeHtml(s.away)}</td>
-            <td>${oppPos ? `<strong>#${oppPos}</strong>` : ""}</td>
+            <td>${s.home === OUR_TEAM ? `<strong>${escapeHtml(s.home)}</strong>` : `${escapeHtml(s.home)}${posTag(oppPos)}`}</td>
+            <td>${s.away === OUR_TEAM ? `<strong>${escapeHtml(s.away)}</strong>` : `${escapeHtml(s.away)}${posTag(oppPos)}`}</td>
             <td>${venue ? `${escapeHtml(venue.address)} &middot; <a href="${mapsLink(venue.address)}" target="_blank" rel="noopener">Map</a>` : ""}</td>
             <td>${availabilityChips(s.date, { compact: true })}</td>
             <td>${resultBadge}</td>
