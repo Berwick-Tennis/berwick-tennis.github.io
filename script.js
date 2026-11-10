@@ -319,6 +319,19 @@ function computeLadder() {
     });
   });
 
+  // Fixtures in rounds already played that have no result on TROLS were washed out.
+  const lastRound = DATA.results.reduce((mx, r) => Math.max(mx, r.round), 0);
+  (((DATA.remainingFixtures || {}).rounds) || []).filter(fr => fr.round <= lastRound).forEach(fr => {
+    const res = DATA.results.find(r => r.round === fr.round);
+    (fr.matches || []).forEach(fx => {
+      if (res && res.matches.some(m => m.home === fx.home && m.away === fx.away)) return;
+      [[fx.home, fx.away], [fx.away, fx.home]].forEach(([me, opp]) => {
+        if (teams[me]) teams[me].form.push({ round: fr.round, result: "R", opponent: opp, pts: 0, oppPts: 0 });
+      });
+    });
+  });
+  Object.values(teams).forEach(t => t.form.sort((x, y) => x.round - y.round));
+
   const list = Object.values(teams).map(t => {
     const gamePct = t.gFor + t.gAgainst > 0 ? t.gFor / (t.gFor + t.gAgainst) : 0;
     const setPct = t.sFor + t.sAgainst > 0 ? t.sFor / (t.sFor + t.sAgainst) : 0;

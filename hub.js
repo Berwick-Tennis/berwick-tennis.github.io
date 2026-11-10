@@ -31,6 +31,15 @@ function ladder(d) {
       x.form.push({ r: wash ? "R" : won ? "W" : "L", round: r.round, opp: m[o], score: `${m[`${s}Pts`]}-${m[`${o}Pts`]}` });
     });
   }));
+  const lastR = d.results.reduce((mx, r) => Math.max(mx, r.round), 0);
+  (((d.remainingFixtures || {}).rounds) || []).filter(fr => fr.round <= lastR).forEach(fr => {
+    const res = d.results.find(r => r.round === fr.round);
+    (fr.matches || []).forEach(fx => {
+      if (res && res.matches.some(m => m.home === fx.home && m.away === fx.away)) return;
+      [[fx.home, fx.away], [fx.away, fx.home]].forEach(([me, opp]) => { if (t[me]) t[me].form.push({ r: "R", round: fr.round, opp, score: "0-0" }); });
+    });
+  });
+  Object.values(t).forEach(x => x.form.sort((a, b) => a.round - b.round));
   const pct = (a, b) => a + b ? a / (a + b) : 0;
   return Object.values(t).sort((a, b) => b.pts - a.pts || pct(b.sF, b.sA) - pct(a.sF, a.sA) || pct(b.gF, b.gA) - pct(a.gF, a.gA) || a.team.localeCompare(b.team))
     .map((x, i) => ({ ...x, pos: i + 1 }));
