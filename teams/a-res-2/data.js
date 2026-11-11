@@ -2662,6 +2662,10 @@ window.SITE_DATA = {
       "Soe Min Tun": {
         "status": "out",
         "note": "Not available (WhatsApp, confirmed 14 Oct)"
+      },
+      "John Keecherer": {
+        "status": "out",
+        "note": "Not available (WhatsApp, 10 Nov)"
       }
     },
     "2026-11-28": {
