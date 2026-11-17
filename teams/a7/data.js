@@ -8,8 +8,8 @@ window.SITE_DATA = {
     "sectionCode": "AP009",
     "teamCode": "AP065",
     "ourTeam": "Berwick",
-    "lastUpdated": "2026-11-10",
-    "resultsLoadedFromSite": "10th November 26 @ 09:08:36 PM",
+    "lastUpdated": "2026-11-17",
+    "resultsLoadedFromSite": "17th November 26 @ 09:07:08 PM",
     "sourceUrl": "https://www.trols.org.au/wdta/results.php?daytime=AP&section=AP009&style=",
     "fixtureUrl": "https://www.trols.org.au/wdta/fixture.php?daytime=AP&section=AP009&style=",
     "dataPath": "teams/a7/data.json",
@@ -129,7 +129,7 @@ window.SITE_DATA = {
       "utrDoubles": null,
       "utrDoublesReliability": null,
       "name": "Jordan Gunnoo",
-      "played": 4,
+      "played": 5,
       "emergencyApps": 0,
       "order": 1,
       "emergency": false
@@ -146,7 +146,7 @@ window.SITE_DATA = {
       "utrDoubles": null,
       "utrDoublesReliability": null,
       "name": "Joseph Hovens",
-      "played": 2,
+      "played": 3,
       "emergencyApps": 0,
       "order": 1,
       "emergency": false
@@ -1997,6 +1997,486 @@ window.SITE_DATA = {
           ]
         }
       ]
+    },
+    {
+      "round": 5,
+      "date": "2026-11-14",
+      "matches": [
+        {
+          "matchId": "AP009051",
+          "home": "East Malvern",
+          "away": "N'hill P'wood",
+          "homePts": 4.0,
+          "homeR": 1,
+          "homeS": 4,
+          "homeG": 38,
+          "awayPts": 6.0,
+          "awayR": 2,
+          "awayS": 4,
+          "awayG": 36,
+          "homePlayers": [
+            "Martin Di Battista",
+            "Manoj Jampala"
+          ],
+          "awayPlayers": [
+            "Roger Chen",
+            "Nanda Jiang"
+          ],
+          "homePositions": {
+            "Martin Di Battista": 1,
+            "Manoj Jampala": 2
+          },
+          "awayPositions": {
+            "Roger Chen": 1,
+            "Nanda Jiang": 2
+          },
+          "homeEmergencies": [
+            "Manoj Jampala"
+          ],
+          "awayEmergencies": [
+            "Nanda Jiang"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Martin Di Battista"
+              ],
+              "awayPlayers": [
+                "Roger Chen"
+              ],
+              "sets": [
+                [
+                  6,
+                  0
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 14,
+              "awayGames": 13,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Manoj Jampala"
+              ],
+              "awayPlayers": [
+                "Nanda Jiang"
+              ],
+              "sets": [
+                [
+                  6,
+                  4
+                ],
+                [
+                  6,
+                  3
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 7,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Martin Di Battista",
+                "Manoj Jampala"
+              ],
+              "awayPlayers": [
+                "Roger Chen",
+                "Nanda Jiang"
+              ],
+              "sets": [
+                [
+                  3,
+                  6
+                ],
+                [
+                  6,
+                  4
+                ],
+                [
+                  3,
+                  6
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 12,
+              "awayGames": 16,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "matchId": "AP009052",
+          "home": "Glenvale",
+          "away": "Berwick",
+          "homePts": 6.0,
+          "homeR": 2,
+          "homeS": 4,
+          "homeG": 31,
+          "awayPts": 3.0,
+          "awayR": 1,
+          "awayS": 3,
+          "awayG": 28,
+          "homePlayers": [
+            "Cheniru Madapatha",
+            "Lachlan Newby"
+          ],
+          "awayPlayers": [
+            "Joseph Hovens",
+            "Jordan Gunnoo"
+          ],
+          "homePositions": {
+            "Cheniru Madapatha": 1,
+            "Lachlan Newby": 2
+          },
+          "awayPositions": {
+            "Joseph Hovens": 1,
+            "Jordan Gunnoo": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Cheniru Madapatha"
+              ],
+              "awayPlayers": [
+                "Joseph Hovens"
+              ],
+              "sets": [
+                [
+                  2,
+                  6
+                ],
+                [
+                  2,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 4,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Lachlan Newby"
+              ],
+              "awayPlayers": [
+                "Jordan Gunnoo"
+              ],
+              "sets": [
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 4,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Cheniru Madapatha",
+                "Lachlan Newby"
+              ],
+              "awayPlayers": [
+                "Joseph Hovens",
+                "Jordan Gunnoo"
+              ],
+              "sets": [
+                [
+                  6,
+                  4
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 15,
+              "awayGames": 12,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "matchId": "AP009053",
+          "home": "Ferntree Gully",
+          "away": "Doveton",
+          "homePts": 8.0,
+          "homeR": 3,
+          "homeS": 6,
+          "homeG": 37,
+          "awayPts": 0.0,
+          "awayR": 0,
+          "awayS": 0,
+          "awayG": 15,
+          "homePlayers": [
+            "Trent Campbell",
+            "Darcy Grey",
+            "Thomas Josephson"
+          ],
+          "awayPlayers": [
+            "Arian Bagaric",
+            "Filip Pejic"
+          ],
+          "homePositions": {
+            "Trent Campbell": 1,
+            "Darcy Grey": 2,
+            "Thomas Josephson": 3
+          },
+          "awayPositions": {
+            "Arian Bagaric": 1,
+            "Filip Pejic": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [
+            "Filip Pejic"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Trent Campbell"
+              ],
+              "awayPlayers": [
+                "Arian Bagaric"
+              ],
+              "sets": [
+                [
+                  6,
+                  3
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 4,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Darcy Grey"
+              ],
+              "awayPlayers": [
+                "Filip Pejic"
+              ],
+              "sets": [
+                [
+                  7,
+                  6
+                ],
+                [
+                  6,
+                  0
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 13,
+              "awayGames": 6,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Darcy Grey",
+                "Thomas Josephson"
+              ],
+              "awayPlayers": [
+                "Arian Bagaric",
+                "Filip Pejic"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 5,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "matchId": "AP009054",
+          "home": "Upwey South",
+          "away": "Wheelers Hill",
+          "homePts": 7.0,
+          "homeR": 2,
+          "homeS": 5,
+          "homeG": 43,
+          "awayPts": 3.0,
+          "awayR": 1,
+          "awayS": 3,
+          "awayG": 35,
+          "homePlayers": [
+            "Brodie McIntosh",
+            "Joshua Wight",
+            "Jensen Hargreaves",
+            "Mitch Webster"
+          ],
+          "awayPlayers": [
+            "Ben Pahor",
+            "Steven Rubinic"
+          ],
+          "homePositions": {
+            "Brodie McIntosh": 1,
+            "Joshua Wight": 2,
+            "Jensen Hargreaves": 3,
+            "Mitch Webster": 4
+          },
+          "awayPositions": {
+            "Ben Pahor": 1,
+            "Steven Rubinic": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [
+            "Steven Rubinic"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Brodie McIntosh"
+              ],
+              "awayPlayers": [
+                "Ben Pahor"
+              ],
+              "sets": [
+                [
+                  6,
+                  4
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 6,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Joshua Wight"
+              ],
+              "awayPlayers": [
+                "Steven Rubinic"
+              ],
+              "sets": [
+                [
+                  6,
+                  4
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  3,
+                  6
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 13,
+              "awayGames": 16,
+              "winner": "away"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Jensen Hargreaves",
+                "Mitch Webster"
+              ],
+              "awayPlayers": [
+                "Ben Pahor",
+                "Steven Rubinic"
+              ],
+              "sets": [
+                [
+                  6,
+                  4
+                ],
+                [
+                  6,
+                  7
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 18,
+              "awayGames": 13,
+              "winner": "home"
+            }
+          ]
+        }
+      ]
     }
   ],
   "teamRosters": {
@@ -2005,7 +2485,7 @@ window.SITE_DATA = {
         "name": "Martin Di Battista",
         "order": 1,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Zlatko Reyer",
@@ -2017,7 +2497,7 @@ window.SITE_DATA = {
         "name": "Manoj Jampala",
         "order": null,
         "emergency": true,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Ryan Fahlbusch",
@@ -2031,19 +2511,19 @@ window.SITE_DATA = {
         "name": "Thomas Josephson",
         "order": 1,
         "emergency": false,
-        "played": 3
+        "played": 4
+      },
+      {
+        "name": "Trent Campbell",
+        "order": 1,
+        "emergency": false,
+        "played": 4
       },
       {
         "name": "Darcy Grey",
         "order": 2,
         "emergency": false,
-        "played": 3
-      },
-      {
-        "name": "Trent Campbell",
-        "order": 3,
-        "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Lewis Mortel",
@@ -2063,13 +2543,13 @@ window.SITE_DATA = {
         "name": "Cheniru Madapatha",
         "order": 1,
         "emergency": false,
-        "played": 1
+        "played": 2
       },
       {
         "name": "Lachlan Newby",
         "order": 1,
         "emergency": false,
-        "played": 4
+        "played": 5
       },
       {
         "name": "Lucas Fang",
@@ -2083,7 +2563,7 @@ window.SITE_DATA = {
         "name": "Ben Pahor",
         "order": 1,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Luke Briffa",
@@ -2096,6 +2576,12 @@ window.SITE_DATA = {
         "order": 2,
         "emergency": false,
         "played": 3
+      },
+      {
+        "name": "Steven Rubinic",
+        "order": null,
+        "emergency": true,
+        "played": 1
       }
     ],
     "N'hill P'wood": [
@@ -2109,7 +2595,7 @@ window.SITE_DATA = {
         "name": "Roger Chen",
         "order": 1,
         "emergency": false,
-        "played": 1
+        "played": 2
       },
       {
         "name": "Jasmine Hassan",
@@ -2122,6 +2608,12 @@ window.SITE_DATA = {
         "order": null,
         "emergency": true,
         "played": 1
+      },
+      {
+        "name": "Nanda Jiang",
+        "order": null,
+        "emergency": true,
+        "played": 1
       }
     ],
     "Doveton": [
@@ -2129,44 +2621,44 @@ window.SITE_DATA = {
         "name": "Arian Bagaric",
         "order": 1,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Filip Pejic",
         "order": null,
         "emergency": true,
-        "played": 2
+        "played": 3
       }
     ],
     "Upwey South": [
       {
-        "name": "Jensen Hargreaves",
+        "name": "Brodie McIntosh",
         "order": 1,
         "emergency": false,
         "played": 3
       },
       {
+        "name": "Jensen Hargreaves",
+        "order": 1,
+        "emergency": false,
+        "played": 4
+      },
+      {
         "name": "Mitch Webster",
         "order": 1,
         "emergency": false,
-        "played": 2
-      },
-      {
-        "name": "Brodie McIntosh",
-        "order": 2,
-        "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Joshua Wight",
         "order": 2,
         "emergency": false,
-        "played": 1
+        "played": 2
       }
     ]
   },
   "remainingFixtures": {
-    "asOfDate": "2026-11-10",
+    "asOfDate": "2026-11-17",
     "note": "Full fixture for all 8 teams in Open Singles/Doubles A 7, from trols.org.au.",
     "rounds": [
       {

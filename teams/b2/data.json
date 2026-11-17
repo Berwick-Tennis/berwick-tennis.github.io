@@ -8,8 +8,8 @@
     "sectionCode": "AP031",
     "teamCode": "AP241",
     "ourTeam": "Berwick",
-    "lastUpdated": "2026-11-10",
-    "resultsLoadedFromSite": "10th November 26 @ 09:08:36 PM",
+    "lastUpdated": "2026-11-17",
+    "resultsLoadedFromSite": "17th November 26 @ 09:07:08 PM",
     "sourceUrl": "https://www.trols.org.au/wdta/results.php?daytime=AP&section=AP031&style=",
     "fixtureUrl": "https://www.trols.org.au/wdta/fixture.php?daytime=AP&section=AP031&style=",
     "dataPath": "teams/b2/data.json",
@@ -129,7 +129,7 @@
       "utrDoubles": null,
       "utrDoublesReliability": null,
       "name": "Amber Patel",
-      "played": 2,
+      "played": 3,
       "emergencyApps": 0,
       "order": 1,
       "emergency": false
@@ -146,7 +146,7 @@
       "utrDoubles": null,
       "utrDoublesReliability": null,
       "name": "Ethan Van Weeghel",
-      "played": 3,
+      "played": 4,
       "emergencyApps": 0,
       "order": 1,
       "emergency": false
@@ -2169,6 +2169,362 @@
           ]
         }
       ]
+    },
+    {
+      "round": 5,
+      "date": "2026-11-14",
+      "matches": [
+        {
+          "matchId": "AP031051",
+          "home": "Legend Park Green",
+          "away": "Legend Park Yellow",
+          "homePts": 8.0,
+          "homeR": 3,
+          "homeS": 6,
+          "homeG": 45,
+          "awayPts": 2.0,
+          "awayR": 0,
+          "awayS": 2,
+          "awayG": 30,
+          "homePlayers": [
+            "Nariman Rezaie",
+            "Shreyans Jains"
+          ],
+          "awayPlayers": [
+            "Aditi Gunturu",
+            "Lara Dumsday",
+            "Carrera Kanhalikham",
+            "Sulagna Ghosal"
+          ],
+          "homePositions": {
+            "Nariman Rezaie": 1,
+            "Shreyans Jains": 2
+          },
+          "awayPositions": {
+            "Aditi Gunturu": 1,
+            "Lara Dumsday": 2,
+            "Carrera Kanhalikham": 3,
+            "Sulagna Ghosal": 4
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Nariman Rezaie"
+              ],
+              "awayPlayers": [
+                "Aditi Gunturu"
+              ],
+              "sets": [
+                [
+                  4,
+                  6
+                ],
+                [
+                  6,
+                  4
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 16,
+              "awayGames": 11,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Shreyans Jains"
+              ],
+              "awayPlayers": [
+                "Lara Dumsday"
+              ],
+              "sets": [
+                [
+                  7,
+                  6
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 13,
+              "awayGames": 10,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Nariman Rezaie",
+                "Shreyans Jains"
+              ],
+              "awayPlayers": [
+                "Carrera Kanhalikham",
+                "Sulagna Ghosal"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 16,
+              "awayGames": 9,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "matchId": "AP031052",
+          "home": "Berwick",
+          "away": "Pakenham",
+          "homePts": 8.0,
+          "homeR": 3,
+          "homeS": 6,
+          "homeG": 36,
+          "awayPts": 0.0,
+          "awayR": 0,
+          "awayS": 0,
+          "awayG": 6,
+          "homePlayers": [
+            "Ethan Van Weeghel",
+            "Amber Patel"
+          ],
+          "awayPlayers": [
+            "Mark Albanese",
+            "Chaminda Thambawita"
+          ],
+          "homePositions": {
+            "Ethan Van Weeghel": 1,
+            "Amber Patel": 2
+          },
+          "awayPositions": {
+            "Mark Albanese": 1,
+            "Chaminda Thambawita": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [
+            "Mark Albanese"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Ethan Van Weeghel"
+              ],
+              "awayPlayers": [
+                "Mark Albanese"
+              ],
+              "sets": [
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  0
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 0,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Amber Patel"
+              ],
+              "awayPlayers": [
+                "Chaminda Thambawita"
+              ],
+              "sets": [
+                [
+                  6,
+                  3
+                ],
+                [
+                  6,
+                  3
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 6,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Ethan Van Weeghel",
+                "Amber Patel"
+              ],
+              "awayPlayers": [
+                "Mark Albanese",
+                "Chaminda Thambawita"
+              ],
+              "sets": [
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  0
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 0,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "matchId": "AP031053",
+          "home": "Endeavour Hills",
+          "away": "St. Paul Apostle",
+          "homePts": 6.0,
+          "homeR": 2,
+          "homeS": 4,
+          "homeG": 30,
+          "awayPts": 3.0,
+          "awayR": 1,
+          "awayS": 3,
+          "awayG": 26,
+          "homePlayers": [
+            "Caleb Cervenjak",
+            "Aiyaz Koya"
+          ],
+          "awayPlayers": [
+            "Jalishan Jesusskanna",
+            "Eka Nair",
+            "Maddox Scerri"
+          ],
+          "homePositions": {
+            "Caleb Cervenjak": 1,
+            "Aiyaz Koya": 2
+          },
+          "awayPositions": {
+            "Jalishan Jesusskanna": 1,
+            "Eka Nair": 2,
+            "Maddox Scerri": 3
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Caleb Cervenjak"
+              ],
+              "awayPlayers": [
+                "Jalishan Jesusskanna"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 3,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Aiyaz Koya"
+              ],
+              "awayPlayers": [
+                "Eka Nair"
+              ],
+              "sets": [
+                [
+                  2,
+                  6
+                ],
+                [
+                  2,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 4,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Caleb Cervenjak",
+                "Aiyaz Koya"
+              ],
+              "awayPlayers": [
+                "Jalishan Jesusskanna",
+                "Maddox Scerri"
+              ],
+              "sets": [
+                [
+                  2,
+                  6
+                ],
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 14,
+              "awayGames": 11,
+              "winner": "home"
+            }
+          ]
+        }
+      ]
     }
   ],
   "teamRosters": {
@@ -2177,7 +2533,7 @@
         "name": "Nariman Rezaie",
         "order": 1,
         "emergency": false,
-        "played": 4
+        "played": 5
       },
       {
         "name": "David Hu",
@@ -2189,7 +2545,7 @@
         "name": "Shreyans Jains",
         "order": 2,
         "emergency": false,
-        "played": 4
+        "played": 5
       }
     ],
     "Endeavour Hills": [
@@ -2197,13 +2553,13 @@
         "name": "Caleb Cervenjak",
         "order": 1,
         "emergency": false,
-        "played": 4
+        "played": 5
       },
       {
         "name": "Aiyaz Koya",
         "order": 2,
         "emergency": false,
-        "played": 4
+        "played": 5
       },
       {
         "name": "Adam Aiyaz",
@@ -2243,7 +2599,7 @@
         "name": "Chaminda Thambawita",
         "order": 2,
         "emergency": false,
-        "played": 4
+        "played": 5
       },
       {
         "name": "Fabin Kallarakkal",
@@ -2256,6 +2612,12 @@
         "order": null,
         "emergency": true,
         "played": 1
+      },
+      {
+        "name": "Mark Albanese",
+        "order": null,
+        "emergency": true,
+        "played": 1
       }
     ],
     "Legend Park Yellow": [
@@ -2263,23 +2625,23 @@
         "name": "Aditi Gunturu",
         "order": 1,
         "emergency": false,
-        "played": 4
+        "played": 5
       },
       {
         "name": "Lara Dumsday",
         "order": 1,
         "emergency": false,
-        "played": 4
-      },
-      {
-        "name": "Carrera Kanhalikham",
-        "order": 2,
-        "emergency": false,
-        "played": 2
+        "played": 5
       },
       {
         "name": "Sulagna Ghosal",
         "order": 2,
+        "emergency": false,
+        "played": 4
+      },
+      {
+        "name": "Carrera Kanhalikham",
+        "order": 3,
         "emergency": false,
         "played": 3
       }
@@ -2318,33 +2680,33 @@
         "played": 4
       },
       {
+        "name": "Jalishan Jesusskanna",
+        "order": 1,
+        "emergency": false,
+        "played": 2
+      },
+      {
         "name": "Eka Nair",
         "order": 2,
         "emergency": false,
-        "played": 1
+        "played": 2
       },
       {
         "name": "Maddox Scerri",
         "order": 2,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Marlan Wickramasinghe",
         "order": 2,
         "emergency": false,
         "played": 1
-      },
-      {
-        "name": "Jalishan Jesusskanna",
-        "order": 3,
-        "emergency": false,
-        "played": 1
       }
     ]
   },
   "remainingFixtures": {
-    "asOfDate": "2026-11-10",
+    "asOfDate": "2026-11-17",
     "note": "Full fixture for all 8 teams in Open Singles/Doubles B 2, from trols.org.au.",
     "rounds": [
       {

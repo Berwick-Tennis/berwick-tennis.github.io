@@ -4,8 +4,8 @@
     "section": "Open Singles/Doubles A Reserve 2",
     "sectionCode": "AP020",
     "ourTeam": "Berwick",
-    "lastUpdated": "2026-11-10",
-    "resultsLoadedFromSite": "10th November 26 @ 09:08:36 PM",
+    "lastUpdated": "2026-11-17",
+    "resultsLoadedFromSite": "17th November 26 @ 09:07:08 PM",
     "sourceUrl": "https://www.trols.org.au/wdta/results.php?daytime=AP&section=AP020&style=",
     "fixtureUrl": "https://www.trols.org.au/wdta/fixture.php?daytime=AP&section=AP020&style=",
     "archives": [
@@ -136,7 +136,7 @@
       "utrDoublesReliability": null,
       "name": "Soe Min Tun",
       "order": 1,
-      "played": 3,
+      "played": 4,
       "emergency": false,
       "emergencyApps": 0
     },
@@ -170,7 +170,7 @@
       "utrDoublesReliability": null,
       "name": "David Thurmond",
       "order": 3,
-      "played": 3,
+      "played": 4,
       "emergency": false,
       "emergencyApps": 0
     },
@@ -187,7 +187,7 @@
       "utrDoublesReliability": 100,
       "name": "Shannon Watson",
       "order": 4,
-      "played": 3,
+      "played": 4,
       "emergency": false,
       "emergencyApps": 0
     },
@@ -204,7 +204,7 @@
       "utrDoublesReliability": 100,
       "name": "John Keecherer",
       "order": 5,
-      "played": 3,
+      "played": 4,
       "emergency": false,
       "emergencyApps": 0
     }
@@ -2110,6 +2110,462 @@
           ]
         }
       ]
+    },
+    {
+      "round": 5,
+      "date": "2026-11-14",
+      "matches": [
+        {
+          "matchId": "AP020051",
+          "home": "N'hill P'wood Blue",
+          "away": "Berwick",
+          "homePts": 2.0,
+          "homeR": 1,
+          "homeS": 2,
+          "homeG": 22,
+          "awayPts": 6.0,
+          "awayR": 2,
+          "awayS": 4,
+          "awayG": 33,
+          "homePlayers": [
+            "Sasha Jain",
+            "Benjamin Ong"
+          ],
+          "awayPlayers": [
+            "Soe Min Tun",
+            "John Keecherer",
+            "David Thurmond",
+            "Shannon Watson"
+          ],
+          "homePositions": {
+            "Sasha Jain": 1,
+            "Benjamin Ong": 2
+          },
+          "awayPositions": {
+            "Soe Min Tun": 1,
+            "John Keecherer": 2,
+            "David Thurmond": 3,
+            "Shannon Watson": 4
+          },
+          "homeEmergencies": [
+            "Benjamin Ong"
+          ],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Sasha Jain"
+              ],
+              "awayPlayers": [
+                "Soe Min Tun"
+              ],
+              "sets": [
+                [
+                  4,
+                  6
+                ],
+                [
+                  1,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 5,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Benjamin Ong"
+              ],
+              "awayPlayers": [
+                "John Keecherer"
+              ],
+              "sets": [
+                [
+                  7,
+                  5
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 13,
+              "awayGames": 9,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Sasha Jain",
+                "Benjamin Ong"
+              ],
+              "awayPlayers": [
+                "David Thurmond",
+                "Shannon Watson"
+              ],
+              "sets": [
+                [
+                  3,
+                  6
+                ],
+                [
+                  1,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 4,
+              "awayGames": 12,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "matchId": "AP020052",
+          "home": "Centenary Park",
+          "away": "Eildon Park",
+          "homePts": 0.0,
+          "homeR": 0,
+          "homeS": 0,
+          "homeG": 3,
+          "awayPts": 8.0,
+          "awayR": 3,
+          "awayS": 6,
+          "awayG": 36,
+          "homePlayers": [
+            "Eddie Schroeder",
+            "Heron Cruz",
+            "Nathan Grooby"
+          ],
+          "awayPlayers": [
+            "Tom Robinson",
+            "Bradley Voysey"
+          ],
+          "homePositions": {
+            "Eddie Schroeder": 1,
+            "Heron Cruz": 2,
+            "Nathan Grooby": 3
+          },
+          "awayPositions": {
+            "Tom Robinson": 1,
+            "Bradley Voysey": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Eddie Schroeder"
+              ],
+              "awayPlayers": [
+                "Tom Robinson"
+              ],
+              "sets": [
+                [
+                  0,
+                  6
+                ],
+                [
+                  0,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 0,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Heron Cruz"
+              ],
+              "awayPlayers": [
+                "Bradley Voysey"
+              ],
+              "sets": [
+                [
+                  0,
+                  6
+                ],
+                [
+                  1,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 1,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Eddie Schroeder",
+                "Nathan Grooby"
+              ],
+              "awayPlayers": [
+                "Tom Robinson",
+                "Bradley Voysey"
+              ],
+              "sets": [
+                [
+                  0,
+                  6
+                ],
+                [
+                  2,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 2,
+              "awayGames": 12,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "matchId": "AP020053",
+          "home": "Vermont South",
+          "away": "Upwey South",
+          "homePts": 2.0,
+          "homeR": 1,
+          "homeS": 2,
+          "homeG": 25,
+          "awayPts": 6.0,
+          "awayR": 2,
+          "awayS": 4,
+          "awayG": 35,
+          "homePlayers": [
+            "Owen Jones",
+            "Kevin Pan"
+          ],
+          "awayPlayers": [
+            "Jethro Cousins",
+            "Charlotte Wilson"
+          ],
+          "homePositions": {
+            "Owen Jones": 1,
+            "Kevin Pan": 2
+          },
+          "awayPositions": {
+            "Jethro Cousins": 1,
+            "Charlotte Wilson": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Owen Jones"
+              ],
+              "awayPlayers": [
+                "Jethro Cousins"
+              ],
+              "sets": [
+                [
+                  5,
+                  7
+                ],
+                [
+                  3,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 8,
+              "awayGames": 13,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Kevin Pan"
+              ],
+              "awayPlayers": [
+                "Charlotte Wilson"
+              ],
+              "sets": [
+                [
+                  7,
+                  6
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 13,
+              "awayGames": 10,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Owen Jones",
+                "Kevin Pan"
+              ],
+              "awayPlayers": [
+                "Jethro Cousins",
+                "Charlotte Wilson"
+              ],
+              "sets": [
+                [
+                  4,
+                  6
+                ],
+                [
+                  0,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 4,
+              "awayGames": 12,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "matchId": "AP020054",
+          "home": "N'hill P'wood White",
+          "away": "Essex Heights",
+          "homePts": 0.0,
+          "homeR": 0,
+          "homeS": 0,
+          "homeG": 13,
+          "awayPts": 8.0,
+          "awayR": 3,
+          "awayS": 6,
+          "awayG": 36,
+          "homePlayers": [
+            "Kenneth Hartono",
+            "Anson Tan"
+          ],
+          "awayPlayers": [
+            "Maksim Gigovic",
+            "Mateja Gigovic"
+          ],
+          "homePositions": {
+            "Kenneth Hartono": 1,
+            "Anson Tan": 2
+          },
+          "awayPositions": {
+            "Maksim Gigovic": 1,
+            "Mateja Gigovic": 2
+          },
+          "homeEmergencies": [
+            "Anson Tan"
+          ],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Kenneth Hartono"
+              ],
+              "awayPlayers": [
+                "Maksim Gigovic"
+              ],
+              "sets": [
+                [
+                  2,
+                  6
+                ],
+                [
+                  2,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 4,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Anson Tan"
+              ],
+              "awayPlayers": [
+                "Mateja Gigovic"
+              ],
+              "sets": [
+                [
+                  3,
+                  6
+                ],
+                [
+                  2,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 5,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Kenneth Hartono",
+                "Anson Tan"
+              ],
+              "awayPlayers": [
+                "Maksim Gigovic",
+                "Mateja Gigovic"
+              ],
+              "sets": [
+                [
+                  3,
+                  6
+                ],
+                [
+                  1,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 4,
+              "awayGames": 12,
+              "winner": "away"
+            }
+          ]
+        }
+      ]
     }
   ],
   "teamRosters": {
@@ -2124,13 +2580,13 @@
         "name": "Sasha Jain",
         "order": 1,
         "emergency": false,
-        "played": 1
+        "played": 2
       },
       {
         "name": "Benjamin Ong",
         "order": null,
         "emergency": true,
-        "played": 1
+        "played": 2
       },
       {
         "name": "Lawrence Botton",
@@ -2153,16 +2609,16 @@
         "played": 3
       },
       {
+        "name": "Owen Jones",
+        "order": 1,
+        "emergency": false,
+        "played": 4
+      },
+      {
         "name": "Kevin Pan",
         "order": 2,
         "emergency": false,
-        "played": 3
-      },
-      {
-        "name": "Owen Jones",
-        "order": 2,
-        "emergency": false,
-        "played": 3
+        "played": 4
       }
     ],
     "Centenary Park": [
@@ -2176,11 +2632,17 @@
         "name": "Eddie Schroeder",
         "order": 2,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Heron Cruz",
         "order": 2,
+        "emergency": false,
+        "played": 2
+      },
+      {
+        "name": "Nathan Grooby",
+        "order": 3,
         "emergency": false,
         "played": 1
       },
@@ -2196,13 +2658,13 @@
         "name": "Maksim Gigovic",
         "order": 1,
         "emergency": false,
-        "played": 4
+        "played": 5
       },
       {
         "name": "Mateja Gigovic",
         "order": 2,
         "emergency": false,
-        "played": 4
+        "played": 5
       },
       {
         "name": "Darko Gigovic",
@@ -2216,13 +2678,13 @@
         "name": "Bradley Voysey",
         "order": 1,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Tom Robinson",
         "order": 1,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Gary Robinson",
@@ -2239,10 +2701,16 @@
     ],
     "N'hill P'wood White": [
       {
+        "name": "Kenneth Hartono",
+        "order": 1,
+        "emergency": false,
+        "played": 1
+      },
+      {
         "name": "Anson Tan",
         "order": null,
         "emergency": true,
-        "played": 1
+        "played": 2
       },
       {
         "name": "George Hildebrand",
@@ -2268,18 +2736,18 @@
         "name": "Jethro Cousins",
         "order": 1,
         "emergency": false,
-        "played": 4
+        "played": 5
       },
       {
         "name": "Charlotte Wilson",
         "order": 2,
         "emergency": false,
-        "played": 4
+        "played": 5
       }
     ]
   },
   "remainingFixtures": {
-    "asOfDate": "2026-11-10",
+    "asOfDate": "2026-11-17",
     "note": "Full fixture for all 8 teams in Open Singles/Doubles A Reserve 2, from trols.org.au.",
     "rounds": [
       {

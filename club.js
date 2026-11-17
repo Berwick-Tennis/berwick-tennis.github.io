@@ -1,8 +1,8 @@
 window.CLUB_DATA = {
   "club": "Berwick",
   "competition": "Saturday PM - Summer 26/27",
-  "lastUpdated": "2026-11-10",
-  "resultsLoadedFromSite": "10th November 26 @ 09:08:36 PM",
+  "lastUpdated": "2026-11-17",
+  "resultsLoadedFromSite": "17th November 26 @ 09:07:08 PM",
   "emergencyLimit": 3,
   "emergencyRule": "WDTA: a player may play as an emergency for another team up to 3 times a season; more than that and they can no longer play in their own section.",
   "teams": [
@@ -66,10 +66,10 @@ window.CLUB_DATA = {
     "Amber Patel": {
       "name": "Amber Patel",
       "apps": {
-        "b2": 2
+        "b2": 3
       },
       "regularApps": {
-        "b2": 2
+        "b2": 3
       },
       "emergencies": [],
       "homeTeam": "b2",
@@ -80,15 +80,44 @@ window.CLUB_DATA = {
     "Andrew Diakoff": {
       "name": "Andrew Diakoff",
       "apps": {
-        "a7": 4
+        "a7": 4,
+        "rubbers-a1": 1
       },
       "regularApps": {
         "a7": 4
       },
-      "emergencies": [],
+      "emergencies": [
+        {
+          "date": "2026-11-14",
+          "round": 5,
+          "team": "rubbers-a1",
+          "opponent": "Oakleigh",
+          "source": "scoresheet"
+        }
+      ],
       "homeTeam": "a7",
       "homeTeamSource": "scoresheet",
-      "emergencyCount": 0,
+      "emergencyCount": 1,
+      "emergencyStatus": "ok"
+    },
+    "Andrew Watson": {
+      "name": "Andrew Watson",
+      "apps": {
+        "a13": 1
+      },
+      "regularApps": {},
+      "emergencies": [
+        {
+          "date": "2026-11-14",
+          "round": 5,
+          "team": "a13",
+          "opponent": "Pakenham",
+          "source": "scoresheet"
+        }
+      ],
+      "homeTeam": null,
+      "homeTeamSource": null,
+      "emergencyCount": 1,
       "emergencyStatus": "ok"
     },
     "Ben Holmes": {
@@ -150,10 +179,10 @@ window.CLUB_DATA = {
     "Cooper Khalil": {
       "name": "Cooper Khalil",
       "apps": {
-        "a2": 1
+        "a2": 2
       },
       "regularApps": {
-        "a2": 1
+        "a2": 2
       },
       "emergencies": [],
       "homeTeam": "a2",
@@ -164,10 +193,10 @@ window.CLUB_DATA = {
     "Craig Kitner": {
       "name": "Craig Kitner",
       "apps": {
-        "rubbers-a1": 4
+        "rubbers-a1": 5
       },
       "regularApps": {
-        "rubbers-a1": 4
+        "rubbers-a1": 5
       },
       "emergencies": [],
       "homeTeam": "rubbers-a1",
@@ -179,11 +208,11 @@ window.CLUB_DATA = {
       "name": "David Ng",
       "apps": {
         "a10": 1,
-        "a13": 2,
+        "a13": 3,
         "rubbers-a1": 1
       },
       "regularApps": {
-        "a13": 2
+        "a13": 3
       },
       "emergencies": [
         {
@@ -209,11 +238,11 @@ window.CLUB_DATA = {
     "David Thurmond": {
       "name": "David Thurmond",
       "apps": {
-        "a-res-2": 3,
+        "a-res-2": 4,
         "rubbers-a1": 1
       },
       "regularApps": {
-        "a-res-2": 3
+        "a-res-2": 4
       },
       "emergencies": [
         {
@@ -246,10 +275,10 @@ window.CLUB_DATA = {
     "Enrique Lopez": {
       "name": "Enrique Lopez",
       "apps": {
-        "a2": 2
+        "a2": 3
       },
       "regularApps": {
-        "a2": 2
+        "a2": 3
       },
       "emergencies": [],
       "homeTeam": "a2",
@@ -274,10 +303,10 @@ window.CLUB_DATA = {
     "Ethan Van Weeghel": {
       "name": "Ethan Van Weeghel",
       "apps": {
-        "b2": 3
+        "b2": 4
       },
       "regularApps": {
-        "b2": 3
+        "b2": 4
       },
       "emergencies": [],
       "homeTeam": "b2",
@@ -313,13 +342,27 @@ window.CLUB_DATA = {
       "emergencyCount": 0,
       "emergencyStatus": "ok"
     },
+    "James Southey": {
+      "name": "James Southey",
+      "apps": {
+        "rubbers-a1": 1
+      },
+      "regularApps": {
+        "rubbers-a1": 1
+      },
+      "emergencies": [],
+      "homeTeam": "rubbers-a1",
+      "homeTeamSource": "scoresheet",
+      "emergencyCount": 0,
+      "emergencyStatus": "ok"
+    },
     "John Keecherer": {
       "name": "John Keecherer",
       "apps": {
-        "a-res-2": 3
+        "a-res-2": 4
       },
       "regularApps": {
-        "a-res-2": 3
+        "a-res-2": 4
       },
       "emergencies": [],
       "homeTeam": "a-res-2",
@@ -330,10 +373,10 @@ window.CLUB_DATA = {
     "Jordan Gunnoo": {
       "name": "Jordan Gunnoo",
       "apps": {
-        "a7": 4
+        "a7": 5
       },
       "regularApps": {
-        "a7": 4
+        "a7": 5
       },
       "emergencies": [],
       "homeTeam": "a7",
@@ -344,15 +387,35 @@ window.CLUB_DATA = {
     "Joseph Hovens": {
       "name": "Joseph Hovens",
       "apps": {
-        "a7": 2
+        "a7": 3
       },
       "regularApps": {
-        "a7": 2
+        "a7": 3
       },
       "emergencies": [],
       "homeTeam": "a7",
       "homeTeamSource": "scoresheet",
       "emergencyCount": 0,
+      "emergencyStatus": "ok"
+    },
+    "Josh Bury": {
+      "name": "Josh Bury",
+      "apps": {
+        "rubbers-a1": 1
+      },
+      "regularApps": {},
+      "emergencies": [
+        {
+          "date": "2026-11-14",
+          "round": 5,
+          "team": "rubbers-a1",
+          "opponent": "Oakleigh",
+          "source": "scoresheet"
+        }
+      ],
+      "homeTeam": null,
+      "homeTeamSource": null,
+      "emergencyCount": 1,
       "emergencyStatus": "ok"
     },
     "Justin Herrmann": {
@@ -386,10 +449,10 @@ window.CLUB_DATA = {
     "Rod McKenzie": {
       "name": "Rod McKenzie",
       "apps": {
-        "a2": 3
+        "a2": 4
       },
       "regularApps": {
-        "a2": 3
+        "a2": 4
       },
       "emergencies": [],
       "homeTeam": "a2",
@@ -400,11 +463,11 @@ window.CLUB_DATA = {
     "Shannon Watson": {
       "name": "Shannon Watson",
       "apps": {
-        "a-res-2": 3,
+        "a-res-2": 4,
         "rubbers-a1": 1
       },
       "regularApps": {
-        "a-res-2": 3
+        "a-res-2": 4
       },
       "emergencies": [
         {
@@ -423,10 +486,10 @@ window.CLUB_DATA = {
     "Simranjeev Chawla": {
       "name": "Simranjeev Chawla",
       "apps": {
-        "a13": 3
+        "a13": 4
       },
       "regularApps": {
-        "a13": 3
+        "a13": 4
       },
       "emergencies": [],
       "homeTeam": "a13",
@@ -437,10 +500,10 @@ window.CLUB_DATA = {
     "Soe Min Tun": {
       "name": "Soe Min Tun",
       "apps": {
-        "a-res-2": 3
+        "a-res-2": 4
       },
       "regularApps": {
-        "a-res-2": 3
+        "a-res-2": 4
       },
       "emergencies": [],
       "homeTeam": "a-res-2",

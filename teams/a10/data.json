@@ -8,8 +8,8 @@
     "sectionCode": "AP012",
     "teamCode": "AP089",
     "ourTeam": "Berwick",
-    "lastUpdated": "2026-11-10",
-    "resultsLoadedFromSite": "10th November 26 @ 09:08:36 PM",
+    "lastUpdated": "2026-11-17",
+    "resultsLoadedFromSite": "17th November 26 @ 09:07:08 PM",
     "sourceUrl": "https://www.trols.org.au/wdta/results.php?daytime=AP&section=AP012&style=",
     "fixtureUrl": "https://www.trols.org.au/wdta/fixture.php?daytime=AP&section=AP012&style=",
     "dataPath": "teams/a10/data.json",
@@ -2110,6 +2110,366 @@
           ]
         }
       ]
+    },
+    {
+      "round": 5,
+      "date": "2026-11-14",
+      "matches": [
+        {
+          "matchId": "AP012051",
+          "home": "N'hill P'wood",
+          "away": "Langwarrin",
+          "homePts": 7.0,
+          "homeR": 2,
+          "homeS": 5,
+          "homeG": 36,
+          "awayPts": 2.0,
+          "awayR": 1,
+          "awayS": 2,
+          "awayG": 25,
+          "homePlayers": [
+            "Tom Wood",
+            "Kavin Aravind"
+          ],
+          "awayPlayers": [
+            "Ben Kirchert",
+            "Meho Cordalija"
+          ],
+          "homePositions": {
+            "Tom Wood": 1,
+            "Kavin Aravind": 2
+          },
+          "awayPositions": {
+            "Ben Kirchert": 1,
+            "Meho Cordalija": 2
+          },
+          "homeEmergencies": [
+            "Tom Wood",
+            "Kavin Aravind"
+          ],
+          "awayEmergencies": [
+            "Meho Cordalija"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Tom Wood"
+              ],
+              "awayPlayers": [
+                "Ben Kirchert"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  2
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 3,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Kavin Aravind"
+              ],
+              "awayPlayers": [
+                "Meho Cordalija"
+              ],
+              "sets": [
+                [
+                  6,
+                  4
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 5,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Tom Wood",
+                "Kavin Aravind"
+              ],
+              "awayPlayers": [
+                "Ben Kirchert",
+                "Meho Cordalija"
+              ],
+              "sets": [
+                [
+                  7,
+                  5
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  2,
+                  6
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 12,
+              "awayGames": 17,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "matchId": "AP012053",
+          "home": "Mayfield Park Red",
+          "away": "Mayfield Park Blue",
+          "homePts": 6.0,
+          "homeR": 2,
+          "homeS": 4,
+          "homeG": 26,
+          "awayPts": 2.0,
+          "awayR": 1,
+          "awayS": 2,
+          "awayG": 15,
+          "homePlayers": [
+            "Joshua Sweeney",
+            "Leigh Webster",
+            "Ashleigh Hasler"
+          ],
+          "awayPlayers": [
+            "Adam Majdan",
+            "Dhruv Lahiri",
+            "Vincent Tran"
+          ],
+          "homePositions": {
+            "Joshua Sweeney": 1,
+            "Leigh Webster": 2,
+            "Ashleigh Hasler": 3
+          },
+          "awayPositions": {
+            "Adam Majdan": 1,
+            "Dhruv Lahiri": 2,
+            "Vincent Tran": 3
+          },
+          "homeEmergencies": [
+            "Joshua Sweeney"
+          ],
+          "awayEmergencies": [
+            "Dhruv Lahiri",
+            "Vincent Tran"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Joshua Sweeney"
+              ],
+              "awayPlayers": [
+                "Adam Majdan"
+              ],
+              "sets": [
+                [
+                  1,
+                  6
+                ],
+                [
+                  1,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 2,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Leigh Webster"
+              ],
+              "awayPlayers": [
+                "Dhruv Lahiri"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 2,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Leigh Webster",
+                "Ashleigh Hasler"
+              ],
+              "awayPlayers": [
+                "Adam Majdan",
+                "Vincent Tran"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  0
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 1,
+              "winner": "home"
+            }
+          ]
+        },
+        {
+          "matchId": "AP012054",
+          "home": "Wellington",
+          "away": "MCC Glen Iris",
+          "homePts": 7.0,
+          "homeR": 2,
+          "homeS": 5,
+          "homeG": 41,
+          "awayPts": 2.0,
+          "awayR": 1,
+          "awayS": 2,
+          "awayG": 24,
+          "homePlayers": [
+            "Jerome Sallai",
+            "Nick Hetrelezis"
+          ],
+          "awayPlayers": [
+            "Martin Wollin",
+            "Geoff Patouris"
+          ],
+          "homePositions": {
+            "Jerome Sallai": 1,
+            "Nick Hetrelezis": 2
+          },
+          "awayPositions": {
+            "Martin Wollin": 1,
+            "Geoff Patouris": 2
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [
+            "Geoff Patouris"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "singles",
+              "homePlayers": [
+                "Jerome Sallai"
+              ],
+              "awayPlayers": [
+                "Martin Wollin"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 3,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "singles",
+              "homePlayers": [
+                "Nick Hetrelezis"
+              ],
+              "awayPlayers": [
+                "Geoff Patouris"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 6,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Jerome Sallai",
+                "Nick Hetrelezis"
+              ],
+              "awayPlayers": [
+                "Martin Wollin",
+                "Geoff Patouris"
+              ],
+              "sets": [
+                [
+                  6,
+                  1
+                ],
+                [
+                  6,
+                  7
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 17,
+              "awayGames": 15,
+              "winner": "away"
+            }
+          ]
+        }
+      ]
     }
   ],
   "teamRosters": {
@@ -2133,10 +2493,16 @@
         "played": 2
       },
       {
+        "name": "Kavin Aravind",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      },
+      {
         "name": "Tom Wood",
         "order": null,
         "emergency": true,
-        "played": 2
+        "played": 3
       }
     ],
     "Mayfield Park Red": [
@@ -2150,7 +2516,7 @@
         "name": "Leigh Webster",
         "order": 2,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Sanjeet Mirihipeena",
@@ -2162,7 +2528,7 @@
         "name": "Ashleigh Hasler",
         "order": 3,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Henry Wilde",
@@ -2172,6 +2538,12 @@
       },
       {
         "name": "Brendan Parr",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      },
+      {
+        "name": "Joshua Sweeney",
         "order": null,
         "emergency": true,
         "played": 1
@@ -2200,9 +2572,9 @@
       },
       {
         "name": "Martin Wollin",
-        "order": 2,
+        "order": 1,
         "emergency": false,
-        "played": 1
+        "played": 2
       },
       {
         "name": "Tihana Razumic",
@@ -2214,7 +2586,7 @@
         "name": "Geoff Patouris",
         "order": null,
         "emergency": true,
-        "played": 1
+        "played": 2
       }
     ],
     "Langwarrin": [
@@ -2228,13 +2600,13 @@
         "name": "Ben Kirchert",
         "order": 2,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Meho Cordalija",
         "order": null,
         "emergency": true,
-        "played": 2
+        "played": 3
       }
     ],
     "Wellington": [
@@ -2242,13 +2614,13 @@
         "name": "Jerome Sallai",
         "order": 1,
         "emergency": false,
-        "played": 4
+        "played": 5
       },
       {
         "name": "Nick Hetrelezis",
         "order": 2,
         "emergency": false,
-        "played": 4
+        "played": 5
       }
     ],
     "Mayfield Park Blue": [
@@ -2256,7 +2628,7 @@
         "name": "Adam Majdan",
         "order": 1,
         "emergency": false,
-        "played": 4
+        "played": 5
       },
       {
         "name": "Joel Burgess-Heath",
@@ -2266,6 +2638,12 @@
       },
       {
         "name": "Daniel Baroudi",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      },
+      {
+        "name": "Dhruv Lahiri",
         "order": null,
         "emergency": true,
         "played": 1
@@ -2281,11 +2659,17 @@
         "order": null,
         "emergency": true,
         "played": 1
+      },
+      {
+        "name": "Vincent Tran",
+        "order": null,
+        "emergency": true,
+        "played": 1
       }
     ]
   },
   "remainingFixtures": {
-    "asOfDate": "2026-11-10",
+    "asOfDate": "2026-11-17",
     "note": "Full fixture for all 8 teams in Open Singles/Doubles A 10, from trols.org.au.",
     "rounds": [
       {
