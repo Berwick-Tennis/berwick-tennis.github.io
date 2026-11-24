@@ -8,8 +8,8 @@ window.SITE_DATA = {
     "sectionCode": "AP034",
     "teamCode": "AP265",
     "ourTeam": "Berwick",
-    "lastUpdated": "2026-11-17",
-    "resultsLoadedFromSite": "17th November 26 @ 09:07:08 PM",
+    "lastUpdated": "2026-11-24",
+    "resultsLoadedFromSite": "24th November 26 @ 11:36:08 PM",
     "sourceUrl": "https://www.trols.org.au/wdta/results.php?daytime=AP&section=AP034&style=",
     "fixtureUrl": "https://www.trols.org.au/wdta/fixture.php?daytime=AP&section=AP034&style=",
     "dataPath": "teams/rubbers-a1/data.json",
@@ -81,7 +81,7 @@ window.SITE_DATA = {
       "utrDoubles": null,
       "utrDoublesReliability": null,
       "name": "Craig Kitner",
-      "played": 5,
+      "played": 6,
       "emergencyApps": 0,
       "order": 1,
       "emergency": false
@@ -98,7 +98,7 @@ window.SITE_DATA = {
       "utrDoubles": null,
       "utrDoublesReliability": null,
       "name": "Eric Castricum",
-      "played": 1,
+      "played": 2,
       "emergencyApps": 0,
       "order": 3,
       "emergency": false
@@ -115,7 +115,7 @@ window.SITE_DATA = {
       "utrDoubles": null,
       "utrDoublesReliability": null,
       "name": "Greg Williams",
-      "played": 1,
+      "played": 2,
       "emergencyApps": 0,
       "order": 3,
       "emergency": false
@@ -149,7 +149,7 @@ window.SITE_DATA = {
       "utrDoubles": null,
       "utrDoublesReliability": null,
       "name": "Nick Teo",
-      "played": 4,
+      "played": 5,
       "emergencyApps": 0,
       "order": 3,
       "emergency": false
@@ -2012,6 +2012,323 @@ window.SITE_DATA = {
           ]
         }
       ]
+    },
+    {
+      "round": 6,
+      "date": "2026-11-21",
+      "matches": [
+        {
+          "matchId": "AP034061",
+          "home": "Glenvale",
+          "away": "Oakleigh",
+          "homePts": 2.0,
+          "homeS": 2,
+          "homeG": 30,
+          "homeR": 1,
+          "awayPts": 9.0,
+          "awayS": 7,
+          "awayG": 51,
+          "awayR": 3,
+          "homePlayers": [
+            "Dave Kuang",
+            "Vineel Dutt",
+            "Marc Pereira",
+            "Savio Pereira"
+          ],
+          "awayPlayers": [
+            "Nyall Langmead",
+            "Michael Chapman",
+            "Daniel Sculac",
+            "Laura Rabinovich"
+          ],
+          "homePositions": {
+            "Dave Kuang": 1,
+            "Vineel Dutt": 2,
+            "Marc Pereira": 3,
+            "Savio Pereira": 4
+          },
+          "awayPositions": {
+            "Nyall Langmead": 1,
+            "Michael Chapman": 2,
+            "Daniel Sculac": 3,
+            "Laura Rabinovich": 4
+          },
+          "homeEmergencies": [
+            "Vineel Dutt"
+          ],
+          "awayEmergencies": [
+            "Michael Chapman",
+            "Daniel Sculac"
+          ],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "doubles",
+              "homePlayers": [
+                "Dave Kuang",
+                "Vineel Dutt"
+              ],
+              "awayPlayers": [
+                "Nyall Langmead",
+                "Michael Chapman"
+              ],
+              "sets": [
+                [
+                  4,
+                  6
+                ],
+                [
+                  2,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 6,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 2,
+              "type": "doubles",
+              "homePlayers": [
+                "Marc Pereira",
+                "Savio Pereira"
+              ],
+              "awayPlayers": [
+                "Daniel Sculac",
+                "Laura Rabinovich"
+              ],
+              "sets": [
+                [
+                  1,
+                  6
+                ],
+                [
+                  1,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 2,
+              "awayGames": 12,
+              "winner": "away"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Dave Kuang",
+                "Marc Pereira"
+              ],
+              "awayPlayers": [
+                "Nyall Langmead",
+                "Daniel Sculac"
+              ],
+              "sets": [
+                [
+                  6,
+                  3
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 1,
+              "homeGames": 16,
+              "awayGames": 15,
+              "winner": "home"
+            },
+            {
+              "rubber": 4,
+              "type": "doubles",
+              "homePlayers": [
+                "Vineel Dutt",
+                "Savio Pereira"
+              ],
+              "awayPlayers": [
+                "Michael Chapman",
+                "Laura Rabinovich"
+              ],
+              "sets": [
+                [
+                  3,
+                  6
+                ],
+                [
+                  3,
+                  6
+                ]
+              ],
+              "homeSets": 0,
+              "awaySets": 2,
+              "homeGames": 6,
+              "awayGames": 12,
+              "winner": "away"
+            }
+          ]
+        },
+        {
+          "matchId": "AP034062",
+          "home": "Glen Waverley",
+          "away": "Berwick",
+          "homePts": 9.0,
+          "homeS": 7,
+          "homeG": 50,
+          "homeR": 3,
+          "awayPts": 2.0,
+          "awayS": 2,
+          "awayG": 29,
+          "awayR": 1,
+          "homePlayers": [
+            "Rob Black",
+            "David Black",
+            "Adrian Hillier",
+            "Ian Archbold"
+          ],
+          "awayPlayers": [
+            "Craig Kitner",
+            "Greg Williams",
+            "Eric Castricum",
+            "Nick Teo"
+          ],
+          "homePositions": {
+            "Rob Black": 1,
+            "David Black": 2,
+            "Adrian Hillier": 3,
+            "Ian Archbold": 4
+          },
+          "awayPositions": {
+            "Craig Kitner": 1,
+            "Greg Williams": 2,
+            "Eric Castricum": 3,
+            "Nick Teo": 4
+          },
+          "homeEmergencies": [],
+          "awayEmergencies": [],
+          "rubbers": [
+            {
+              "rubber": 1,
+              "type": "doubles",
+              "homePlayers": [
+                "Rob Black",
+                "David Black"
+              ],
+              "awayPlayers": [
+                "Craig Kitner",
+                "Greg Williams"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 3,
+              "winner": "home"
+            },
+            {
+              "rubber": 2,
+              "type": "doubles",
+              "homePlayers": [
+                "Adrian Hillier",
+                "Ian Archbold"
+              ],
+              "awayPlayers": [
+                "Eric Castricum",
+                "Nick Teo"
+              ],
+              "sets": [
+                [
+                  6,
+                  2
+                ],
+                [
+                  7,
+                  5
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 13,
+              "awayGames": 7,
+              "winner": "home"
+            },
+            {
+              "rubber": 3,
+              "type": "doubles",
+              "homePlayers": [
+                "Rob Black",
+                "Adrian Hillier"
+              ],
+              "awayPlayers": [
+                "Greg Williams",
+                "Eric Castricum"
+              ],
+              "sets": [
+                [
+                  0,
+                  6
+                ],
+                [
+                  7,
+                  5
+                ],
+                [
+                  6,
+                  7
+                ]
+              ],
+              "homeSets": 1,
+              "awaySets": 2,
+              "homeGames": 13,
+              "awayGames": 18,
+              "winner": "away"
+            },
+            {
+              "rubber": 4,
+              "type": "doubles",
+              "homePlayers": [
+                "David Black",
+                "Ian Archbold"
+              ],
+              "awayPlayers": [
+                "Craig Kitner",
+                "Nick Teo"
+              ],
+              "sets": [
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  1
+                ]
+              ],
+              "homeSets": 2,
+              "awaySets": 0,
+              "homeGames": 12,
+              "awayGames": 1,
+              "winner": "home"
+            }
+          ]
+        }
+      ]
     }
   ],
   "teamRosters": {
@@ -2020,13 +2337,13 @@ window.SITE_DATA = {
         "name": "Nyall Langmead",
         "order": 1,
         "emergency": false,
-        "played": 2
+        "played": 3
       },
       {
         "name": "Laura Rabinovich",
         "order": 2,
         "emergency": false,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Ola Luczak",
@@ -2053,6 +2370,12 @@ window.SITE_DATA = {
         "played": 1
       },
       {
+        "name": "Daniel Sculac",
+        "order": null,
+        "emergency": true,
+        "played": 1
+      },
+      {
         "name": "David Hadden",
         "order": null,
         "emergency": true,
@@ -2068,7 +2391,7 @@ window.SITE_DATA = {
         "name": "Michael Chapman",
         "order": null,
         "emergency": true,
-        "played": 3
+        "played": 4
       },
       {
         "name": "Noel Annakis",
@@ -2082,17 +2405,17 @@ window.SITE_DATA = {
         "name": "David Black",
         "order": 1,
         "emergency": false,
-        "played": 4
+        "played": 5
+      },
+      {
+        "name": "Rob Black",
+        "order": 1,
+        "emergency": false,
+        "played": 6
       },
       {
         "name": "Adrian Hillier",
         "order": 2,
-        "emergency": false,
-        "played": 4
-      },
-      {
-        "name": "Rob Black",
-        "order": 3,
         "emergency": false,
         "played": 5
       },
@@ -2112,7 +2435,7 @@ window.SITE_DATA = {
         "name": "Ian Archbold",
         "order": 5,
         "emergency": false,
-        "played": 4
+        "played": 5
       },
       {
         "name": "Paul Roe",
@@ -2124,15 +2447,9 @@ window.SITE_DATA = {
     "Glenvale": [
       {
         "name": "Dave Kuang",
-        "order": 2,
+        "order": 1,
         "emergency": false,
-        "played": 4
-      },
-      {
-        "name": "Savio Pereira",
-        "order": 2,
-        "emergency": false,
-        "played": 2
+        "played": 5
       },
       {
         "name": "Steven Brown",
@@ -2142,9 +2459,15 @@ window.SITE_DATA = {
       },
       {
         "name": "Marc Pereira",
+        "order": 3,
+        "emergency": false,
+        "played": 5
+      },
+      {
+        "name": "Savio Pereira",
         "order": 4,
         "emergency": false,
-        "played": 4
+        "played": 3
       },
       {
         "name": "Felix Fung",
@@ -2169,11 +2492,17 @@ window.SITE_DATA = {
         "order": null,
         "emergency": true,
         "played": 2
+      },
+      {
+        "name": "Vineel Dutt",
+        "order": null,
+        "emergency": true,
+        "played": 1
       }
     ]
   },
   "remainingFixtures": {
-    "asOfDate": "2026-11-17",
+    "asOfDate": "2026-11-24",
     "note": "Full fixture for all 4 teams in Open Rubbers A 1, from trols.org.au.",
     "rounds": [
       {

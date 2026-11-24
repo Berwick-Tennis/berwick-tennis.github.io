@@ -1,8 +1,8 @@
 window.CLUB_DATA = {
   "club": "Berwick",
   "competition": "Saturday PM - Summer 26/27",
-  "lastUpdated": "2026-11-17",
-  "resultsLoadedFromSite": "17th November 26 @ 09:07:08 PM",
+  "lastUpdated": "2026-11-24",
+  "resultsLoadedFromSite": "24th November 26 @ 11:36:08 PM",
   "emergencyLimit": 3,
   "emergencyRule": "WDTA: a player may play as an emergency for another team up to 3 times a season; more than that and they can no longer play in their own section.",
   "teams": [
@@ -80,11 +80,11 @@ window.CLUB_DATA = {
     "Andrew Diakoff": {
       "name": "Andrew Diakoff",
       "apps": {
-        "a7": 4,
+        "a7": 5,
         "rubbers-a1": 1
       },
       "regularApps": {
-        "a7": 4
+        "a7": 5
       },
       "emergencies": [
         {
@@ -123,10 +123,10 @@ window.CLUB_DATA = {
     "Ben Holmes": {
       "name": "Ben Holmes",
       "apps": {
-        "a10": 2
+        "a10": 3
       },
       "regularApps": {
-        "a10": 2
+        "a10": 3
       },
       "emergencies": [],
       "homeTeam": "a10",
@@ -165,10 +165,10 @@ window.CLUB_DATA = {
     "Chung Tan": {
       "name": "Chung Tan",
       "apps": {
-        "a7": 4
+        "a7": 5
       },
       "regularApps": {
-        "a7": 4
+        "a7": 5
       },
       "emergencies": [],
       "homeTeam": "a7",
@@ -179,10 +179,10 @@ window.CLUB_DATA = {
     "Cooper Khalil": {
       "name": "Cooper Khalil",
       "apps": {
-        "a2": 2
+        "a2": 3
       },
       "regularApps": {
-        "a2": 2
+        "a2": 3
       },
       "emergencies": [],
       "homeTeam": "a2",
@@ -193,10 +193,10 @@ window.CLUB_DATA = {
     "Craig Kitner": {
       "name": "Craig Kitner",
       "apps": {
-        "rubbers-a1": 5
+        "rubbers-a1": 6
       },
       "regularApps": {
-        "rubbers-a1": 5
+        "rubbers-a1": 6
       },
       "emergencies": [],
       "homeTeam": "rubbers-a1",
@@ -238,11 +238,11 @@ window.CLUB_DATA = {
     "David Thurmond": {
       "name": "David Thurmond",
       "apps": {
-        "a-res-2": 4,
+        "a-res-2": 5,
         "rubbers-a1": 1
       },
       "regularApps": {
-        "a-res-2": 4
+        "a-res-2": 5
       },
       "emergencies": [
         {
@@ -261,10 +261,10 @@ window.CLUB_DATA = {
     "Declan Pope": {
       "name": "Declan Pope",
       "apps": {
-        "b2": 3
+        "b2": 4
       },
       "regularApps": {
-        "b2": 3
+        "b2": 4
       },
       "emergencies": [],
       "homeTeam": "b2",
@@ -275,10 +275,10 @@ window.CLUB_DATA = {
     "Enrique Lopez": {
       "name": "Enrique Lopez",
       "apps": {
-        "a2": 3
+        "a2": 4
       },
       "regularApps": {
-        "a2": 3
+        "a2": 4
       },
       "emergencies": [],
       "homeTeam": "a2",
@@ -289,10 +289,10 @@ window.CLUB_DATA = {
     "Eric Castricum": {
       "name": "Eric Castricum",
       "apps": {
-        "rubbers-a1": 1
+        "rubbers-a1": 2
       },
       "regularApps": {
-        "rubbers-a1": 1
+        "rubbers-a1": 2
       },
       "emergencies": [],
       "homeTeam": "rubbers-a1",
@@ -303,10 +303,10 @@ window.CLUB_DATA = {
     "Ethan Van Weeghel": {
       "name": "Ethan Van Weeghel",
       "apps": {
-        "b2": 4
+        "b2": 5
       },
       "regularApps": {
-        "b2": 4
+        "b2": 5
       },
       "emergencies": [],
       "homeTeam": "b2",
@@ -317,10 +317,10 @@ window.CLUB_DATA = {
     "Greg Williams": {
       "name": "Greg Williams",
       "apps": {
-        "rubbers-a1": 1
+        "rubbers-a1": 2
       },
       "regularApps": {
-        "rubbers-a1": 1
+        "rubbers-a1": 2
       },
       "emergencies": [],
       "homeTeam": "rubbers-a1",
@@ -387,10 +387,10 @@ window.CLUB_DATA = {
     "Joseph Hovens": {
       "name": "Joseph Hovens",
       "apps": {
-        "a7": 3
+        "a7": 4
       },
       "regularApps": {
-        "a7": 3
+        "a7": 4
       },
       "emergencies": [],
       "homeTeam": "a7",
@@ -421,10 +421,10 @@ window.CLUB_DATA = {
     "Justin Herrmann": {
       "name": "Justin Herrmann",
       "apps": {
-        "a13": 3
+        "a13": 4
       },
       "regularApps": {
-        "a13": 3
+        "a13": 4
       },
       "emergencies": [],
       "homeTeam": "a13",
@@ -435,10 +435,10 @@ window.CLUB_DATA = {
     "Nick Teo": {
       "name": "Nick Teo",
       "apps": {
-        "rubbers-a1": 4
+        "rubbers-a1": 5
       },
       "regularApps": {
-        "rubbers-a1": 4
+        "rubbers-a1": 5
       },
       "emergencies": [],
       "homeTeam": "rubbers-a1",
@@ -449,10 +449,10 @@ window.CLUB_DATA = {
     "Rod McKenzie": {
       "name": "Rod McKenzie",
       "apps": {
-        "a2": 4
+        "a2": 5
       },
       "regularApps": {
-        "a2": 4
+        "a2": 5
       },
       "emergencies": [],
       "homeTeam": "a2",
@@ -463,11 +463,11 @@ window.CLUB_DATA = {
     "Shannon Watson": {
       "name": "Shannon Watson",
       "apps": {
-        "a-res-2": 4,
+        "a-res-2": 5,
         "rubbers-a1": 1
       },
       "regularApps": {
-        "a-res-2": 4
+        "a-res-2": 5
       },
       "emergencies": [
         {
@@ -486,10 +486,10 @@ window.CLUB_DATA = {
     "Simranjeev Chawla": {
       "name": "Simranjeev Chawla",
       "apps": {
-        "a13": 4
+        "a13": 5
       },
       "regularApps": {
-        "a13": 4
+        "a13": 5
       },
       "emergencies": [],
       "homeTeam": "a13",
@@ -515,10 +515,10 @@ window.CLUB_DATA = {
       "name": "Tom Maloney",
       "apps": {
         "a10": 1,
-        "a-res-2": 3
+        "a-res-2": 4
       },
       "regularApps": {
-        "a-res-2": 3
+        "a-res-2": 4
       },
       "emergencies": [
         {
@@ -537,10 +537,10 @@ window.CLUB_DATA = {
     "Vignesh Pakkiam": {
       "name": "Vignesh Pakkiam",
       "apps": {
-        "a10": 3
+        "a10": 4
       },
       "regularApps": {
-        "a10": 3
+        "a10": 4
       },
       "emergencies": [],
       "homeTeam": "a10",
