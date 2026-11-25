@@ -291,8 +291,53 @@ function formPill(f) {
   const tip = f.result === "R" ? `${head} — washed out`
     : `${head} — ${f.result === "W" ? "Won" : "Lost"} ${fmtPts(f.pts)}–${fmtPts(f.oppPts)}` +
       (f.m ? ` (rubbers ${f.m.r}–${f.m.or}, sets ${f.m.s}–${f.m.os}, games ${f.m.g}–${f.m.og})` : "");
-  return `<span class="pill ${f.result}" data-tip="${escapeHtml(tip)}" tabindex="0">${f.result === "R" ? "🌧️" : f.result}</span>`;
+  const go = f.result !== "R" && f.idx != null ? ` data-goto="${f.round}-${f.idx}" role="link"` : "";
+  return `<span class="pill ${f.result}${go ? " goto" : ""}" data-tip="${escapeHtml(tip)}${go ? " — click to view" : ""}" tabindex="0"${go}>${f.result === "R" ? "🌧️" : f.result}</span>`;
 }
+
+// Index of a match within its round's results (for #match-<round>-<idx> links), or -1.
+function matchIndex(round, home, away) {
+  const r = DATA.results.find(x => x.round === round);
+  return r ? r.matches.findIndex(m => m.home === home && m.away === away) : -1;
+}
+function gotoAttr(round, home, away) {
+  const i = matchIndex(round, home, away);
+  return i < 0 ? "" : ` data-goto="${round}-${i}" role="link"`;
+}
+
+// Jump to one match on the Results tab: open its rubber detail, scroll to it and flash it.
+function focusMatch(round, idx) {
+  activateTab("results");
+  const row = document.getElementById(`match-${round}-${idx}`);
+  if (!row) return;
+  const detail = document.getElementById(`detail-${round}-${idx}`);
+  if (detail) detail.style.display = "";
+  [row, detail].forEach(r => { if (r) { r.classList.remove("flash"); void r.offsetWidth; r.classList.add("flash"); } });
+  row.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+function goToMatch(round, idx) {
+  history.pushState(null, "", `#match-${round}-${idx}`);
+  focusMatch(round, idx);
+}
+
+function routeHash() {
+  const h = location.hash.slice(1);
+  const m = h.match(/^match-(\d+)-(\d+)$/);
+  if (m) focusMatch(+m[1], +m[2]); else activateTab(h || "dashboard");
+}
+
+document.addEventListener("click", e => {
+  const el = e.target.closest && e.target.closest("[data-goto]");
+  if (!el) return;
+  const [r, i] = el.dataset.goto.split("-").map(Number);
+  goToMatch(r, i);
+});
+document.addEventListener("keydown", e => {
+  if (e.key !== "Enter") return;
+  const el = e.target.closest && e.target.closest("[data-goto]");
+  if (el) el.click();
+});
 
 function fmtPts(n) { return Number.isInteger(+n) ? String(+n) : (+n).toFixed(1); }
 function shortDate(iso) {
@@ -327,7 +372,7 @@ function computeLadder() {
   (DATA.teams || []).forEach(ensure);
 
   DATA.results.forEach(round => {
-    round.matches.forEach(m => {
+    round.matches.forEach((m, idx) => {
       const h = ensure(m.home);
       const a = ensure(m.away);
       h.played++; a.played++;
@@ -339,9 +384,9 @@ function computeLadder() {
       h.gFor += m.homeG; h.gAgainst += m.awayG;
       a.gFor += m.awayG; a.gAgainst += m.homeG;
       const washout = isWashout(m);
-      h.form.push({ round: round.round, date: round.date, home: true, result: washout ? "R" : (m.homePts > m.awayPts ? "W" : "L"), opponent: m.away, pts: m.homePts, oppPts: m.awayPts,
+      h.form.push({ round: round.round, idx, date: round.date, home: true, result: washout ? "R" : (m.homePts > m.awayPts ? "W" : "L"), opponent: m.away, pts: m.homePts, oppPts: m.awayPts,
         m: { r: m.homeR, or: m.awayR, s: m.homeS, os: m.awayS, g: m.homeG, og: m.awayG } });
-      a.form.push({ round: round.round, date: round.date, home: false, result: washout ? "R" : (m.awayPts > m.homePts ? "W" : "L"), opponent: m.home, pts: m.awayPts, oppPts: m.homePts,
+      a.form.push({ round: round.round, idx, date: round.date, home: false, result: washout ? "R" : (m.awayPts > m.homePts ? "W" : "L"), opponent: m.home, pts: m.awayPts, oppPts: m.homePts,
         m: { r: m.awayR, or: m.homeR, s: m.awayS, os: m.homeS, g: m.awayG, og: m.homeG } });
     });
   });
@@ -959,8 +1004,7 @@ function findPreviousResult(opponent, beforeDate) {
 
 /* ---------------- Tabs ---------------- */
 
-function initTabs() {
-  function activateTab(tabId) {
+function activateTab(tabId) {
     const valid = document.getElementById(tabId) ? tabId : "dashboard";
     document.querySelectorAll("nav button").forEach(b => b.classList.remove("active"));
     document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
@@ -968,8 +1012,9 @@ function initTabs() {
     const section = document.getElementById(valid);
     if (btn) btn.classList.add("active");
     if (section) section.classList.add("active");
-  }
+}
 
+function initTabs() {
   document.querySelectorAll("nav button").forEach(btn => {
     btn.addEventListener("click", () => {
       const tabId = btn.dataset.tab;
@@ -979,12 +1024,10 @@ function initTabs() {
   });
 
   // Back / forward button support
-  window.addEventListener("popstate", () => {
-    activateTab(location.hash.slice(1) || "dashboard");
-  });
+  window.addEventListener("popstate", routeHash);
 
   // Honour hash on initial load (e.g. shared link or page refresh)
-  activateTab(location.hash.slice(1) || "dashboard");
+  routeHash();
 }
 
 /* ---------------- Dashboard ---------------- */
@@ -1318,7 +1361,7 @@ function renderResults() {
         <thead><tr><th>Home</th><th>Pts</th><th>R</th><th>S</th><th>G</th><th>Pts</th><th>R</th><th>S</th><th>G</th><th>Away</th></tr></thead>
         <tbody>
           ${r.matches.map((m, idx) => `
-            <tr class="${m.home === OUR_TEAM || m.away === OUR_TEAM ? "us-row" : ""}">
+            <tr id="match-${r.round}-${idx}" class="${m.home === OUR_TEAM || m.away === OUR_TEAM ? "us-row" : ""}">
               <td>${m.rubbers && m.rubbers.length ? `<button class="match-home-link" data-round="${r.round}" data-idx="${idx}">${escapeHtml(m.home)}</button>` : escapeHtml(m.home)}</td>
               <td>${m.homePts.toFixed(1)}</td><td>${m.homeR}</td><td>${m.homeS}</td><td>${m.homeG}</td>
               <td>${m.awayPts.toFixed(1)}</td><td>${m.awayR}</td><td>${m.awayS}</td><td>${m.awayG}</td>
@@ -1433,12 +1476,13 @@ function renderScheduleAll() {
             const m = res && res.matches.find(mm => mm.home === fx.home && mm.away === fx.away);
             let cell = `<span class="muted">–</span>`;
             if (m) {
-              const tip = escapeHtml(matchTip(m, fr.round, fr.date, ours ? OUR_TEAM : null));
+              const tip = escapeHtml(matchTip(m, fr.round, fr.date, ours ? OUR_TEAM : null) + (isWashout(m) ? "" : " — click to view"));
+              const go = isWashout(m) ? "" : gotoAttr(fr.round, m.home, m.away);
               if (isWashout(m)) cell = `<span class="badge" data-tip="${tip}">🌧️</span>`;
               else if (ours) {
                 const won = (fx.home === OUR_TEAM) === (m.homePts > m.awayPts);
-                cell = `<span class="badge ${won ? "win" : "loss"}" data-tip="${tip}" tabindex="0">${won ? "W" : "L"} ${fmtPts(m.homePts)}-${fmtPts(m.awayPts)}</span>`;
-              } else cell = `<span class="score" data-tip="${tip}" tabindex="0">${fmtPts(m.homePts)}-${fmtPts(m.awayPts)}</span>`;
+                cell = `<span class="badge goto ${won ? "win" : "loss"}" data-tip="${tip}" tabindex="0"${go}>${won ? "W" : "L"} ${fmtPts(m.homePts)}-${fmtPts(m.awayPts)}</span>`;
+              } else cell = `<span class="score goto" data-tip="${tip}" tabindex="0"${go}>${fmtPts(m.homePts)}-${fmtPts(m.awayPts)}</span>`;
             } else if (fr.round <= lastRound) cell = `<span class="badge" title="No result recorded — washed out">🌧️</span>`;
             const venue = clubByName(fx.home);
             const cls = [ours ? "sched-ours" : "", i === 0 ? "round-start" : "", ours && fr.date === nextDate ? "us-row" : ""].filter(Boolean).join(" ");
@@ -1487,7 +1531,7 @@ function renderScheduleOurs() {
             const m = result.matches.find(mm => mm.home === s.home && mm.away === s.away);
             if (m) {
               const usWon = (isHome && m.homePts > m.awayPts) || (!isHome && m.awayPts > m.homePts);
-              resultBadge = isWashout(m) ? `<span class="badge" data-tip="${escapeHtml(matchTip(m, s.round, s.date, OUR_TEAM))}">🌧️ Washout</span>` : `<span class="badge ${usWon ? "win" : "loss"}" data-tip="${escapeHtml(matchTip(m, s.round, s.date, OUR_TEAM))}" tabindex="0">${usWon ? "W" : "L"} ${fmtPts(m.homePts)}-${fmtPts(m.awayPts)}</span>`;
+              resultBadge = isWashout(m) ? `<span class="badge" data-tip="${escapeHtml(matchTip(m, s.round, s.date, OUR_TEAM))}">🌧️ Washout</span>` : `<span class="badge goto ${usWon ? "win" : "loss"}" data-tip="${escapeHtml(matchTip(m, s.round, s.date, OUR_TEAM))} — click to view" tabindex="0"${gotoAttr(s.round, m.home, m.away)}>${usWon ? "W" : "L"} ${fmtPts(m.homePts)}-${fmtPts(m.awayPts)}</span>`;
             }
           }
           return `<tr class="${s.date === nextMatchDate() ? "us-row" : ""}">
@@ -1650,6 +1694,7 @@ async function init() {
   initDataTools();
   initStatsToggle();
   renderAll();
+  if (/^#match-/.test(location.hash)) routeHash(); // results exist now
 }
 
 init();

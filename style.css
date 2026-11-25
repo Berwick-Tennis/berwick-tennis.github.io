@@ -738,3 +738,11 @@ table.hs-form tbody th { text-align: right; padding-right: 8px; font-weight: 600
 .sched-all tr.sched-ours td { background: rgba(255,255,255,0.04); }
 .sched-all .score { font-variant-numeric: tabular-nums; cursor: help; }
 .pill[data-tip], .badge[data-tip] { cursor: help; }
+
+/* Clickable results: W/L pills, badges and scores jump to the match on the Results tab */
+.goto { cursor: pointer; text-decoration: none; }
+a.pill { color: white; }
+.goto:hover, .goto:focus-visible { outline: 2px solid var(--green); outline-offset: 1px; }
+.sched-all .score.goto:hover { text-decoration: underline; outline: none; }
+@keyframes matchflash { 0%, 40% { background: rgba(255, 213, 79, 0.35); } 100% { background: transparent; } }
+tr.flash > td { animation: matchflash 2.4s ease-out; }

@@ -21,14 +21,14 @@ async function loadJSON(path, fallback) {
 function ladder(d) {
   const t = {};
   (d.teams || []).forEach(n => t[n] = { team: n, played: 0, pts: 0, w: 0, l: 0, sF: 0, sA: 0, gF: 0, gA: 0, form: [] });
-  d.results.forEach(r => r.matches.forEach(m => {
+  d.results.forEach(r => r.matches.forEach((m, idx) => {
     [["home", "away"], ["away", "home"]].forEach(([s, o]) => {
       const x = t[m[s]] || (t[m[s]] = { team: m[s], played: 0, pts: 0, w: 0, l: 0, sF: 0, sA: 0, gF: 0, gA: 0, form: [] });
       const won = m[`${s}Pts`] > m[`${o}Pts`];
       const wash = !!m.washout || !(m.homePts || m.awayPts || m.homeR || m.awayR || m.homeS || m.awayS || m.homeG || m.awayG);
       x.played++; x.pts += m[`${s}Pts`]; if (!wash) { won ? x.w++ : x.l++; }
       x.sF += m[`${s}S`]; x.sA += m[`${o}S`]; x.gF += m[`${s}G`]; x.gA += m[`${o}G`];
-      x.form.push({ r: wash ? "R" : won ? "W" : "L", round: r.round, opp: m[o], score: `${m[`${s}Pts`]}-${m[`${o}Pts`]}` });
+      x.form.push({ r: wash ? "R" : won ? "W" : "L", round: r.round, idx, opp: m[o], score: `${m[`${s}Pts`]}-${m[`${o}Pts`]}` });
     });
   }));
   const lastR = d.results.reduce((mx, r) => Math.max(mx, r.round), 0);
@@ -68,7 +68,12 @@ function lastResult(d) {
   return null;
 }
 
-function pill(f) { return `<span class="pill ${f.r}" data-tip="Rd ${f.round} v ${esc(f.opp)} — ${f.r === "R" ? "washed out" : (f.r === "W" ? "Won " : "Lost ") + f.score}" tabindex="0">${f.r === "R" ? "🌧️" : f.r}</span>`; }
+function pill(f, path) {
+  const tip = `Rd ${f.round} v ${f.opp} — ${f.r === "R" ? "washed out" : (f.r === "W" ? "Won " : "Lost ") + f.score}`;
+  const inner = f.r === "R" ? "🌧️" : f.r;
+  if (f.r === "R" || f.idx == null || !path) return `<span class="pill ${f.r}" data-tip="${esc(tip)}" tabindex="0">${inner}</span>`;
+  return `<a class="pill ${f.r} goto" href="${path}#match-${f.round}-${f.idx}" data-tip="${esc(tip + " — click to view")}">${inner}</a>`;
+}
 
 function renderWeek(club, teams) {
   const el = document.getElementById("this-week");
@@ -121,7 +126,7 @@ function renderLadders(teams) {
           <td class="muted">${esc(short(t.sectionName))}</td>
           <td>${d.results.length ? `<b>${us.pos}</b>/${L.length}` : "-"}</td>
           <td>${us.played || 0}</td><td>${us.w || 0}-${us.l || 0}</td><td>${(us.pts || 0).toFixed(1)}</td>
-          <td><div class="form-pills">${(us.form || []).slice(-5).map(pill).join("")}</div></td>
+          <td><div class="form-pills">${(us.form || []).slice(-5).map(f => pill(f, t.path)).join("")}</div></td>
           <td>${top4 ? `<span class="tag">Top 4</span>` : ""}</td>
         </tr>`;
       }).join("")}</tbody>

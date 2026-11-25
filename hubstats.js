@@ -13,10 +13,10 @@ function hsCollect(club, teams) {
   teams.forEach(({ t, d }) => {
     const alias = { ...clubAlias, ...(d.playerAliases || {}) };
     const canon = n => alias[n] || n;
-    d.results.filter(r => typeof r.round === "number").forEach(r => r.matches.forEach(m => {
+    d.results.filter(r => typeof r.round === "number").forEach(r => r.matches.forEach((m, idx) => {
       if (m.home !== "Berwick" && m.away !== "Berwick") return;
       const s = m.home === "Berwick" ? "home" : "away", o = s === "home" ? "away" : "home";
-      const match = { team: t.slug, label: t.label, round: r.round, date: r.date, opp: m[o], home: s === "home",
+      const match = { team: t.slug, path: t.path, idx, label: t.label, round: r.round, date: r.date, opp: m[o], home: s === "home",
         us: m[`${s}Pts`], them: m[`${o}Pts`], won: m[`${s}Pts`] > m[`${o}Pts`], rW: m[`${s}R`], rL: m[`${o}R`], gF: m[`${s}G`], gA: m[`${o}G`] };
       matches.push(match);
       (m.rubbers || []).forEach(rb => {
@@ -81,7 +81,7 @@ function hsFormGrid(club, matches) {
       return `<tr><th><a href="${t.path}">${hsEsc(t.label)}</a></th>${rounds.map(r => {
         const m = ms.find(x => x.round === r);
         if (!m) return `<td><span class="hs-cell none" title="No match">–</span></td>`;
-        return `<td><span class="hs-cell ${m.won ? "W" : "L"}" data-tip="${hsEsc(`${t.label} ${m.home ? "v" : "@"} ${m.opp}: ${m.won ? "won" : "lost"} ${m.us}–${m.them} pts (rubbers ${m.rW}-${m.rL})`)}">${m.us}–${m.them}</span></td>`;
+        return `<td><a class="hs-cell goto ${m.won ? "W" : "L"}" href="${t.path}#match-${m.round}-${m.idx}" data-tip="${hsEsc(`${t.label} ${m.home ? "v" : "@"} ${m.opp}: ${m.won ? "won" : "lost"} ${m.us}–${m.them} pts (rubbers ${m.rW}-${m.rL}) — click to view`)}">${m.us}–${m.them}</a></td>`;
       }).join("")}<td class="hs-wl">${w}-${ms.length - w}</td></tr>`;
     }).join("")}</tbody></table></div>`;
 }
