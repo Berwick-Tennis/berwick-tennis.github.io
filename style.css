@@ -732,3 +732,9 @@ table.hs-form tbody th { text-align: right; padding-right: 8px; font-weight: 600
 @media (max-width: 760px) { .hs-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 460px) { .hs-facts { grid-template-columns: 1fr; } }
 .hs-lrow { grid-template-columns: 18px minmax(0, 1fr) minmax(30px, 60px) auto; }
+
+/* Schedule: Berwick / All teams views */
+.sched-all tr.round-start td { border-top: 2px solid var(--border); }
+.sched-all tr.sched-ours td { background: rgba(255,255,255,0.04); }
+.sched-all .score { font-variant-numeric: tabular-nums; cursor: help; }
+.pill[data-tip], .badge[data-tip] { cursor: help; }

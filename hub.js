@@ -68,7 +68,7 @@ function lastResult(d) {
   return null;
 }
 
-function pill(f) { return `<span class="pill ${f.r}" title="Rd${f.round} v ${esc(f.opp)} (${f.r === "R" ? "washed out" : f.score})">${f.r === "R" ? "🌧️" : f.r}</span>`; }
+function pill(f) { return `<span class="pill ${f.r}" data-tip="Rd ${f.round} v ${esc(f.opp)} — ${f.r === "R" ? "washed out" : (f.r === "W" ? "Won " : "Lost ") + f.score}" tabindex="0">${f.r === "R" ? "🌧️" : f.r}</span>`; }
 
 function renderWeek(club, teams) {
   const el = document.getElementById("this-week");

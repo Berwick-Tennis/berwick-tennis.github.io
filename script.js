@@ -286,8 +286,33 @@ function isWashout(m) {
 
 // Ladder form pill: green W / red L, or a rain cloud for a washout.
 function formPill(f) {
-  const tip = f.result === "R" ? `Rd${f.round} vs ${f.opponent} — washed out` : `Rd${f.round} vs ${f.opponent} (${f.pts}-${f.oppPts})`;
-  return `<span class="pill ${f.result}" title="${escapeHtml(tip)}">${f.result === "R" ? "🌧️" : f.result}</span>`;
+  const where = f.home === undefined ? "v" : (f.home ? "v" : "@");
+  const head = `Rd ${f.round}${f.date ? " · " + shortDate(f.date) : ""} · ${where} ${f.opponent}`;
+  const tip = f.result === "R" ? `${head} — washed out`
+    : `${head} — ${f.result === "W" ? "Won" : "Lost"} ${fmtPts(f.pts)}–${fmtPts(f.oppPts)}` +
+      (f.m ? ` (rubbers ${f.m.r}–${f.m.or}, sets ${f.m.s}–${f.m.os}, games ${f.m.g}–${f.m.og})` : "");
+  return `<span class="pill ${f.result}" data-tip="${escapeHtml(tip)}" tabindex="0">${f.result === "R" ? "🌧️" : f.result}</span>`;
+}
+
+function fmtPts(n) { return Number.isInteger(+n) ? String(+n) : (+n).toFixed(1); }
+function shortDate(iso) {
+  if (!iso) return "";
+  return new Date(iso + "T00:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" });
+}
+// Hover text for one match, from one team's point of view (or neutral when me is null).
+function matchTip(m, round, date, me) {
+  const head = `Rd ${round}${date ? " · " + shortDate(date) : ""} · ${m.home} v ${m.away}`;
+  if (isWashout(m)) return `${head} — washed out`;
+  // Neutral view: tell it from the winner's side.
+  const neutral = !me;
+  if (neutral) me = m.awayPts > m.homePts ? m.away : m.home;
+  const H = m.home === me;
+  const [u, o] = H ? ["home", "away"] : ["away", "home"];
+  const us = m[u + "Pts"], them = m[o + "Pts"];
+  const detail = `rubbers ${m[u + "R"]}–${m[o + "R"]}, sets ${m[u + "S"]}–${m[o + "S"]}, games ${m[u + "G"]}–${m[o + "G"]}`;
+  const verb = us > them ? "won" : us < them ? "lost" : "drew";
+  const who = neutral ? `${us === them ? "Drawn" : me + " " + verb}` : verb[0].toUpperCase() + verb.slice(1);
+  return `${head} — ${who} ${fmtPts(us)}–${fmtPts(them)} (${detail})`;
 }
 
 function computeLadder() {
@@ -314,8 +339,10 @@ function computeLadder() {
       h.gFor += m.homeG; h.gAgainst += m.awayG;
       a.gFor += m.awayG; a.gAgainst += m.homeG;
       const washout = isWashout(m);
-      h.form.push({ round: round.round, result: washout ? "R" : (m.homePts > m.awayPts ? "W" : "L"), opponent: m.away, pts: m.homePts, oppPts: m.awayPts });
-      a.form.push({ round: round.round, result: washout ? "R" : (m.awayPts > m.homePts ? "W" : "L"), opponent: m.home, pts: m.awayPts, oppPts: m.homePts });
+      h.form.push({ round: round.round, date: round.date, home: true, result: washout ? "R" : (m.homePts > m.awayPts ? "W" : "L"), opponent: m.away, pts: m.homePts, oppPts: m.awayPts,
+        m: { r: m.homeR, or: m.awayR, s: m.homeS, os: m.awayS, g: m.homeG, og: m.awayG } });
+      a.form.push({ round: round.round, date: round.date, home: false, result: washout ? "R" : (m.awayPts > m.homePts ? "W" : "L"), opponent: m.home, pts: m.awayPts, oppPts: m.homePts,
+        m: { r: m.awayR, or: m.homeR, s: m.awayS, os: m.homeS, g: m.awayG, og: m.homeG } });
     });
   });
 
@@ -326,7 +353,7 @@ function computeLadder() {
     (fr.matches || []).forEach(fx => {
       if (res && res.matches.some(m => m.home === fx.home && m.away === fx.away)) return;
       [[fx.home, fx.away], [fx.away, fx.home]].forEach(([me, opp]) => {
-        if (teams[me]) teams[me].form.push({ round: fr.round, result: "R", opponent: opp, pts: 0, oppPts: 0 });
+        if (teams[me]) teams[me].form.push({ round: fr.round, date: fr.date, home: me === fx.home, result: "R", opponent: opp, pts: 0, oppPts: 0 });
       });
     });
   });
@@ -1362,8 +1389,77 @@ function renderRoster() {
 
 /* ---------------- Schedule tab ---------------- */
 
+let scheduleView = "berwick";
+
 function renderSchedule() {
   const el = document.getElementById("schedule-table");
+  el.innerHTML = `
+    <div class="stats-toggle sched-toggle" role="tablist">
+      <button class="btn secondary ${scheduleView === "berwick" ? "active" : ""}" data-view="berwick" role="tab">${escapeHtml(OUR_TEAM)}</button>
+      <button class="btn secondary ${scheduleView === "all" ? "active" : ""}" data-view="all" role="tab">All teams</button>
+    </div>
+    <div id="schedule-view"></div>`;
+  el.querySelectorAll(".sched-toggle button").forEach(b => b.addEventListener("click", () => {
+    scheduleView = b.dataset.view;
+    renderSchedule();
+  }));
+  if (scheduleView === "all") renderScheduleAll(); else renderScheduleOurs();
+}
+
+// Full fixture for every team in the section, round by round, with results where played.
+function renderScheduleAll() {
+  const el = document.getElementById("schedule-view");
+  const ladderNow = computeLadder();
+  const posOf = name => { const t = ladderNow.find(x => x.team === name); return t ? t.position : null; };
+  const teamCell = name => {
+    const p = posOf(name);
+    const label = name === OUR_TEAM ? `<strong>${escapeHtml(name)}</strong>` : escapeHtml(name);
+    return `${label}${p ? ` <span class="muted" title="Current ladder position">(${p})</span>` : ""}`;
+  };
+  const rounds = (((DATA.remainingFixtures || {}).rounds) || []).slice().sort((a, b) => a.round - b.round);
+  if (!rounds.length) { el.innerHTML = `<p class="muted">The full fixture isn't available for this section yet.</p>`; return; }
+  const lastRound = DATA.results.reduce((mx, r) => Math.max(mx, r.round), 0);
+  const nextDate = nextMatchDate();
+  el.innerHTML = `
+    <div class="table-wrap">
+    <table class="sched-all">
+      <thead><tr><th>Rd</th><th>Date</th><th>Home</th><th>Result</th><th>Away</th><th>Venue</th></tr></thead>
+      <tbody>
+        ${rounds.map(fr => {
+          const res = DATA.results.find(r => r.round === fr.round);
+          const ms = fr.matches || [];
+          return ms.map((fx, i) => {
+            const ours = fx.home === OUR_TEAM || fx.away === OUR_TEAM;
+            const m = res && res.matches.find(mm => mm.home === fx.home && mm.away === fx.away);
+            let cell = `<span class="muted">–</span>`;
+            if (m) {
+              const tip = escapeHtml(matchTip(m, fr.round, fr.date, ours ? OUR_TEAM : null));
+              if (isWashout(m)) cell = `<span class="badge" data-tip="${tip}">🌧️</span>`;
+              else if (ours) {
+                const won = (fx.home === OUR_TEAM) === (m.homePts > m.awayPts);
+                cell = `<span class="badge ${won ? "win" : "loss"}" data-tip="${tip}" tabindex="0">${won ? "W" : "L"} ${fmtPts(m.homePts)}-${fmtPts(m.awayPts)}</span>`;
+              } else cell = `<span class="score" data-tip="${tip}" tabindex="0">${fmtPts(m.homePts)}-${fmtPts(m.awayPts)}</span>`;
+            } else if (fr.round <= lastRound) cell = `<span class="badge" title="No result recorded — washed out">🌧️</span>`;
+            const venue = clubByName(fx.home);
+            const cls = [ours ? "sched-ours" : "", i === 0 ? "round-start" : "", ours && fr.date === nextDate ? "us-row" : ""].filter(Boolean).join(" ");
+            return `<tr class="${cls}">
+              <td>${i === 0 ? fr.round : ""}</td>
+              <td>${i === 0 ? fmtDate(fr.date) : ""}</td>
+              <td>${teamCell(fx.home)}</td>
+              <td>${cell}</td>
+              <td>${teamCell(fx.away)}</td>
+              <td>${venue ? `${escapeHtml(venue.address)} &middot; <a href="${mapsLink(venue.address)}" target="_blank" rel="noopener">Map</a>` : ""}</td>
+            </tr>`;
+          }).join("");
+        }).join("")}
+      </tbody>
+    </table>
+    </div>
+    <p class="muted small">Ladder position in brackets. Hover or tap a result for rubbers, sets and games.</p>`;
+}
+
+function renderScheduleOurs() {
+  const el = document.getElementById("schedule-view");
   const today = todayISO();
   const ladderNow = computeLadder();
   const posTag = p => p ? ` <span class="muted" title="Current ladder position">(${p})</span>` : "";
@@ -1391,7 +1487,7 @@ function renderSchedule() {
             const m = result.matches.find(mm => mm.home === s.home && mm.away === s.away);
             if (m) {
               const usWon = (isHome && m.homePts > m.awayPts) || (!isHome && m.awayPts > m.homePts);
-              resultBadge = isWashout(m) ? `<span class="badge" title="Washed out">🌧️ Washout</span>` : `<span class="badge ${usWon ? "win" : "loss"}">${usWon ? "W" : "L"} ${m.homePts.toFixed(0)}-${m.awayPts.toFixed(0)}</span>`;
+              resultBadge = isWashout(m) ? `<span class="badge" data-tip="${escapeHtml(matchTip(m, s.round, s.date, OUR_TEAM))}">🌧️ Washout</span>` : `<span class="badge ${usWon ? "win" : "loss"}" data-tip="${escapeHtml(matchTip(m, s.round, s.date, OUR_TEAM))}" tabindex="0">${usWon ? "W" : "L"} ${fmtPts(m.homePts)}-${fmtPts(m.awayPts)}</span>`;
             }
           }
           return `<tr class="${s.date === nextMatchDate() ? "us-row" : ""}">
